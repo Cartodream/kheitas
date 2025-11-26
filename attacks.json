@@ -1,0 +1,6666 @@
+{
+  "charge": {
+    "nom": "Charge",
+    "attaque": "Contact",
+    "type": "Normal",
+    "description": "Le lanceur charge l'ennemi et le percute de tout son poids.",
+    "de": "1d4",
+    "effet": ""
+  },
+  "rugissement": {
+    "nom": "Rugissement",
+    "attaque": "Magique",
+    "type": "Normal",
+    "description": "Le Pokémon rugit férocement pour effrayer son adversaire.",
+    "de": "-",
+    "effet": "Baisse la Défense de la cible de 1"
+  },
+  "fouet_lianes": {
+    "nom": "Fouet Lianes",
+    "attaque": "Distance",
+    "type": "Plante",
+    "description": "Fouette l'ennemi avec de fines lianes pour infliger des dégâts.",
+    "de": "1d4+2",
+    "effet": ""
+  },
+  "brouillard": {
+    "nom": "Brouillard",
+    "attaque": "Magique",
+    "type": "Normal",
+    "description": "Le lanceur disperse un nuage d'encre ou de fumée. Réduit la Précision de l'ennemi.",
+    "de": "-",
+    "effet": "Baisse l'Attaque des Pokémon dans la zone de 2 (contact, distance et magique) sur 2 tours."
+  },
+  "la_queue": {
+    "nom": "À la Queue",
+    "attaque": "",
+    "type": "Ténèbres",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "abattage": {
+    "nom": "Abattage",
+    "attaque": "",
+    "type": "Dragon",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "abime": {
+    "nom": "Abîme",
+    "attaque": "",
+    "type": "Sol",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "aboiement": {
+    "nom": "Aboiement",
+    "attaque": "",
+    "type": "Ténèbres",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "abri": {
+    "nom": "Abri",
+    "attaque": "Magique",
+    "type": "Normal",
+    "description": "Le lanceur se protège de toutes les attaques.",
+    "de": "",
+    "effet": "Protège de tout effet, direct ou indirect, d'une attaque de la cible pour un tour. Ne peut-être utilisé deux fois d'affilé."
+  },
+  "acidarmure": {
+    "nom": "Acidarmure",
+    "attaque": "",
+    "type": "Poison",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "acide": {
+    "nom": "Acide",
+    "attaque": "Distance",
+    "type": "Poison",
+    "description": "Le lanceur attaque l'ennemi avec un jet d'acide corrosif.",
+    "de": "1d4",
+    "effet": ""
+  },
+  "acide_malique": {
+    "nom": "Acide Malique",
+    "attaque": "",
+    "type": "Plante",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "acrobatie": {
+    "nom": "Acrobatie",
+    "attaque": "",
+    "type": "Vol",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "acupression": {
+    "nom": "Acupression",
+    "attaque": "",
+    "type": "Normal",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "aegis_maxima": {
+    "nom": "Aegis Maxima",
+    "attaque": "",
+    "type": "Acier",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "aeroblast": {
+    "nom": "Aéroblast",
+    "attaque": "",
+    "type": "Vol",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "aeropique": {
+    "nom": "Aéropique",
+    "attaque": "Contact",
+    "type": "Vol",
+    "description": "Le lanceur prend l'ennemi de vitesse et le lacère.",
+    "de": "2d4",
+    "effet": "La technique n'échoue jamais, excepté si la cible est dans le premier tour d'attaques comme Plongée ou Tunnel."
+  },
+  "affilage": {
+    "nom": "Affilage",
+    "attaque": "Magique",
+    "type": "Normal",
+    "description": "Le lanceur se concentre pour être sûr de porter un coup critique au tour suivant.",
+    "de": "-",
+    "effet": "Au prochain tour, le lanceur n'a pas à faire de jet d'attaque, il portera un coup critique automatiquement."
+  },
+  "affutage": {
+    "nom": "Affûtage",
+    "attaque": "",
+    "type": "Normal",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "aiguisage": {
+    "nom": "Aiguisage",
+    "attaque": "",
+    "type": "Ténèbres",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "ailes_d_acier": {
+    "nom": "Ailes d'Acier",
+    "attaque": "",
+    "type": "Acier",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "air_veinard": {
+    "nom": "Air Veinard",
+    "attaque": "Magique",
+    "type": "Normal",
+    "description": "Empêche de subir des coups critiques pendant 5 tours",
+    "de": "-",
+    "effet": "Empêche de subir des coups critiques pendant 5 tours"
+  },
+  "aire_de_feu": {
+    "nom": "Aire de Feu",
+    "attaque": "",
+    "type": "Feu",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "aire_d_eau": {
+    "nom": "Aire d'Eau",
+    "attaque": "",
+    "type": "Eau",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "aire_d_herbe": {
+    "nom": "Aire d'Herbe",
+    "attaque": "",
+    "type": "Plante",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "allegement": {
+    "nom": "Allègement",
+    "attaque": "",
+    "type": "Acier",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "amass_sable": {
+    "nom": "Amass'Sable",
+    "attaque": "",
+    "type": "Sol",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "amnesie": {
+    "nom": "Amnésie",
+    "attaque": "Magique",
+    "type": "Psy",
+    "description": "Le lanceur fait le vide dans son esprit pour oublier ses soucis",
+    "de": "-",
+    "effet": "Augmente l'attaque du lanceur de 2"
+  },
+  "ampleur": {
+    "nom": "Ampleur",
+    "attaque": "Contact",
+    "type": "Sol",
+    "description": "Inflige des dégâts variés en fonction de la force du lanceur",
+    "de": "2d6",
+    "effet": "Ajouter le Modif de FOR au score de dégâts"
+  },
+  "ancrage": {
+    "nom": "Ancrage",
+    "attaque": "",
+    "type": "Acier",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "anneau_hydro": {
+    "nom": "Anneau Hydro",
+    "attaque": "",
+    "type": "Eau",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "anti_air": {
+    "nom": "Anti-Air",
+    "attaque": "",
+    "type": "Roche",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "anti_brume": {
+    "nom": "Anti-Brume",
+    "attaque": "",
+    "type": "Vol",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "anti_soin": {
+    "nom": "Anti-Soin",
+    "attaque": "",
+    "type": "Psy",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "appel_attaque": {
+    "nom": "Appel Attaque",
+    "attaque": "",
+    "type": "Insecte",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "appel_d_fense": {
+    "nom": "Appel Défense",
+    "attaque": "",
+    "type": "Insecte",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "appel_soins": {
+    "nom": "Appel Soins",
+    "attaque": "",
+    "type": "Insecte",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "apr_s_vous": {
+    "nom": "Après Vous",
+    "attaque": "",
+    "type": "Normal",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "aqua_br_che": {
+    "nom": "Aqua-Brèche",
+    "attaque": "",
+    "type": "Eau",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "aqua_jet": {
+    "nom": "Aqua-Jet",
+    "attaque": "",
+    "type": "Eau",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "aria_de_l_ecume": {
+    "nom": "Aria de l'Écume",
+    "attaque": "",
+    "type": "Eau",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "armure": {
+    "nom": "Armure",
+    "attaque": "Magique",
+    "type": "Normal",
+    "description": "Le lanceur contracte tous ses muscles pour augmenter sa Défense.",
+    "de": "-",
+    "effet": "Augmente la défense du lanceur de 1"
+  },
+  "aromatherapie": {
+    "nom": "Aromathérapie",
+    "attaque": "",
+    "type": "Plante",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "arrogance": {
+    "nom": "Arrogance",
+    "attaque": "",
+    "type": "Ténèbres",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "assistance": {
+    "nom": "Assistance",
+    "attaque": "",
+    "type": "Normal",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "assurance": {
+    "nom": "Assurance",
+    "attaque": "Contact",
+    "type": "Ténèbres",
+    "description": "Cette attaque est deux fois plus efficace si l'ennemi a déjà été blessé durant ce tour.",
+    "de": "2d4",
+    "effet": "dégats doublés si la cible a déjà subi des dégâts ce tour"
+  },
+  "astuce_force": {
+    "nom": "Astuce Force",
+    "attaque": "",
+    "type": "Psy",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "atout": {
+    "nom": "Atout",
+    "attaque": "",
+    "type": "Normal",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "atterrissage": {
+    "nom": "Atterrissage",
+    "attaque": "",
+    "type": "Vol",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "attraction": {
+    "nom": "Attraction",
+    "attaque": "",
+    "type": "Normal",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "attrition": {
+    "nom": "Attrition",
+    "attaque": "Contact",
+    "type": "Normal",
+    "description": "",
+    "de": "2d6",
+    "effet": "Inflige des dégâts sans tenir compte des changements de stats sauf s'il a reçu jet de sable."
+  },
+  "aurasph_re": {
+    "nom": "Aurasphère",
+    "attaque": "",
+    "type": "Combat",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "aurore": {
+    "nom": "Aurore",
+    "attaque": "",
+    "type": "Normal",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "avalanche": {
+    "nom": "Avalanche",
+    "attaque": "",
+    "type": "Glace",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "avale": {
+    "nom": "Avale",
+    "attaque": "",
+    "type": "Normal",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "babil": {
+    "nom": "Babil",
+    "attaque": "",
+    "type": "Vol",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "baillement": {
+    "nom": "Bâillement",
+    "attaque": "Magique",
+    "type": "Normal",
+    "description": "Fait bâiller l'ennemi qui s'endort au tour suivant.",
+    "de": "_",
+    "effet": "Fait bâiller la cible qui s'endort au tour suivant pour un tour."
+  },
+  "bain_de_smog": {
+    "nom": "Bain de Smog",
+    "attaque": "Distance",
+    "type": "Poison",
+    "description": "Le lanceur jette un tas de détritus spéciaux sur la cible",
+    "de": "1d4+2",
+    "effet": "Annule les changements de stats temporaires de la cible."
+  },
+  "balance": {
+    "nom": "Balance",
+    "attaque": "",
+    "type": "Normal",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "balayage": {
+    "nom": "Balayage",
+    "attaque": "Contact",
+    "type": "Combat",
+    "description": "Un puissant coup de pied bas qui fauche l'ennemi. Il est plus efficace contre les ennemis lourds.",
+    "de": "-",
+    "effet": "Si la CON du lanceur est supérieure à celle de la cible 12 PV de dégâts sinon 6"
+  },
+  "balayette": {
+    "nom": "Balayette",
+    "attaque": "",
+    "type": "Combat",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "ball_brume": {
+    "nom": "Ball'Brume",
+    "attaque": "",
+    "type": "Psy",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "balle_graine": {
+    "nom": "Balle Graine",
+    "attaque": "",
+    "type": "Plante",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "ball_glace": {
+    "nom": "Ball'Glace",
+    "attaque": "",
+    "type": "Glace",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "ball_meteo": {
+    "nom": "Ball'Météo",
+    "attaque": "",
+    "type": "Eau",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "ball_ombre": {
+    "nom": "Ball'Ombre",
+    "attaque": "Distance",
+    "type": "Spectre",
+    "description": "Projette une grande ombre sur l'ennemi.",
+    "de": "2d6+1",
+    "effet": "20% de chance de baisser l'attaque de la cible de 5"
+  },
+  "ballon_br_lant": {
+    "nom": "Ballon Brûlant",
+    "attaque": "",
+    "type": "Feu",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "bang_sonique": {
+    "nom": "Bang Sonique",
+    "attaque": "",
+    "type": "Normal",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "barrage": {
+    "nom": "Barrage",
+    "attaque": "",
+    "type": "Normal",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "baston": {
+    "nom": "Baston",
+    "attaque": "",
+    "type": "Ténèbres",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "bec_vrille": {
+    "nom": "Bec Vrille",
+    "attaque": "",
+    "type": "Vol",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "bec_canon": {
+    "nom": "Bec-Canon",
+    "attaque": "",
+    "type": "Vol",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "belier": {
+    "nom": "Bélier",
+    "attaque": "Contact",
+    "type": "Normal",
+    "description": "Une charge violente qui blesse aussi légèrement le lanceur.",
+    "de": "2d6+2",
+    "effet": "Le lanceur subit 2 points de dégâts en tant que dégâts de recul"
+  },
+  "berceuse": {
+    "nom": "Berceuse",
+    "attaque": "Magique",
+    "type": "Normal",
+    "description": "Une berceuse plonge l'ennemi dans un profond sommeil.",
+    "de": "-",
+    "effet": "Endort tous les adversaires pour 2 tours"
+  },
+  "big_splash": {
+    "nom": "Big Splash",
+    "attaque": "",
+    "type": "Combat",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "blabla_dodo": {
+    "nom": "Blabla Dodo",
+    "attaque": "",
+    "type": "Normal",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "blizzard": {
+    "nom": "Blizzard",
+    "attaque": "",
+    "type": "Glace",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "blocage": {
+    "nom": "Blocage",
+    "attaque": "",
+    "type": "Ténèbres",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "blockhaus": {
+    "nom": "Blockhaus",
+    "attaque": "",
+    "type": "Poison",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "bluff": {
+    "nom": "Bluff",
+    "attaque": "Contact",
+    "type": "Normal",
+    "description": "Le lanceur frappe son adversaire.",
+    "de": "1d4+1",
+    "effet": "Ne peut être utilisée qu'au tour d'arrivé du lanceur. Initiative +10 pendant ce tour et apeure la cible pour un tour."
+  },
+  "bombe_acide": {
+    "nom": "Bombe Acide",
+    "attaque": "",
+    "type": "Poison",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "bombe_aimant": {
+    "nom": "Bombe Aimant",
+    "attaque": "Distance",
+    "type": "Acier",
+    "description": "Lance une bombe sur la cible",
+    "de": "2d4",
+    "effet": "La technique n'échoue jamais, excepté si la cible est dans le premier tour d'attaques comme Plongée, Tunnel, Vol, Rebond ou si la cible a utilisé Abri ou Rebond."
+  },
+  "bombe_beurk": {
+    "nom": "Bombe Beurk",
+    "attaque": "",
+    "type": "Poison",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "bombe_oeuf": {
+    "nom": "Bombe Oeuf",
+    "attaque": "",
+    "type": "Normal",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "boost": {
+    "nom": "Boost",
+    "attaque": "Magique",
+    "type": "Normal",
+    "description": "Une autohypnose qui permet au lanceur de copier les changements de stats de la cible.",
+    "de": "-",
+    "effet": "Le lanceur copie tous les changements de stats temporaires de la cible."
+  },
+  "botte_sucrette": {
+    "nom": "Botte Sucrette",
+    "attaque": "",
+    "type": "Plante",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "bouclier": {
+    "nom": "Bouclier",
+    "attaque": "Magique",
+    "type": "Psy",
+    "description": "Le lanceur fait apparaitre devant lui un bouclier protecteur.",
+    "de": "-",
+    "effet": "Augmente la défense du lanceur de 2"
+  },
+  "bouclier_royal": {
+    "nom": "Bouclier Royal",
+    "attaque": "",
+    "type": "Acier",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "boue_bombe": {
+    "nom": "Boue-Bombe",
+    "attaque": "",
+    "type": "Sol",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "boul_armure": {
+    "nom": "Boul'Armure",
+    "attaque": "Magique",
+    "type": "Normal",
+    "description": "Le lanceur s'enroule pour cacher ses points faibles, ce qui augmente sa Défense.",
+    "de": "-",
+    "effet": "Augmente la défense du lanceur de 2."
+  },
+  "boule_elek": {
+    "nom": "Boule Élek",
+    "attaque": "Distance",
+    "type": "Electrik",
+    "description": "Le lanceur envoie une boule d'électricité.",
+    "de": "-",
+    "effet": "Si la DEX de la cible est inférieure à celle du lanceur, les dégats sont de 10 sinon 4"
+  },
+  "boule_pollen": {
+    "nom": "Boule Pollen",
+    "attaque": "",
+    "type": "Insecte",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "boule_roc": {
+    "nom": "Boule Roc",
+    "attaque": "",
+    "type": "Roche",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "bourdon": {
+    "nom": "Bourdon",
+    "attaque": "",
+    "type": "Insecte",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "boutefeu": {
+    "nom": "Boutefeu",
+    "attaque": "",
+    "type": "Feu",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "branchicrok": {
+    "nom": "Branchicrok",
+    "attaque": "",
+    "type": "Eau",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "brouhaha": {
+    "nom": "Brouhaha",
+    "attaque": "",
+    "type": "Normal",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "brume": {
+    "nom": "Brume",
+    "attaque": "",
+    "type": "Glace",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "brume_capiteuse": {
+    "nom": "Brume Capiteuse",
+    "attaque": "",
+    "type": "Fée",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "buee_noire": {
+    "nom": "Buée Noire",
+    "attaque": "Magique",
+    "type": "Glace",
+    "description": "Le lanceur répand autour de lui un brouillard noir",
+    "de": "-",
+    "effet": "Les modifications de Statistiques sont annulées sur toute la zone concernée"
+  },
+  "bulldoboule": {
+    "nom": "Bulldoboule",
+    "attaque": "",
+    "type": "Insecte",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "bulles_d_o": {
+    "nom": "Bulles d'O",
+    "attaque": "Distance",
+    "type": "Eau",
+    "description": "Des bulles sont envoyées avec puissance sur l'ennemi.",
+    "de": "2d6",
+    "effet": "10% de chance de baisser la Dextérité de la cible de 1"
+  },
+  "caboche_kaboum": {
+    "nom": "Caboche-Kaboum",
+    "attaque": "",
+    "type": "Feu",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "cadeau": {
+    "nom": "Cadeau",
+    "attaque": "",
+    "type": "Normal",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "cage_eclair": {
+    "nom": "Cage Éclair",
+    "attaque": "Magique",
+    "type": "Electrik",
+    "description": "Un faible choc électrique frappe l'ennemi. Peut paralyser la cible.",
+    "de": "-",
+    "effet": "10% de chance de paralyser la cible"
+  },
+  "calcination": {
+    "nom": "Calcination",
+    "attaque": "",
+    "type": "Feu",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "calinerie": {
+    "nom": "Câlinerie",
+    "attaque": "",
+    "type": "Fée",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "camaraderie": {
+    "nom": "Camaraderie",
+    "attaque": "Magique",
+    "type": "Normal",
+    "description": "L'ennemi se lie d'amitié avec le lanceur et perd sa combativité",
+    "de": "-",
+    "effet": "L'attaque et la défense de la cible diminuent de 1."
+  },
+  "camouflage": {
+    "nom": "Camouflage",
+    "attaque": "",
+    "type": "Normal",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "canicule": {
+    "nom": "Canicule",
+    "attaque": "",
+    "type": "Feu",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "canon_dynamax": {
+    "nom": "Canon Dynamax",
+    "attaque": "",
+    "type": "Dragon",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "canon_floral": {
+    "nom": "Canon Floral",
+    "attaque": "",
+    "type": "Fée",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "canon_graine": {
+    "nom": "Canon Graine",
+    "attaque": "Distance",
+    "type": "Plante",
+    "description": "Le lanceur fait pleuvoir un déluge de graines explosives sur l'ennemi.",
+    "de": "2d6+1",
+    "effet": ""
+  },
+  "carapiege": {
+    "nom": "Carapiège",
+    "attaque": "",
+    "type": "Feu",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "cascade": {
+    "nom": "Cascade",
+    "attaque": "",
+    "type": "Eau",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "casse_brique": {
+    "nom": "Casse-Brique",
+    "attaque": "",
+    "type": "Combat",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "cauchemar": {
+    "nom": "Cauchemar",
+    "attaque": "",
+    "type": "Spectre",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "cavalerie_lourde": {
+    "nom": "Cavalerie Lourde",
+    "attaque": "",
+    "type": "Sol",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "c_l_bration": {
+    "nom": "Célébration",
+    "attaque": "",
+    "type": "Normal",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "cent_rancunes": {
+    "nom": "Cent Rancunes",
+    "attaque": "",
+    "type": "Ténèbres",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "centrifugifle": {
+    "nom": "Centrifugifle",
+    "attaque": "",
+    "type": "Ténèbres",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "champ_brumeux": {
+    "nom": "Champ Brumeux",
+    "attaque": "",
+    "type": "Fée",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "champ_lectrifi": {
+    "nom": "Champ Électrifié",
+    "attaque": "",
+    "type": "Electrik",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "champ_herbu": {
+    "nom": "Champ Herbu",
+    "attaque": "",
+    "type": "Plante",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "champ_psychique": {
+    "nom": "Champ Psychique",
+    "attaque": "",
+    "type": "Psy",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "champlification": {
+    "nom": "Champlification",
+    "attaque": "",
+    "type": "Electrik",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "change_clair": {
+    "nom": "Change Éclair",
+    "attaque": "",
+    "type": "Electrik",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "change_c_t": {
+    "nom": "Change-Côté",
+    "attaque": "",
+    "type": "Normal",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "chant_antique": {
+    "nom": "Chant Antique",
+    "attaque": "",
+    "type": "Normal",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "chant_canon": {
+    "nom": "Chant Canon",
+    "attaque": "",
+    "type": "Normal",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "charge_foudre": {
+    "nom": "Charge Foudre",
+    "attaque": "",
+    "type": "Electrik",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "charge_os": {
+    "nom": "Charge Os",
+    "attaque": "",
+    "type": "Sol",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "chargeur": {
+    "nom": "Chargeur",
+    "attaque": "",
+    "type": "Electrik",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "charme": {
+    "nom": "Charme",
+    "attaque": "",
+    "type": "Fée",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "chatiment": {
+    "nom": "Châtiment",
+    "attaque": "",
+    "type": "Spectre",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "chatouille": {
+    "nom": "Chatouille",
+    "attaque": "",
+    "type": "Normal",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "chgt_vitesse": {
+    "nom": "Chgt Vitesse",
+    "attaque": "",
+    "type": "Acier",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "choc_motionnel": {
+    "nom": "Choc Émotionnel",
+    "attaque": "",
+    "type": "Fée",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "choc_mental": {
+    "nom": "Choc Mental",
+    "attaque": "Distance",
+    "type": "Psy",
+    "description": "Une faible vague télékinétique frappe la cible. Peut aussi la rendre confuse.",
+    "de": "1d4+2",
+    "effet": "10% de chance de rendre la cible confuse pour 1 tour."
+  },
+  "choc_m_t_ore": {
+    "nom": "Choc Météore",
+    "attaque": "",
+    "type": "Acier",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "choc_psy": {
+    "nom": "Choc Psy",
+    "attaque": "",
+    "type": "Psy",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "choc_venin": {
+    "nom": "Choc Venin",
+    "attaque": "",
+    "type": "Poison",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "chute_glace": {
+    "nom": "Chute Glace",
+    "attaque": "",
+    "type": "Glace",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "chute_libre": {
+    "nom": "Chute Libre",
+    "attaque": "",
+    "type": "Vol",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "clairvoyance": {
+    "nom": "Clairvoyance",
+    "attaque": "Magique",
+    "type": "Normal",
+    "description": "Annule le type Spectre de la cible et permet de l'attaquer avec des attaques de type Normal ou Combat.",
+    "de": "-",
+    "effet": "Annule le type Spectre de la cible et permet de l'attaquer avec des attaques de type Normal ou Combat."
+  },
+  "claquoir": {
+    "nom": "Claquoir",
+    "attaque": "",
+    "type": "Eau",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "clepto_m_nes": {
+    "nom": "Clepto-Mânes",
+    "attaque": "",
+    "type": "Spectre",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "clonage": {
+    "nom": "Clonage",
+    "attaque": "",
+    "type": "Normal",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "close_combat": {
+    "nom": "Close Combat",
+    "attaque": "",
+    "type": "Combat",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "coaching": {
+    "nom": "Coaching",
+    "attaque": "",
+    "type": "Combat",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "cogne": {
+    "nom": "Cogne",
+    "attaque": "",
+    "type": "Combat",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "cognobidon": {
+    "nom": "Cognobidon",
+    "attaque": "",
+    "type": "Normal",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "colere": {
+    "nom": "Colère",
+    "attaque": "",
+    "type": "Dragon",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "combo_griffe": {
+    "nom": "Combo-Griffe",
+    "attaque": "Contact",
+    "type": "Normal",
+    "description": "L'ennemi est lacéré par des faux ou des griffes",
+    "de": "1d4",
+    "effet": "Le lanceur attaque la cible de 1 à 5 fois (lancer 1D4 pour déterminer le nombre d'attaque puis lancer le jet de dégât)"
+  },
+  "confidence": {
+    "nom": "Confidence",
+    "attaque": "",
+    "type": "Normal",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "constriction": {
+    "nom": "Constriction",
+    "attaque": "Magique",
+    "type": "Normal",
+    "description": "10 % de chance de diminuer l'attaque de la cible de 1",
+    "de": "-",
+    "effet": "10 % de chance de diminuer l'attaque de la cible de 1"
+  },
+  "contre": {
+    "nom": "Contre",
+    "attaque": "",
+    "type": "Combat",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "conversion": {
+    "nom": "Conversion",
+    "attaque": "",
+    "type": "Normal",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "conversion_2": {
+    "nom": "Conversion 2",
+    "attaque": "",
+    "type": "Normal",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "copie": {
+    "nom": "Copie",
+    "attaque": "",
+    "type": "Normal",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "copie_type": {
+    "nom": "Copie-Type",
+    "attaque": "",
+    "type": "Normal",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "coqui_lame": {
+    "nom": "Coqui-Lame",
+    "attaque": "",
+    "type": "Eau",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "corps_perdu": {
+    "nom": "Corps Perdu",
+    "attaque": "",
+    "type": "Combat",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "cotogarde": {
+    "nom": "Cotogarde",
+    "attaque": "",
+    "type": "Plante",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "coud_boue": {
+    "nom": "Coud'Boue",
+    "attaque": "Magique",
+    "type": "Sol",
+    "description": "Le lanceur envoie de la boue au visage de l'ennemi ",
+    "de": "-",
+    "effet": "Diminue l'Attaque de la cible de 2."
+  },
+  "coud_krane": {
+    "nom": "Coud'Krâne",
+    "attaque": "",
+    "type": "Normal",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "coup_bas": {
+    "nom": "Coup Bas",
+    "attaque": "Contact",
+    "type": "Ténèbres",
+    "description": "Attaque sournoisement l'ennemi.",
+    "de": "2d6",
+    "effet": "Augmente l'initiative de 10 pour le tour suivant"
+  },
+  "coup_croix": {
+    "nom": "Coup Croix",
+    "attaque": "",
+    "type": "Combat",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "coup_d_boule": {
+    "nom": "Coup d'Boule",
+    "attaque": "Contact",
+    "type": "Normal",
+    "description": "Le lanceur donne un coup de tête.",
+    "de": "2d6",
+    "effet": "20% de chance d'apeurer la cible pour trois tours."
+  },
+  "coup_d_jus": {
+    "nom": "Coup d'Jus",
+    "attaque": "",
+    "type": "Electrik",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "coup_d_main": {
+    "nom": "Coup d'Main",
+    "attaque": "Magique",
+    "type": "Normal",
+    "description": "Une capacité qui augmente la puissance d'attaque d'un allié.",
+    "de": "-",
+    "effet": "Augmente le prochain jet d'attaque d'un allié de 2."
+  },
+  "coup_double": {
+    "nom": "Coup Double",
+    "attaque": "",
+    "type": "Normal",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "coup_fulgurant": {
+    "nom": "Coup Fulgurant",
+    "attaque": "",
+    "type": "Combat",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "coup_varia_type": {
+    "nom": "Coup Varia-Type",
+    "attaque": "",
+    "type": "Normal",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "coup_victoire": {
+    "nom": "Coup Victoire",
+    "attaque": "",
+    "type": "Feu",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "coupe": {
+    "nom": "Coupe",
+    "attaque": "",
+    "type": "Normal",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "coupe_psycho": {
+    "nom": "Coupe Psycho",
+    "attaque": "",
+    "type": "Psy",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "coupe_vent": {
+    "nom": "Coupe-Vent",
+    "attaque": "",
+    "type": "Normal",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "cradovague": {
+    "nom": "Cradovague",
+    "attaque": "",
+    "type": "Poison",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "cr_ve_coeur": {
+    "nom": "Crève-Coeur",
+    "attaque": "",
+    "type": "Psy",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "croc_de_mort": {
+    "nom": "Croc de Mort",
+    "attaque": "Contact",
+    "type": "Normal",
+    "description": "Le lanceur mord l'ennemi à l'aide de ses incisives aiguisées.",
+    "de": "2d6+1",
+    "effet": "30 % de chance d'apeurer la cible pour 3 tours"
+  },
+  "croc_fatal": {
+    "nom": "Croc Fatal",
+    "attaque": "",
+    "type": "Normal",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "crochet_venin": {
+    "nom": "Crochet Venin",
+    "attaque": "",
+    "type": "Poison",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "croco_larme": {
+    "nom": "Croco Larme",
+    "attaque": "",
+    "type": "Ténèbres",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "crocs_eclair": {
+    "nom": "Crocs Éclair",
+    "attaque": "Contact",
+    "type": "Electrik",
+    "description": "Le lanceur inflige une morsure électrifiée à la cible",
+    "de": "2d6",
+    "effet": "10% de chance d'apeurer la cible si le lanceur attaque en premier, sinon elle est paralysée."
+  },
+  "crocs_feu": {
+    "nom": "Crocs Feu",
+    "attaque": "Contact",
+    "type": "Feu",
+    "description": "Le lanceur utilise une morsure enflammée",
+    "de": "2d6",
+    "effet": "10% de chance de brûler la cible pour 2 tours (Dégâts : 1D4/tour)"
+  },
+  "crocs_givre": {
+    "nom": "Crocs Givre",
+    "attaque": "",
+    "type": "Glace",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "croissance": {
+    "nom": "Croissance",
+    "attaque": "Magique",
+    "type": "Normal",
+    "description": "Le corps du lanceur se développe",
+    "de": "-",
+    "effet": ""
+  },
+  "croque_fort": {
+    "nom": "Croque Fort",
+    "attaque": "",
+    "type": "Ténèbres",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "cru_ailes": {
+    "nom": "Cru-Ailes",
+    "attaque": "",
+    "type": "Vol",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "cyclone": {
+    "nom": "Cyclone",
+    "attaque": "Magique",
+    "type": "Normal",
+    "description": "Le lanceur génère une bourrasque puissante",
+    "de": "-",
+    "effet": "Lors d'un duel remplace le pokémon adverse par l'un de son équipe"
+  },
+  "damocles": {
+    "nom": "Damoclès",
+    "attaque": "Contact",
+    "type": "Normal",
+    "description": "Une charge dangereuse et imprudente. Blesse aussi gravement le lanceur.",
+    "de": "2d12+3",
+    "effet": "Le lanceur subit 2 points de dégâts en tant que dégâts de recul"
+  },
+  "danse_draco": {
+    "nom": "Danse Draco",
+    "attaque": "Magique",
+    "type": "Dragon",
+    "description": "Une danse mystique dont le rythme effréné ",
+    "de": "-",
+    "effet": "L'attaque et la défense du lanceur est augmenté de 3"
+  },
+  "danse_du_feu": {
+    "nom": "Danse du Feu",
+    "attaque": "",
+    "type": "Feu",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "danse_veil": {
+    "nom": "Danse Éveil",
+    "attaque": "",
+    "type": "Normal",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "danse_flammes": {
+    "nom": "Danse Flammes",
+    "attaque": "",
+    "type": "Feu",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "danse_fleurs": {
+    "nom": "Danse Fleurs",
+    "attaque": "Distance",
+    "type": "Plante",
+    "description": "Le lanceur attaque en projetant des pétales ",
+    "de": "2d12+1",
+    "effet": "La technique dure 3 tours et rend confus ensuite pour deux tours"
+  },
+  "danse_folle": {
+    "nom": "Danse Folle",
+    "attaque": "",
+    "type": "Normal",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "danse_lames": {
+    "nom": "Danse Lames",
+    "attaque": "",
+    "type": "Normal",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "danse_lune": {
+    "nom": "Danse Lune",
+    "attaque": "",
+    "type": "Psy",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "danse_pluie": {
+    "nom": "Danse Pluie",
+    "attaque": "",
+    "type": "Eau",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "danse_plumes": {
+    "nom": "Danse Plumes",
+    "attaque": "Magique",
+    "type": "Vol",
+    "description": "Une montagne de plumes ensevelit la cible",
+    "de": "-",
+    "effet": "Diminue l'attaque de la cible de 2"
+  },
+  "dard_mortel": {
+    "nom": "Dard Mortel",
+    "attaque": "",
+    "type": "Insecte",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "dard_nuee": {
+    "nom": "Dard-Nuée",
+    "attaque": "Contact",
+    "type": "Insecte",
+    "description": "Envoie une rafale de dards",
+    "de": "1d4",
+    "effet": "Le lanceur attaque 2 à 5 fois sur jusqu'à 5 cibles. Lancer 1D4 pour déterminer le nombre d'attaque puis lancer le jet de dégât"
+  },
+  "dard_venin": {
+    "nom": "Dard-Venin",
+    "attaque": "Contact",
+    "type": "Poison",
+    "description": "Un dard toxique qui transperce l'ennemi. Peut aussi l'empoisonner.",
+    "de": "1d4",
+    "effet": "10% de chance d'empoisonner la cible pour 3 tours (Dégâts : 1D4/tour)"
+  },
+  "dark_lariat": {
+    "nom": "Dark Lariat",
+    "attaque": "",
+    "type": "Ténèbres",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "deflagration": {
+    "nom": "Déflagration",
+    "attaque": "",
+    "type": "Feu",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "degommage": {
+    "nom": "Dégommage",
+    "attaque": "",
+    "type": "Ténèbres",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "deluge_plasmique": {
+    "nom": "Déluge Plasmique",
+    "attaque": "",
+    "type": "Electrik",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "demi_tour": {
+    "nom": "Demi-Tour",
+    "attaque": "",
+    "type": "Insecte",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "depit": {
+    "nom": "Dépit",
+    "attaque": "Magique",
+    "type": "Spectre",
+    "description": "Le lanceur exprime son ressentiment",
+    "de": "-",
+    "effet": "Retire 4 PV à la cible."
+  },
+  "dernier_mot": {
+    "nom": "Dernier Mot",
+    "attaque": "",
+    "type": "Ténèbres",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "dernier_recours": {
+    "nom": "Dernier Recours",
+    "attaque": "",
+    "type": "Normal",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "destruction": {
+    "nom": "Destruction",
+    "attaque": "",
+    "type": "Normal",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "detection": {
+    "nom": "Détection",
+    "attaque": "",
+    "type": "Combat",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "detrempage": {
+    "nom": "Détrempage",
+    "attaque": "",
+    "type": "Eau",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "detricanon": {
+    "nom": "Détricanon",
+    "attaque": "",
+    "type": "Poison",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "detritus": {
+    "nom": "Détritus",
+    "attaque": "",
+    "type": "Poison",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "devoreve": {
+    "nom": "Dévorêve",
+    "attaque": "Distance",
+    "type": "Psy",
+    "description": "Le lanceur mange le rêve de l'ennemi endormi ",
+    "de": "2d10",
+    "effet": "Le lanceur récupère la moitié des PV perdus par la cible. La technique ne fonctionne que si la cible est endormie"
+  },
+  "direct_toxik": {
+    "nom": "Direct Toxik",
+    "attaque": "",
+    "type": "Poison",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "distorsion": {
+    "nom": "Distorsion",
+    "attaque": "",
+    "type": "Psy",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "don_naturel": {
+    "nom": "Don Naturel",
+    "attaque": "",
+    "type": "Normal",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "double_baffe": {
+    "nom": "Double Baffe",
+    "attaque": "",
+    "type": "Dragon",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "double_dard": {
+    "nom": "Double Dard",
+    "attaque": "Contact",
+    "type": "Insecte",
+    "description": "Frappe la cible",
+    "de": "1d4",
+    "effet": "Le lanceur attaque la cible deux fois. 20% de chance d'empoisonner la cible pendant 2 tours (dégâts : 1d4/tour)"
+  },
+  "double_pied": {
+    "nom": "Double Pied",
+    "attaque": "Contact",
+    "type": "Combat",
+    "description": "Deux coups de pied qui frappent l'ennemi deux fois d'affilée.",
+    "de": "1d4",
+    "effet": "Frappe la cible 2 fois"
+  },
+  "double_vol_e": {
+    "nom": "Double Volée",
+    "attaque": "",
+    "type": "Vol",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "doux_baiser": {
+    "nom": "Doux Baiser",
+    "attaque": "",
+    "type": "Fée",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "doux_parfum": {
+    "nom": "Doux Parfum",
+    "attaque": "Magique",
+    "type": "Normal",
+    "description": "Un doux parfum ",
+    "de": "-",
+    "effet": "Diminue la défense de tous les adversaires de 2"
+  },
+  "dracacophonie": {
+    "nom": "Dracacophonie",
+    "attaque": "",
+    "type": "Dragon",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "draco_ascension": {
+    "nom": "Draco-Ascension",
+    "attaque": "",
+    "type": "Vol",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "draco_charge": {
+    "nom": "Draco-Charge",
+    "attaque": "Contact",
+    "type": "Dragon",
+    "description": "Le lanceur frappe l'ennemi en prenant un air menaçant. ",
+    "de": "2d6+1",
+    "effet": ""
+  },
+  "draco_choc": {
+    "nom": "Draco-Choc",
+    "attaque": "Distance",
+    "type": "Dragon",
+    "description": "Le lanceur ouvre la bouche pour envoyer une onde de choc qui frappe l'ennemi.",
+    "de": "2d6+2",
+    "effet": ""
+  },
+  "draco_nergie": {
+    "nom": "Draco-Énergie",
+    "attaque": "",
+    "type": "Dragon",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "draco_fl_ches": {
+    "nom": "Draco-Flèches",
+    "attaque": "",
+    "type": "Dragon",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "draco_griffe": {
+    "nom": "Draco-Griffe",
+    "attaque": "",
+    "type": "Dragon",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "draco_marteau": {
+    "nom": "Draco-Marteau",
+    "attaque": "",
+    "type": "Dragon",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "draco_m_t_ore": {
+    "nom": "Draco-Météore",
+    "attaque": "",
+    "type": "Dragon",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "draco_queue": {
+    "nom": "Draco-Queue",
+    "attaque": "",
+    "type": "Dragon",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "draco_rage": {
+    "nom": "Draco-Rage",
+    "attaque": "Distance",
+    "type": "Dragon",
+    "description": "La colère du lanceur déclenche une onde de choc destructrice",
+    "de": "2d6+1",
+    "effet": ""
+  },
+  "draco_souffle": {
+    "nom": "Draco-Souffle",
+    "attaque": "",
+    "type": "Dragon",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "dynamo_poing": {
+    "nom": "Dynamo-Poing",
+    "attaque": "",
+    "type": "Combat",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "eau_revoir": {
+    "nom": "Eau Revoir",
+    "attaque": "",
+    "type": "Eau",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "eboulement": {
+    "nom": "Éboulement",
+    "attaque": "",
+    "type": "Roche",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "ebullilave": {
+    "nom": "Ébullilave",
+    "attaque": "",
+    "type": "Feu",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "ebullition": {
+    "nom": "Ébullition",
+    "attaque": "",
+    "type": "Eau",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "echange": {
+    "nom": "Échange",
+    "attaque": "",
+    "type": "Psy",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "echange_psy": {
+    "nom": "Échange Psy",
+    "attaque": "",
+    "type": "Psy",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "echo": {
+    "nom": "Écho",
+    "attaque": "",
+    "type": "Normal",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "eclair": {
+    "nom": "Éclair",
+    "attaque": "Distance",
+    "type": "Electrik",
+    "description": "Une décharge électrique tombe sur l'ennemi",
+    "de": "1d4",
+    "effet": "10% de chance de paralyser la cible."
+  },
+  "eclair_croix": {
+    "nom": "Éclair Croix",
+    "attaque": "",
+    "type": "Electrik",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "eclair_fou": {
+    "nom": "Éclair Fou",
+    "attaque": "",
+    "type": "Electrik",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "eclair_gel": {
+    "nom": "Éclair Gelé",
+    "attaque": "",
+    "type": "Glace",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "eclat_magique": {
+    "nom": "Éclat Magique",
+    "attaque": "",
+    "type": "Fée",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "eclat_spectral": {
+    "nom": "Éclat Spectral",
+    "attaque": "",
+    "type": "Spectre",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "eclate_griffe": {
+    "nom": "Éclate Griffe",
+    "attaque": "",
+    "type": "Normal",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "eclate_roc": {
+    "nom": "Éclate-Roc",
+    "attaque": "",
+    "type": "Combat",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "eclats_glace": {
+    "nom": "Éclats Glace",
+    "attaque": "",
+    "type": "Glace",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "e_coque": {
+    "nom": "E-Coque",
+    "attaque": "",
+    "type": "Normal",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "eco_sphere": {
+    "nom": "Éco-Sphère",
+    "attaque": "",
+    "type": "Plante",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "ecrasement": {
+    "nom": "Écrasement",
+    "attaque": "",
+    "type": "Normal",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "ecras_face": {
+    "nom": "Écras'Face",
+    "attaque": "Contact",
+    "type": "Normal",
+    "description": "Écrase l'ennemi avec les pattes avant ou la queue, par exemple.",
+    "de": "1d4",
+    "effet": ""
+  },
+  "ecrous_d_poing": {
+    "nom": "Écrous d'Poing",
+    "attaque": "",
+    "type": "Acier",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "ecume": {
+    "nom": "Écume",
+    "attaque": "Distance",
+    "type": "Eau",
+    "description": "Des bulles frappent l'ennemi.",
+    "de": "1d4+1",
+    "effet": "10% de chance de baisser la Dextérité de la cible de 1"
+  },
+  "effort": {
+    "nom": "Effort",
+    "attaque": "",
+    "type": "Normal",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "lecanon": {
+    "nom": "Élecanon",
+    "attaque": "",
+    "type": "Electrik",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "lectacle": {
+    "nom": "Électacle",
+    "attaque": "",
+    "type": "Electrik",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "lectrikipik": {
+    "nom": "Électrikipik",
+    "attaque": "",
+    "type": "Electrik",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "lectrisation": {
+    "nom": "Électrisation",
+    "attaque": "",
+    "type": "Electrik",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "embargo": {
+    "nom": "Embargo",
+    "attaque": "",
+    "type": "Ténèbres",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "empal_korne": {
+    "nom": "Empal'Korne",
+    "attaque": "",
+    "type": "Normal",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "encore": {
+    "nom": "Encore",
+    "attaque": "Magique",
+    "type": "Normal",
+    "description": "",
+    "de": "-",
+    "effet": "Oblige la cible à répéter sa dernière action pendant 3 tours."
+  },
+  "encornebois": {
+    "nom": "Encornebois",
+    "attaque": "",
+    "type": "Plante",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "engrenage": {
+    "nom": "Engrenage",
+    "attaque": "",
+    "type": "Acier",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "enroulement": {
+    "nom": "Enroulement",
+    "attaque": "",
+    "type": "Poison",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "entrave": {
+    "nom": "Entrave",
+    "attaque": "Magique",
+    "type": "Normal",
+    "description": "Empêche la cible de répéter sa dernière attaque.",
+    "de": "-",
+    "effet": "Dure quatre tours. Echoue si la cible n'a pas attaqué au sur ce tour."
+  },
+  "ere_glaciaire": {
+    "nom": "Ère Glaciaire",
+    "attaque": "",
+    "type": "Glace",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "eructation": {
+    "nom": "Éructation",
+    "attaque": "",
+    "type": "Poison",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "eruption": {
+    "nom": "Éruption",
+    "attaque": "",
+    "type": "Feu",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "escalade": {
+    "nom": "Escalade",
+    "attaque": "",
+    "type": "Normal",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "escarmouche": {
+    "nom": "Escarmouche",
+    "attaque": "",
+    "type": "Insecte",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "esprit_frappeur": {
+    "nom": "Esprit Frappeur",
+    "attaque": "",
+    "type": "Spectre",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "essorage": {
+    "nom": "Essorage",
+    "attaque": "",
+    "type": "Normal",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "estocorne": {
+    "nom": "Estocorne",
+    "attaque": "",
+    "type": "Acier",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "etincelle": {
+    "nom": "Étincelle",
+    "attaque": "Magique",
+    "type": "Electrik",
+    "description": "Lance une charge électrique sur l'ennemi",
+    "de": "2d6",
+    "effet": "30% de chance de paralyser la cible pour 2 tours"
+  },
+  "etonnement": {
+    "nom": "Étonnement",
+    "attaque": "",
+    "type": "Spectre",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "etreinte": {
+    "nom": "Étreinte",
+    "attaque": "",
+    "type": "Normal",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "evo_chardasso": {
+    "nom": "Évo-Chardasso",
+    "attaque": "",
+    "type": "Normal",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "evo_cong_lo": {
+    "nom": "Évo-Congélo",
+    "attaque": "",
+    "type": "Glace",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "evo_dynamo": {
+    "nom": "Évo-Dynamo",
+    "attaque": "",
+    "type": "Electrik",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "evo_ecolo": {
+    "nom": "Évo-Écolo",
+    "attaque": "",
+    "type": "Plante",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "evo_fabulo": {
+    "nom": "Évo-Fabulo",
+    "attaque": "",
+    "type": "Fée",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "evo_flambo": {
+    "nom": "Évo-Flambo",
+    "attaque": "",
+    "type": "Feu",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "evo_psycho": {
+    "nom": "Évo-Psycho",
+    "attaque": "",
+    "type": "Psy",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "evo_tenebro": {
+    "nom": "Évo-Ténébro",
+    "attaque": "",
+    "type": "Ténèbres",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "vo_thalasso": {
+    "nom": "Évo-Thalasso",
+    "attaque": "",
+    "type": "Eau",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "ex_cu_son": {
+    "nom": "Exécu-Son",
+    "attaque": "",
+    "type": "Ténèbres",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "explo_brume": {
+    "nom": "Explo-Brume",
+    "attaque": "",
+    "type": "Fée",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "exploforce": {
+    "nom": "Exploforce",
+    "attaque": "",
+    "type": "Combat",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "explonuit": {
+    "nom": "Explonuit",
+    "attaque": "",
+    "type": "Ténèbres",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "explosion": {
+    "nom": "Explosion",
+    "attaque": "",
+    "type": "Normal",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "extrasenseur": {
+    "nom": "Extrasenseur",
+    "attaque": "",
+    "type": "Psy",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "exuviation": {
+    "nom": "Exuviation",
+    "attaque": "",
+    "type": "Normal",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "fa_ade": {
+    "nom": "Façade",
+    "attaque": "",
+    "type": "Normal",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "fatal_foudre": {
+    "nom": "Fatal-Foudre",
+    "attaque": "",
+    "type": "Electrik",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "faux_chage": {
+    "nom": "Faux-Chage",
+    "attaque": "",
+    "type": "Normal",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "feinte": {
+    "nom": "Feinte",
+    "attaque": "Contact",
+    "type": "Ténèbres",
+    "description": "Le lanceur feinte sa cible",
+    "de": "2d4",
+    "effet": ""
+  },
+  "fertilisation": {
+    "nom": "Fertilisation",
+    "attaque": "",
+    "type": "Sol",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "feu_d_enfer": {
+    "nom": "Feu d'Enfer",
+    "attaque": "",
+    "type": "Feu",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "feu_ensorcel": {
+    "nom": "Feu Ensorcelé",
+    "attaque": "",
+    "type": "Feu",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "feu_envieux": {
+    "nom": "Feu Envieux",
+    "attaque": "",
+    "type": "Feu",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "feu_follet": {
+    "nom": "Feu Follet",
+    "attaque": "Distance",
+    "type": "Feu",
+    "description": "Le lanceur projette des flammes maléfiques sur la cible",
+    "de": "-",
+    "effet": "Brûle la cible sur trois tours ( dégâts : 1d4/tour )"
+  },
+  "feu_glac": {
+    "nom": "Feu Glacé",
+    "attaque": "",
+    "type": "Glace",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "feu_sacr": {
+    "nom": "Feu Sacré",
+    "attaque": "",
+    "type": "Feu",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "feuillage": {
+    "nom": "Feuillage",
+    "attaque": "",
+    "type": "Plante",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "feuille_magik": {
+    "nom": "Feuille Magik",
+    "attaque": "",
+    "type": "Plante",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "fil_toxique": {
+    "nom": "Fil Toxique",
+    "attaque": "",
+    "type": "Poison",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "flair": {
+    "nom": "Flair",
+    "attaque": "Magique",
+    "type": "Normal",
+    "description": "Permet de toucher un Pokémon Spectre avec n'importe quelle capacité ou de toucher un ennemi insaisissable.",
+    "de": "-",
+    "effet": "Permet de toucher un Pokémon Spectre avec n'importe quelle capacité ou de toucher un ennemi insaisissable."
+  },
+  "flamme_bleue": {
+    "nom": "Flamme Bleue",
+    "attaque": "",
+    "type": "Feu",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "flamme_croix": {
+    "nom": "Flamme Croix",
+    "attaque": "",
+    "type": "Feu",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "flamme_ultime": {
+    "nom": "Flamme Ultime",
+    "attaque": "",
+    "type": "Feu",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "flammeche": {
+    "nom": "Flammèche",
+    "attaque": "Distance",
+    "type": "Feu",
+    "description": "L'ennemi est attaqué par une faible flamme. Peut aussi le brûler.",
+    "de": "1d4",
+    "effet": "10% de chance de brûler la cible"
+  },
+  "flash": {
+    "nom": "Flash",
+    "attaque": "",
+    "type": "Normal",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "flatterie": {
+    "nom": "Flatterie",
+    "attaque": "",
+    "type": "Ténèbres",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "flying_press": {
+    "nom": "Flying Press",
+    "attaque": "",
+    "type": "Combat",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "fontaine_de_vie": {
+    "nom": "Fontaine de Vie",
+    "attaque": "",
+    "type": "Eau",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "force": {
+    "nom": "Force",
+    "attaque": "",
+    "type": "Normal",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "force_ajout_e": {
+    "nom": "Force Ajoutée",
+    "attaque": "",
+    "type": "Psy",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "force_cach_e": {
+    "nom": "Force Cachée",
+    "attaque": "",
+    "type": "Normal",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "force_chtonienne": {
+    "nom": "Force Chtonienne",
+    "attaque": "",
+    "type": "Sol",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "force_cosmique": {
+    "nom": "Force Cosmique",
+    "attaque": "",
+    "type": "Psy",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "force_g": {
+    "nom": "Force G",
+    "attaque": "",
+    "type": "Plante",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "force_nature": {
+    "nom": "Force Nature",
+    "attaque": "",
+    "type": "Normal",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "force_poigne": {
+    "nom": "Force Poigne",
+    "attaque": "Contact",
+    "type": "Normal",
+    "description": "L'ennemi est attrapé et compressé par les côtés.",
+    "de": "2d4",
+    "effet": ""
+  },
+  "forte_paume": {
+    "nom": "Forte-Paume",
+    "attaque": "",
+    "type": "Combat",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "fouet_de_feu": {
+    "nom": "Fouet de Feu",
+    "attaque": "",
+    "type": "Feu",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "fourbette": {
+    "nom": "Fourbette",
+    "attaque": "",
+    "type": "Ténèbres",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "fracass_tete": {
+    "nom": "Fracass'Tête",
+    "attaque": "",
+    "type": "Roche",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "frappe_atlas": {
+    "nom": "Frappe Atlas",
+    "attaque": "",
+    "type": "Combat",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "frappe_psy": {
+    "nom": "Frappe Psy",
+    "attaque": "",
+    "type": "Psy",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "frenesie": {
+    "nom": "Frénésie",
+    "attaque": "Contact",
+    "type": "Normal",
+    "description": "Le pokémon entre dans une frénésie dangereuse.",
+    "de": "1d4",
+    "effet": "A la fin du tour, le lanceur reçoit +1 ATT pour chaque coup qu'il a reçu pendant le tour."
+  },
+  "frotte_frimousse": {
+    "nom": "Frotte-Frimousse",
+    "attaque": "",
+    "type": "Electrik",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "frustration": {
+    "nom": "Frustration",
+    "attaque": "",
+    "type": "Normal",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "fulmifer": {
+    "nom": "Fulmifer",
+    "attaque": "",
+    "type": "Acier",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "fulmigraine": {
+    "nom": "Fulmigraine",
+    "attaque": "",
+    "type": "Plante",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "fureur_ardente": {
+    "nom": "Fureur Ardente",
+    "attaque": "",
+    "type": "Ténèbres",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "furie": {
+    "nom": "Furie",
+    "attaque": "Contact",
+    "type": "Normal",
+    "description": "Frappe l'ennemi deux à cinq fois d'affilée avec un bec ou une corne, par exemple.",
+    "de": "1d4",
+    "effet": "Frappe de 1 à 5 fois (lancer d'abord le jet de dégâts, puis le jet de répétition)"
+  },
+  "furie_dimension": {
+    "nom": "Furie Dimension",
+    "attaque": "",
+    "type": "Ténèbres",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "furie_bond": {
+    "nom": "Furie-Bond",
+    "attaque": "",
+    "type": "Insecte",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "garde_florale": {
+    "nom": "Garde Florale",
+    "attaque": "",
+    "type": "Fée",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "garde_large": {
+    "nom": "Garde Large",
+    "attaque": "",
+    "type": "Roche",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "garde_joues": {
+    "nom": "Garde-à-Joues",
+    "attaque": "",
+    "type": "Normal",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "gaz_corrosif": {
+    "nom": "Gaz Corrosif",
+    "attaque": "",
+    "type": "Poison",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "gaz_toxik": {
+    "nom": "Gaz Toxik",
+    "attaque": "Magique",
+    "type": "Poison",
+    "description": "Un nuage de gaz toxique est projeté sur l'ennemi pour l'empoisonner.",
+    "de": "-",
+    "effet": "Empoisonne tous les pokémons adverses pendant 5 tours. Inflige 1d4 de dégâts à chaque tour."
+  },
+  "g_o_contr_le": {
+    "nom": "Géo-Contrôle",
+    "attaque": "",
+    "type": "Fée",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "gicl_do": {
+    "nom": "Giclédo",
+    "attaque": "",
+    "type": "Eau",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "giga_impact": {
+    "nom": "Giga Impact",
+    "attaque": "",
+    "type": "Normal",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "giga_sangsue": {
+    "nom": "Giga-Sangsue",
+    "attaque": "",
+    "type": "Plante",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "gigotage": {
+    "nom": "Gigotage",
+    "attaque": "Contact",
+    "type": "Normal",
+    "description": "Le lanceur attaque en gigotant dans tous les sens.",
+    "de": "-",
+    "effet": "Les dégâts de base de l'attaque sont de 5 si le lanceur a plus de la moitié de sa Vitalité, sinon ils sont de 10,"
+  },
+  "glaciation": {
+    "nom": "Glaciation",
+    "attaque": "",
+    "type": "Glace",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "gladius_maximus": {
+    "nom": "Gladius Maximus",
+    "attaque": "",
+    "type": "Acier",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "glas_de_soin": {
+    "nom": "Glas de Soin",
+    "attaque": "",
+    "type": "Normal",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "gliss_herbe": {
+    "nom": "Gliss'Herbe",
+    "attaque": "",
+    "type": "Plante",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "gonflette": {
+    "nom": "Gonflette",
+    "attaque": "",
+    "type": "Combat",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "goudronnage": {
+    "nom": "Goudronnage",
+    "attaque": "",
+    "type": "Roche",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "gravit": {
+    "nom": "Gravité",
+    "attaque": "",
+    "type": "Psy",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "gr_le": {
+    "nom": "Grêle",
+    "attaque": "",
+    "type": "Glace",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "gribouille": {
+    "nom": "Gribouille",
+    "attaque": "",
+    "type": "Normal",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "griffe": {
+    "nom": "Griffe",
+    "attaque": "Contact",
+    "type": "Normal",
+    "description": "Le Pokémon attaque au contact avec ses griffes.",
+    "de": "1d4",
+    "effet": ""
+  },
+  "griffe_acier": {
+    "nom": "Griffe Acier",
+    "attaque": "",
+    "type": "Acier",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "griffe_ombre": {
+    "nom": "Griffe Ombre",
+    "attaque": "",
+    "type": "Spectre",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "grimace": {
+    "nom": "Grimace",
+    "attaque": "Magique",
+    "type": "Normal",
+    "description": "Le lanceur fait une grimace qui effraie l'ennemi et réduit beaucoup sa Vitesse",
+    "de": "-",
+    "effet": "Baisse l'attaque de la cible de 2"
+  },
+  "grincement": {
+    "nom": "Grincement",
+    "attaque": "Magique",
+    "type": "Normal",
+    "description": "Le lanceur émet un son strident qui donne envie de se boucher les oreilles",
+    "de": "-",
+    "effet": "Baisse la défense de la cible de 3"
+  },
+  "grobisou": {
+    "nom": "Grobisou",
+    "attaque": "",
+    "type": "Normal",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "grondement": {
+    "nom": "Grondement",
+    "attaque": "",
+    "type": "Normal",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "groz_yeux": {
+    "nom": "Groz'Yeux",
+    "attaque": "Magique",
+    "type": "Normal",
+    "description": "Le lanceur fait les gros yeux à l'ennemi pour l'intimider et baisser sa Défense.",
+    "de": "-",
+    "effet": "Diminue la défense de la cible de 1."
+  },
+  "guillotine": {
+    "nom": "Guillotine",
+    "attaque": "",
+    "type": "Normal",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "gyroballe": {
+    "nom": "Gyroballe",
+    "attaque": "",
+    "type": "Acier",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "halloween": {
+    "nom": "Halloween",
+    "attaque": "",
+    "type": "Spectre",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "hantise": {
+    "nom": "Hantise",
+    "attaque": "",
+    "type": "Spectre",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "harcelement": {
+    "nom": "Harcèlement",
+    "attaque": "",
+    "type": "Insecte",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "hate": {
+    "nom": "Hâte",
+    "attaque": "Magique",
+    "type": "Psy",
+    "description": "Le lanceur se relaxe et allège son corps pour beaucoup augmenter sa Vitesse.",
+    "de": "-",
+    "effet": "Augmente la vitesse du lanceur de 10 pour deux tours."
+  },
+  "hurlement": {
+    "nom": "Hurlement",
+    "attaque": "Magique",
+    "type": "Normal",
+    "description": "Le lanceur pousse un hurlement terrible qui repousse les cibles",
+    "de": "-",
+    "effet": "Lors d'un combat officiel, remplace le pokémon adverse par l'un de son équipe"
+  },
+  "hurle_temps": {
+    "nom": "Hurle-Temps",
+    "attaque": "",
+    "type": "Dragon",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "hydroblast": {
+    "nom": "Hydroblast",
+    "attaque": "",
+    "type": "Eau",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "hydrocanon": {
+    "nom": "Hydrocanon",
+    "attaque": "Distance",
+    "type": "Eau",
+    "description": "Un puissant jet d'eau est dirigé sur l'ennemi.",
+    "de": "2d10+3",
+    "effet": ""
+  },
+  "hydro_queue": {
+    "nom": "Hydro-Queue",
+    "attaque": "Contact",
+    "type": "Eau",
+    "description": "Le lanceur attaque en balançant sa queue comme une lame de fond en pleine tempête.",
+    "de": "2d6+2",
+    "effet": ""
+  },
+  "hypnose": {
+    "nom": "Hypnose",
+    "attaque": "Distance",
+    "type": "Psy",
+    "description": "Le lanceur hypnotise la cible pour la plonger dans un profond sommeil.",
+    "de": "-",
+    "effet": "Endort la cible pour 4 tours."
+  },
+  "imitation": {
+    "nom": "Imitation",
+    "attaque": "",
+    "type": "Psy",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "implore": {
+    "nom": "Implore",
+    "attaque": "",
+    "type": "Normal",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "incendie": {
+    "nom": "Incendie",
+    "attaque": "",
+    "type": "Feu",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "interversion": {
+    "nom": "Interversion",
+    "attaque": "",
+    "type": "Psy",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "ire_de_la_nature": {
+    "nom": "Ire de la Nature",
+    "attaque": "",
+    "type": "Fée",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "jackpot": {
+    "nom": "Jackpot",
+    "attaque": "",
+    "type": "Normal",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "jet_de_sable": {
+    "nom": "Jet de Sable",
+    "attaque": "Magique",
+    "type": "Sol",
+    "description": "Lance du sable au visage de l'ennemi",
+    "de": "-",
+    "effet": "Baisse l'attaque de la cible de 2"
+  },
+  "jet_de_vapeur": {
+    "nom": "Jet de Vapeur",
+    "attaque": "",
+    "type": "Eau",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "jet_pierres": {
+    "nom": "Jet-Pierres",
+    "attaque": "",
+    "type": "Roche",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "joute_astrale": {
+    "nom": "Joute Astrale",
+    "attaque": "",
+    "type": "Combat",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "jugement": {
+    "nom": "Jugement",
+    "attaque": "",
+    "type": "Normal",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "kokiyarme": {
+    "nom": "Kokiyarme",
+    "attaque": "",
+    "type": "Poison",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "koud_korne": {
+    "nom": "Koud'Korne",
+    "attaque": "Contact",
+    "type": "Normal",
+    "description": "Frappe l'ennemi d'un coup de corne pointue pour infliger des dégâts.",
+    "de": "2d6",
+    "effet": ""
+  },
+  "lait_boire": {
+    "nom": "Lait à Boire",
+    "attaque": "",
+    "type": "Normal",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "lame_d_air": {
+    "nom": "Lame d'Air",
+    "attaque": "",
+    "type": "Vol",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "lame_de_roc": {
+    "nom": "Lame de Roc",
+    "attaque": "",
+    "type": "Roche",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "lame_feuille": {
+    "nom": "Lame Feuille",
+    "attaque": "",
+    "type": "Plante",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "lame_ointe": {
+    "nom": "Lame Ointe",
+    "attaque": "",
+    "type": "Combat",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "lame_pang_enne": {
+    "nom": "Lame Pangéenne",
+    "attaque": "",
+    "type": "Sol",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "lame_sainte": {
+    "nom": "Lame Sainte",
+    "attaque": "",
+    "type": "Combat",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "lame_solaire": {
+    "nom": "Lame Solaire",
+    "attaque": "",
+    "type": "Plante",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "lance_de_glace": {
+    "nom": "Lance de Glace",
+    "attaque": "",
+    "type": "Glace",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "lance_boue": {
+    "nom": "Lance-Boue",
+    "attaque": "Magique",
+    "type": "Sol",
+    "description": "Réduit la puissance des attaques Électrik",
+    "de": "-",
+    "effet": "Les dégâts causés par les attaques Électrik sont réduites de moitié"
+  },
+  "lanc_crou": {
+    "nom": "Lancécrou",
+    "attaque": "",
+    "type": "Acier",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "lance_flammes": {
+    "nom": "Lance-Flammes",
+    "attaque": "",
+    "type": "Feu",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "lance_soleil": {
+    "nom": "Lance-Soleil",
+    "attaque": "Distance",
+    "type": "Plante",
+    "description": "Absorbe la lumière au premier tour et envoie un rayon puissant au tour suivant.",
+    "de": "2d12+3",
+    "effet": "Accumule de l'énergie au premier tour et envoie un rayon au second (le jet d'attaque se fait uniquement au premier tour)"
+  },
+  "larcin": {
+    "nom": "Larcin",
+    "attaque": "",
+    "type": "Ténèbres",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "larme_l_oeil": {
+    "nom": "Larme à l'Oeil",
+    "attaque": "",
+    "type": "Normal",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "laser_glace": {
+    "nom": "Laser Glace",
+    "attaque": "",
+    "type": "Glace",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "laser_infinimax": {
+    "nom": "Laser Infinimax",
+    "attaque": "",
+    "type": "Dragon",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "laser_m_t_ore": {
+    "nom": "Laser Météore",
+    "attaque": "",
+    "type": "Roche",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "laser_prisme": {
+    "nom": "Laser Prisme",
+    "attaque": "",
+    "type": "Psy",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "lechouille": {
+    "nom": "Léchouille",
+    "attaque": "Contact",
+    "type": "Spectre",
+    "description": "Un grand coup de langue qui inflige des dégâts à l'ennemi.",
+    "de": "1d4",
+    "effet": "30% de chance de paralyser la cible pour deux tours"
+  },
+  "levikinesie": {
+    "nom": "Lévikinésie",
+    "attaque": "",
+    "type": "Psy",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "lien_du_destin": {
+    "nom": "Lien du Destin",
+    "attaque": "",
+    "type": "Spectre",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "ligotage": {
+    "nom": "Ligotage",
+    "attaque": "Contact",
+    "type": "Normal",
+    "description": "Le lanceur ligote l'ennemi avec des lianes ou son corps pour l'écraser durant cinq tours.",
+    "de": "-",
+    "effet": "Enlève 10% des PV max de la cible pendant 5 tours. Celle-ci ne peut être remplacée."
+  },
+  "lilliput": {
+    "nom": "Lilliput",
+    "attaque": "",
+    "type": "Normal",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "lire_esprit": {
+    "nom": "Lire-Esprit",
+    "attaque": "",
+    "type": "Normal",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "lumi_clat": {
+    "nom": "Lumi-Éclat",
+    "attaque": "",
+    "type": "Psy",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "lumiere_du_n_ant": {
+    "nom": "Lumière du Néant",
+    "attaque": "",
+    "type": "Fée",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "luminocanon": {
+    "nom": "Luminocanon",
+    "attaque": "",
+    "type": "Acier",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "lumi_queue": {
+    "nom": "Lumi-Queue",
+    "attaque": "",
+    "type": "Insecte",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "lutte": {
+    "nom": "Lutte",
+    "attaque": "",
+    "type": "Aucun",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "lyophilisation": {
+    "nom": "Lyophilisation",
+    "attaque": "",
+    "type": "Glace",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "mach_punch": {
+    "nom": "Mach Punch",
+    "attaque": "",
+    "type": "Combat",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "machination": {
+    "nom": "Machination",
+    "attaque": "",
+    "type": "Ténèbres",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "machouille": {
+    "nom": "Mâchouille",
+    "attaque": "",
+    "type": "Ténèbres",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "magne_controle": {
+    "nom": "Magné-Contrôle",
+    "attaque": "",
+    "type": "Electrik",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "mains_jointes": {
+    "nom": "Mains Jointes",
+    "attaque": "",
+    "type": "Normal",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "malediction": {
+    "nom": "Malédiction",
+    "attaque": "Magique",
+    "type": "Spectre",
+    "description": "Lance une malédiction sur la cible.",
+    "de": "-",
+    "effet": "Si le lanceur est de type spectre, il sacrifie la moitié de sa Vitalité maximale pour maudire une cible qui perd 1/4 de sa Vitalité à chaque tour. Sinon augmente la Force de 1 et baisse sa Dextérité de 1."
+  },
+  "malefice_sylvain": {
+    "nom": "Maléfice Sylvain",
+    "attaque": "",
+    "type": "Plante",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "mania": {
+    "nom": "Mania",
+    "attaque": "",
+    "type": "Normal",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "marteau_de_glace": {
+    "nom": "Marteau de Glace",
+    "attaque": "",
+    "type": "Glace",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "martobois": {
+    "nom": "Martobois",
+    "attaque": "",
+    "type": "Plante",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "marto_poing": {
+    "nom": "Marto-Poing",
+    "attaque": "",
+    "type": "Combat",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "massd_os": {
+    "nom": "Massd'Os",
+    "attaque": "Contact",
+    "type": "Sol",
+    "description": "Utilise sa masse osseuse pour frapper l'ennemi.",
+    "de": "2d6",
+    "effet": "10% de chance d'apeurer la cible."
+  },
+  "mawashi_geri": {
+    "nom": "Mawashi Geri",
+    "attaque": "",
+    "type": "Combat",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "megacorne": {
+    "nom": "Mégacorne",
+    "attaque": "",
+    "type": "Insecte",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "megafouet": {
+    "nom": "Mégafouet",
+    "attaque": "",
+    "type": "Plante",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "megaphone": {
+    "nom": "Mégaphone",
+    "attaque": "",
+    "type": "Normal",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "mega_sangsue": {
+    "nom": "Méga-Sangsue",
+    "attaque": "",
+    "type": "Plante",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "metalaser": {
+    "nom": "Métalaser",
+    "attaque": "",
+    "type": "Acier",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "metalliroue": {
+    "nom": "Métalliroue",
+    "attaque": "",
+    "type": "Acier",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "meteores": {
+    "nom": "Météores",
+    "attaque": "Distance",
+    "type": "Normal",
+    "description": "Le lanceur envoie des rayons d'étoiles. ",
+    "de": "2d4",
+    "effet": "N'échoue jamais"
+  },
+  "metronome": {
+    "nom": "Métronome",
+    "attaque": "",
+    "type": "Normal",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "mimique": {
+    "nom": "Mimique",
+    "attaque": "Magique",
+    "type": "Vol",
+    "description": "Imite la cible avec sa propre attaque",
+    "de": "-",
+    "effet": "Contrecarre une attaque de la cible avec la même attaque"
+  },
+  "mimi_queue": {
+    "nom": "Mimi-Queue",
+    "attaque": "Magique",
+    "type": "Normal",
+    "description": "Le lanceur remue son adorable queue pour tromper la vigilance de l'ennemi et baisser sa Défense.",
+    "de": "",
+    "effet": "Diminue la défense de la cible de 1."
+  },
+  "miroi_tir": {
+    "nom": "Miroi-Tir",
+    "attaque": "Magique",
+    "type": "Acier",
+    "description": "",
+    "de": "-",
+    "effet": "30% de chance de baisser l'attaque de 5"
+  },
+  "mitra_poing": {
+    "nom": "Mitra-Poing",
+    "attaque": "",
+    "type": "Combat",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "moi_d_abord": {
+    "nom": "Moi d'Abord",
+    "attaque": "",
+    "type": "Normal",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "monte_tension": {
+    "nom": "Monte-Tension",
+    "attaque": "",
+    "type": "Electrik",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "morphing": {
+    "nom": "Morphing",
+    "attaque": "",
+    "type": "Normal",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "morsure": {
+    "nom": "Morsure",
+    "attaque": "Contact",
+    "type": "Ténèbres",
+    "description": "L'ennemi est mordu par de tranchantes canines. Peut l'apeurer.",
+    "de": "2d4",
+    "effet": "30% de chance d'apeurer la cible"
+  },
+  "mort_ailes": {
+    "nom": "Mort'Ailes",
+    "attaque": "",
+    "type": "Vol",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "mur_de_fer": {
+    "nom": "Mur de Fer",
+    "attaque": "",
+    "type": "Acier",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "mur_lumiere": {
+    "nom": "Mur Lumière",
+    "attaque": "Magique",
+    "type": "Psy",
+    "description": "Crée un fabuleux mur de lumière",
+    "de": "-",
+    "effet": "Divise par 2 les dégâts subits par le lanceur pendant 5 tours"
+  },
+  "myria_fleches": {
+    "nom": "Myria-Flèches",
+    "attaque": "",
+    "type": "Sol",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "myria_vagues": {
+    "nom": "Myria-Vagues",
+    "attaque": "",
+    "type": "Sol",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "nappage": {
+    "nom": "Nappage",
+    "attaque": "",
+    "type": "Fée",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "nitrocharge": {
+    "nom": "Nitrocharge",
+    "attaque": "",
+    "type": "Feu",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "noeud_herbe": {
+    "nom": "Noeud Herbe",
+    "attaque": "",
+    "type": "Plante",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "nuee_de_poudre": {
+    "nom": "Nuée de Poudre",
+    "attaque": "",
+    "type": "Insecte",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "ocroupi": {
+    "nom": "Ocroupi",
+    "attaque": "",
+    "type": "Eau",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "octazooka": {
+    "nom": "Octazooka",
+    "attaque": "",
+    "type": "Eau",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "octoprise": {
+    "nom": "Octoprise",
+    "attaque": "",
+    "type": "Combat",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "oeil_miracle": {
+    "nom": "Oeil Miracle",
+    "attaque": "Magique",
+    "type": "Psy",
+    "description": "Le regard du lanceur perce les esprits fantômes",
+    "de": "",
+    "effet": "Supprime l'insensibilité des Pokémon Ténèbres aux attaques Psy"
+  },
+  "ombre_nocturne": {
+    "nom": "Ombre Nocturne",
+    "attaque": "Magique",
+    "type": "Spectre",
+    "description": "Le lanceur invoque un mirage qui inflige des dégâts",
+    "de": "-",
+    "effet": "Inflige des dégâts équivalents au niveau du lanceur/10."
+  },
+  "ombre_port_e": {
+    "nom": "Ombre Portée",
+    "attaque": "",
+    "type": "Spectre",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "onde_bor_ale": {
+    "nom": "Onde Boréale",
+    "attaque": "",
+    "type": "Glace",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "onde_de_choc": {
+    "nom": "Onde de Choc",
+    "attaque": "",
+    "type": "Electrik",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "onde_folie": {
+    "nom": "Onde Folie",
+    "attaque": "Magique",
+    "type": "Spectre",
+    "description": "Le lanceur émet une lumière étrange ",
+    "de": "-",
+    "effet": "La cible est confuse pour 3 tours"
+  },
+  "onde_originelle": {
+    "nom": "Onde Originelle",
+    "attaque": "",
+    "type": "Eau",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "onde_vide": {
+    "nom": "Onde Vide",
+    "attaque": "",
+    "type": "Combat",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "ondes_tranges": {
+    "nom": "Ondes Étranges",
+    "attaque": "",
+    "type": "Electrik",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "orage_adamantin": {
+    "nom": "Orage Adamantin",
+    "attaque": "",
+    "type": "Roche",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "os_ombre": {
+    "nom": "Os Ombre",
+    "attaque": "",
+    "type": "Spectre",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "osmerang": {
+    "nom": "Osmerang",
+    "attaque": "",
+    "type": "Sol",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "ouragan": {
+    "nom": "Ouragan",
+    "attaque": "Distance",
+    "type": "Dragon",
+    "description": "Déclenche un terrible ouragan qui s'abat sur l'ennemi",
+    "de": "1d4+1",
+    "effet": "Les dégâts sont doublés si la cible est dans les airs."
+  },
+  "overdrive": {
+    "nom": "Overdrive",
+    "attaque": "",
+    "type": "Electrik",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "papillodanse": {
+    "nom": "Papillodanse",
+    "attaque": "Magique",
+    "type": "Insecte",
+    "description": "Une danse mystique dont le rythme parfait",
+    "de": "",
+    "effet": "Augmente l'attaque et la défense du lanceur de 2"
+  },
+  "par_ici": {
+    "nom": "Par Ici",
+    "attaque": "",
+    "type": "Normal",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "parabocharge": {
+    "nom": "Parabocharge",
+    "attaque": "",
+    "type": "Electrik",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "para_spore": {
+    "nom": "Para-Spore",
+    "attaque": "Magique",
+    "type": "Plante",
+    "description": "Le lanceur répand sur l'ennemi une poudre",
+    "de": "-",
+    "effet": "Paralyse tous les adversaires pour 1 tour (sauf si la cible est déjà la cible d'un problème de statut)"
+  },
+  "paresse": {
+    "nom": "Paresse",
+    "attaque": "",
+    "type": "Normal",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "partage_force": {
+    "nom": "Partage Force",
+    "attaque": "",
+    "type": "Psy",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "partage_garde": {
+    "nom": "Partage Garde",
+    "attaque": "",
+    "type": "Psy",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "passe_cadeau": {
+    "nom": "Passe-Cadeau",
+    "attaque": "",
+    "type": "Normal",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "passe_passe": {
+    "nom": "Passe-Passe",
+    "attaque": "",
+    "type": "Ténèbres",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "patience": {
+    "nom": "Patience",
+    "attaque": "",
+    "type": "Normal",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "peign_e": {
+    "nom": "Peignée",
+    "attaque": "",
+    "type": "Normal",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "permucoeur": {
+    "nom": "Permucoeur",
+    "attaque": "",
+    "type": "Psy",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "permuforce": {
+    "nom": "Permuforce",
+    "attaque": "",
+    "type": "Psy",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "permugarde": {
+    "nom": "Permugarde",
+    "attaque": "",
+    "type": "Psy",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "permuvitesse": {
+    "nom": "Permuvitesse",
+    "attaque": "",
+    "type": "Psy",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "photocopie": {
+    "nom": "Photocopie",
+    "attaque": "",
+    "type": "Normal",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "photo_geyser": {
+    "nom": "Photo-Geyser",
+    "attaque": "",
+    "type": "Psy",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "phytomixeur": {
+    "nom": "Phytomixeur",
+    "attaque": "",
+    "type": "Plante",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "picanon": {
+    "nom": "Picanon",
+    "attaque": "",
+    "type": "Normal",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "pico_d_fense": {
+    "nom": "Pico-Défense",
+    "attaque": "",
+    "type": "Plante",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "picore": {
+    "nom": "Picore",
+    "attaque": "Contact",
+    "type": "Vol",
+    "description": "Le lanceur picore la cible.",
+    "de": "2d6",
+    "effet": ""
+  },
+  "picots": {
+    "nom": "Picots",
+    "attaque": "",
+    "type": "Sol",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "picpic": {
+    "nom": "Picpic",
+    "attaque": "Distance",
+    "type": "Vol",
+    "description": "Frappe l'ennemi d'un bec pointu ou d'une corne pour infliger des dégâts.",
+    "de": "1d4",
+    "effet": ""
+  },
+  "pics_toxik": {
+    "nom": "Pics Toxik",
+    "attaque": "",
+    "type": "Poison",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "pied_br_leur": {
+    "nom": "Pied Brûleur",
+    "attaque": "",
+    "type": "Feu",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "pied_saut": {
+    "nom": "Pied Sauté",
+    "attaque": "",
+    "type": "Combat",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "pied_voltige": {
+    "nom": "Pied Voltige",
+    "attaque": "",
+    "type": "Combat",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "piege_de_roc": {
+    "nom": "Piège de Roc",
+    "attaque": "",
+    "type": "Roche",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "piege_de_venin": {
+    "nom": "Piège de Venin",
+    "attaque": "",
+    "type": "Poison",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "pietisol": {
+    "nom": "Piétisol",
+    "attaque": "",
+    "type": "Sol",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "pika_fracas": {
+    "nom": "Pika-Fracas",
+    "attaque": "",
+    "type": "Electrik",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "pika_pique": {
+    "nom": "Pika-Piqué",
+    "attaque": "",
+    "type": "Vol",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "pika_splash": {
+    "nom": "Pika-Splash",
+    "attaque": "",
+    "type": "Eau",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "pika_sprint": {
+    "nom": "Pika-Sprint",
+    "attaque": "",
+    "type": "Electrik",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "pilonnage": {
+    "nom": "Pilonnage",
+    "attaque": "",
+    "type": "Normal",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "pince_masse": {
+    "nom": "Pince-Masse",
+    "attaque": "",
+    "type": "Eau",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "pique": {
+    "nom": "Piqué",
+    "attaque": "Contact",
+    "type": "Vol",
+    "description": "Une attaque en deux tours",
+    "de": "1d20+3",
+    "effet": "Le Pokémon s'envole au premier tour et attaque au second. 20% de chance d'apeurer la cible pour deux tours"
+  },
+  "piqure": {
+    "nom": "Piqûre",
+    "attaque": "Contact",
+    "type": "Insecte",
+    "description": "Le lanceur pique l'ennemi",
+    "de": "2d4",
+    "effet": ""
+  },
+  "pistolet_o": {
+    "nom": "Pistolet à O",
+    "attaque": "Distance",
+    "type": "Eau",
+    "description": "De l'eau est projetée avec force sur l'ennemi.",
+    "de": "1d4+1",
+    "effet": ""
+  },
+  "pisto_poing": {
+    "nom": "Pisto-Poing",
+    "attaque": "",
+    "type": "Acier",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "plaie_croix": {
+    "nom": "Plaie Croix",
+    "attaque": "",
+    "type": "Insecte",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "plaquage": {
+    "nom": "Plaquage",
+    "attaque": "Contact",
+    "type": "Normal",
+    "description": "Le lanceur se laisse tomber sur l'ennemi de tout son poids",
+    "de": "1d4+2",
+    "effet": "30% de chance de paralyser la cible"
+  },
+  "plasma_punch": {
+    "nom": "Plasma Punch",
+    "attaque": "",
+    "type": "Electrik",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "pl_nitude": {
+    "nom": "Plénitude",
+    "attaque": "",
+    "type": "Psy",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "plong_e": {
+    "nom": "Plongée",
+    "attaque": "",
+    "type": "Eau",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "plumo_queue": {
+    "nom": "Plumo-Queue",
+    "attaque": "",
+    "type": "Normal",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "poing_boost": {
+    "nom": "Poing Boost",
+    "attaque": "",
+    "type": "Combat",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "poing_com_te": {
+    "nom": "Poing Comète",
+    "attaque": "",
+    "type": "Normal",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "poing_dard": {
+    "nom": "Poing Dard",
+    "attaque": "",
+    "type": "Plante",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "poing_eclair": {
+    "nom": "Poing Éclair",
+    "attaque": "Contact",
+    "type": "Electrik",
+    "description": "Un coup de poing électrique vient frapper l'ennemi.",
+    "de": "2d6+1",
+    "effet": "10% de chance de paralyser la cible pour 3 tours."
+  },
+  "poing_feu": {
+    "nom": "Poing Feu",
+    "attaque": "",
+    "type": "Feu",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "poing_glace": {
+    "nom": "Poing Glace",
+    "attaque": "",
+    "type": "Glace",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "poing_karat": {
+    "nom": "Poing Karaté",
+    "attaque": "",
+    "type": "Combat",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "poing_m_t_ore": {
+    "nom": "Poing Météore",
+    "attaque": "",
+    "type": "Acier",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "poing_obscur": {
+    "nom": "Poing Obscur",
+    "attaque": "",
+    "type": "Ténèbres",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "poing_ombre": {
+    "nom": "Poing Ombre",
+    "attaque": "Contact",
+    "type": "Spectre",
+    "description": "Le lanceur surgit des ombres et donne un coup de poing.",
+    "de": "2d4",
+    "effet": "La technique n'échoue jamais, excepté si la cible est de type Normal ou dans le premier tour d'attaques comme Plongée, Tunnel ou Vol."
+  },
+  "poison_croix": {
+    "nom": "Poison Croix",
+    "attaque": "",
+    "type": "Poison",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "poliroche": {
+    "nom": "Poliroche",
+    "attaque": "",
+    "type": "Roche",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "possessif": {
+    "nom": "Possessif",
+    "attaque": "",
+    "type": "Psy",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "poudre_dodo": {
+    "nom": "Poudre Dodo",
+    "attaque": "Magique",
+    "type": "Plante",
+    "description": "Le lanceur répand une poudre soporifique qui endort la cible.",
+    "de": "-",
+    "effet": "Endort la cible pour 5 tours (sauf si la cible est déjà la cible d'un problème de statut)"
+  },
+  "poudre_fureur": {
+    "nom": "Poudre Fureur",
+    "attaque": "",
+    "type": "Insecte",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "poudre_magique": {
+    "nom": "Poudre Magique",
+    "attaque": "",
+    "type": "Psy",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "poudre_toxik": {
+    "nom": "Poudre Toxik",
+    "attaque": "Magique",
+    "type": "Poison",
+    "description": "Une poudre toxique empoisonne l'ennemi.",
+    "de": "-",
+    "effet": "Enpoisonne la cible sur 3 tours (dégâts : 1D4 à chaque tour) Ne marche pas sur les types Acier et Poisons"
+  },
+  "poudreuse": {
+    "nom": "Poudreuse",
+    "attaque": "",
+    "type": "Glace",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "poursuite": {
+    "nom": "Poursuite",
+    "attaque": "Contact",
+    "type": "Ténèbres",
+    "description": "",
+    "de": "1d4",
+    "effet": "Les dégâts sont doublés si la cible est remplacée par un autre pokémon durant ce tour"
+  },
+  "pouvoir_antique": {
+    "nom": "Pouvoir Antique",
+    "attaque": "",
+    "type": "Roche",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "pouvoir_lunaire": {
+    "nom": "Pouvoir Lunaire",
+    "attaque": "",
+    "type": "Fée",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "prescience": {
+    "nom": "Prescience",
+    "attaque": "Distance",
+    "type": "Psy",
+    "description": "De l'énergie psychique vient frapper l'ennemi",
+    "de": "2d12+3",
+    "effet": "Le lanceur frappe au bout du troisième tour, le jet d'attaque se fait au premier tour, celui de dégâts au troisième."
+  },
+  "presse": {
+    "nom": "Presse",
+    "attaque": "",
+    "type": "Normal",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "prevention": {
+    "nom": "Prévention",
+    "attaque": "",
+    "type": "Combat",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "prise_de_bec": {
+    "nom": "Prise de Bec",
+    "attaque": "",
+    "type": "Electrik",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "projecteur": {
+    "nom": "Projecteur",
+    "attaque": "",
+    "type": "Normal",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "projection": {
+    "nom": "Projection",
+    "attaque": "",
+    "type": "Combat",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "protection": {
+    "nom": "Protection",
+    "attaque": "",
+    "type": "Psy",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "provoc": {
+    "nom": "Provoc",
+    "attaque": "",
+    "type": "Ténèbres",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "psycho_boost": {
+    "nom": "Psycho-Boost",
+    "attaque": "",
+    "type": "Psy",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "psycho_croc": {
+    "nom": "Psycho-Croc",
+    "attaque": "",
+    "type": "Psy",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "psyko": {
+    "nom": "Psyko",
+    "attaque": "",
+    "type": "Psy",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "psykoud_boul": {
+    "nom": "Psykoud'Boul",
+    "attaque": "",
+    "type": "Psy",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "puissance": {
+    "nom": "Puissance",
+    "attaque": "Magique",
+    "type": "Normal",
+    "description": "Le lanceur prend une profonde inspiration et se concentre",
+    "de": "-",
+    "effet": "Augmente l'attaque du lanceur de 1."
+  },
+  "puissance_cach_e": {
+    "nom": "Puissance Cachée",
+    "attaque": "",
+    "type": "Normal",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "punition": {
+    "nom": "Punition",
+    "attaque": "",
+    "type": "Ténèbres",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "puredpois": {
+    "nom": "Purédpois",
+    "attaque": "Distance",
+    "type": "Poison",
+    "description": "Le lanceur attaque à l'aide d'une éruption de gaz répugnants",
+    "de": "1d4",
+    "effet": "40% de chance d'empoisonner la cible pour 3 tours"
+  },
+  "purification": {
+    "nom": "Purification",
+    "attaque": "",
+    "type": "Poison",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "queue_de_fer": {
+    "nom": "Queue de Fer",
+    "attaque": "",
+    "type": "Acier",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "queue_poison": {
+    "nom": "Queue-Poison",
+    "attaque": "",
+    "type": "Poison",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "racines": {
+    "nom": "Racines",
+    "attaque": "",
+    "type": "Plante",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "rafale_ecailles": {
+    "nom": "Rafale Écailles",
+    "attaque": "",
+    "type": "Dragon",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "rafale_feu": {
+    "nom": "Rafale Feu",
+    "attaque": "",
+    "type": "Feu",
+    "description": "Un étrange rayon frappe l'ennemi",
+    "de": "",
+    "effet": ""
+  },
+  "rafale_psy": {
+    "nom": "Rafale Psy",
+    "attaque": "Distance",
+    "type": "Psy",
+    "description": "",
+    "de": "2d6",
+    "effet": "10% de chance de rendre la cible confuse pour 1 tour"
+  },
+  "r_le_m_le": {
+    "nom": "Râle Mâle",
+    "attaque": "",
+    "type": "Normal",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "rancune": {
+    "nom": "Rancune",
+    "attaque": "",
+    "type": "Spectre",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "rapace": {
+    "nom": "Rapace",
+    "attaque": "",
+    "type": "Vol",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "ravage_rampant": {
+    "nom": "Ravage Rampant",
+    "attaque": "",
+    "type": "Insecte",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "rayon_charg": {
+    "nom": "Rayon Chargé",
+    "attaque": "",
+    "type": "Electrik",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "rayon_gemme": {
+    "nom": "Rayon Gemme",
+    "attaque": "",
+    "type": "Roche",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "rayon_lune": {
+    "nom": "Rayon Lune",
+    "attaque": "",
+    "type": "Fée",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "rayon_signal": {
+    "nom": "Rayon Signal",
+    "attaque": "",
+    "type": "Insecte",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "rayon_simple": {
+    "nom": "Rayon Simple",
+    "attaque": "",
+    "type": "Normal",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "rayon_spectral": {
+    "nom": "Rayon Spectral",
+    "attaque": "",
+    "type": "Spectre",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "rebond": {
+    "nom": "Rebond",
+    "attaque": "",
+    "type": "Vol",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "rebondifeu": {
+    "nom": "Rebondifeu",
+    "attaque": "",
+    "type": "Feu",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "recyclage": {
+    "nom": "Recyclage",
+    "attaque": "",
+    "type": "Normal",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "reflet": {
+    "nom": "Reflet",
+    "attaque": "",
+    "type": "Normal",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "reflet_magik": {
+    "nom": "Reflet Magik",
+    "attaque": "",
+    "type": "Psy",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "regard_glacant": {
+    "nom": "Regard Glaçant",
+    "attaque": "",
+    "type": "Psy",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "regard_medusant": {
+    "nom": "Regard Médusant",
+    "attaque": "Magique",
+    "type": "Normal",
+    "description": "Le lanceur intimide l'ennemi grâce à son regard terrifiant",
+    "de": "-",
+    "effet": "Paralyse la cible pour 2 tours"
+  },
+  "regard_noir": {
+    "nom": "Regard Noir",
+    "attaque": "Magique",
+    "type": "Normal",
+    "description": "Le lanceur pétrifie l'ennemi en lui lançant un regard noir. ",
+    "de": "-",
+    "effet": "Empêche la cible d'attaquer, de fuir ou d'être remplacée pendant 2 tours"
+  },
+  "regard_touchant": {
+    "nom": "Regard Touchant",
+    "attaque": "Magique",
+    "type": "Fée",
+    "description": "Fixe l'ennemi d'un air très attendrissant qui le touche et diminue son Attaque. ",
+    "de": "-",
+    "effet": "Diminue l'attaque de la cible de 1."
+  },
+  "regeneration": {
+    "nom": "Régénération",
+    "attaque": "",
+    "type": "Normal",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "rel_che": {
+    "nom": "Relâche",
+    "attaque": "",
+    "type": "Normal",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "relais": {
+    "nom": "Relais",
+    "attaque": "",
+    "type": "Normal",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "rengorgement": {
+    "nom": "Rengorgement",
+    "attaque": "Magique",
+    "type": "Normal",
+    "description": "Le lanceur se rengorge.",
+    "de": "-",
+    "effet": "Augmente la défense et l'attaque du lanceur de 1"
+  },
+  "renversement": {
+    "nom": "Renversement",
+    "attaque": "",
+    "type": "Ténèbres",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "repli": {
+    "nom": "Repli",
+    "attaque": "Magique",
+    "type": "Eau",
+    "description": "Le lanceur se recroqueville dans sa carapace, ce qui augmente sa Défense.",
+    "de": "-",
+    "effet": "Augmente la défense du lanceur de 1"
+  },
+  "repos": {
+    "nom": "Repos",
+    "attaque": "Magique",
+    "type": "Psy",
+    "description": "Le lanceur regagne tous ses PV",
+    "de": "-",
+    "effet": "Le lanceur dort pendant trois tours. Il regagne l'intégralité de ses PV"
+  },
+  "represailles": {
+    "nom": "Représailles",
+    "attaque": "Contact",
+    "type": "Ténèbres",
+    "description": "Le lanceur concentre son énergie puis attaque. ",
+    "de": "2d6",
+    "effet": "Les dégâts sont doublés si la cible a déjà utilisé une technique sur le lanceur durant ce tour"
+  },
+  "requiem": {
+    "nom": "Requiem",
+    "attaque": "",
+    "type": "Normal",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "retenue": {
+    "nom": "Retenue",
+    "attaque": "",
+    "type": "Normal",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "retour": {
+    "nom": "Retour",
+    "attaque": "",
+    "type": "Normal",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "reveil_force": {
+    "nom": "Réveil Forcé",
+    "attaque": "",
+    "type": "Combat",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "revenant": {
+    "nom": "Revenant",
+    "attaque": "",
+    "type": "Spectre",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "riposte": {
+    "nom": "Riposte",
+    "attaque": "",
+    "type": "Combat",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "roc_boulet": {
+    "nom": "Roc-Boulet",
+    "attaque": "",
+    "type": "Roche",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "ronflement": {
+    "nom": "Ronflement",
+    "attaque": "Distance",
+    "type": "Normal",
+    "description": "Le lanceur ronfle tellement fort que cela attaque l'ennemi.",
+    "de": "1d4+2",
+    "effet": "Ne fonctionne que si le lanceur est endormi. 30% de chance d'apeurer les cibles"
+  },
+  "roue_de_feu": {
+    "nom": "Roue de Feu",
+    "attaque": "Distance",
+    "type": "Feu",
+    "description": "Le lanceur s'entoure de feu et charge l'ennemi. Peut aussi le brûler",
+    "de": "2d4",
+    "effet": "10% de chance de brûler la cible"
+  },
+  "roue_libre": {
+    "nom": "Roue Libre",
+    "attaque": "",
+    "type": "Electrik",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "roulade": {
+    "nom": "Roulade",
+    "attaque": "Contact",
+    "type": "Roche",
+    "description": "Un rocher roule sur l'ennemi pendant cinq tours. L'attaque gagne en puissance à chaque coup.",
+    "de": "1d4",
+    "effet": "L'attaque dure 5 tours, les dommages augmentent de +1 à chaque tour (le jet de dommage ne se fait qu'au premier tour. Les dégâts sont doublés si le lanceur a utilisé Boul'Armure précédemment pendant le combat."
+  },
+  "rune_protect": {
+    "nom": "Rune Protect",
+    "attaque": "Magique",
+    "type": "Normal",
+    "description": "Crée un champ protecteur",
+    "de": "-",
+    "effet": "Le lanceur et ses alliés sont protégés contre les changements de statut excepté ceux lancés par eux-même pendant 5 tours"
+  },
+  "ruse": {
+    "nom": "Ruse",
+    "attaque": "Contact",
+    "type": "Normal",
+    "description": "",
+    "de": "1d4",
+    "effet": "Une attaque capable de toucher un ennemi qui utilise une capacité comme Détection ou Abri. Annule l'effet de ces capacités."
+  },
+  "sable_ardent": {
+    "nom": "Sable Ardent",
+    "attaque": "",
+    "type": "Sol",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "sabotage": {
+    "nom": "Sabotage",
+    "attaque": "",
+    "type": "Ténèbres",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "sacrifice": {
+    "nom": "Sacrifice",
+    "attaque": "",
+    "type": "Combat",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "saisie": {
+    "nom": "Saisie",
+    "attaque": "",
+    "type": "Ténèbres",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "sanction_supreme": {
+    "nom": "Sanction Suprême",
+    "attaque": "",
+    "type": "Dragon",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "saumure": {
+    "nom": "Saumure",
+    "attaque": "Distance",
+    "type": "Eau",
+    "description": "Attaque Aquatique Puissante.",
+    "de": "2d6",
+    "effet": "Les dégâts sont doublés si la cible à moins de 50% de PV"
+  },
+  "secretion": {
+    "nom": "Sécrétion",
+    "attaque": "Magique",
+    "type": "Insecte",
+    "description": "Le lanceur crache de la soie pour ligoter l'ennemi",
+    "de": "",
+    "effet": "Diminue l'attaque de la cible de 2."
+  },
+  "seduction": {
+    "nom": "Séduction",
+    "attaque": "",
+    "type": "Normal",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "seisme": {
+    "nom": "Séisme",
+    "attaque": "",
+    "type": "Sol",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "selve_salvatrice": {
+    "nom": "Selve Salvatrice",
+    "attaque": "",
+    "type": "Plante",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "sheauriken": {
+    "nom": "Sheauriken",
+    "attaque": "",
+    "type": "Eau",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "siffl_herbe": {
+    "nom": "Siffl'Herbe",
+    "attaque": "",
+    "type": "Plante",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "siphon": {
+    "nom": "Siphon",
+    "attaque": "",
+    "type": "Eau",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "soin": {
+    "nom": "Soin",
+    "attaque": "Magique",
+    "type": "Normal",
+    "description": "Un soin qui permet au lanceur de récupérer des PV.",
+    "de": "-",
+    "effet": "Restaure la moitié des PV max du lanceur."
+  },
+  "soin_floral": {
+    "nom": "Soin Floral",
+    "attaque": "",
+    "type": "Fée",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "sommation": {
+    "nom": "Sommation",
+    "attaque": "",
+    "type": "Psy",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "sonic_boom": {
+    "nom": "Sonic Boom",
+    "attaque": "Distance",
+    "type": "Normal",
+    "description": "Envoi des ondes destructrices",
+    "de": "",
+    "effet": "Envoie des ondes de choc infligeant 5 PV de dégâts sur xtours (1d4)"
+  },
+  "sort_sinistre": {
+    "nom": "Sort Sinistre",
+    "attaque": "",
+    "type": "Psy",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "soucigraine": {
+    "nom": "Soucigraine",
+    "attaque": "Magique",
+    "type": "Plante",
+    "description": "Plante sur la cible une graine qui la rend soucieuse, l'empêchant ainsi de dormir.",
+    "de": "-",
+    "effet": "La cible ne pourra plus s'endormir ou se réveillera si elle est déjà endormie"
+  },
+  "souffle_glac": {
+    "nom": "Souffle Glacé",
+    "attaque": "",
+    "type": "Glace",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "souplesse": {
+    "nom": "Souplesse",
+    "attaque": "",
+    "type": "Normal",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "souvenir": {
+    "nom": "Souvenir",
+    "attaque": "",
+    "type": "Ténèbres",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "spatio_rift": {
+    "nom": "Spatio-Rift",
+    "attaque": "",
+    "type": "Dragon",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "spore": {
+    "nom": "Spore",
+    "attaque": "",
+    "type": "Plante",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "spore_coton": {
+    "nom": "Spore Coton",
+    "attaque": "",
+    "type": "Plante",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "stalactite": {
+    "nom": "Stalactite",
+    "attaque": "",
+    "type": "Glace",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "stimulant": {
+    "nom": "Stimulant",
+    "attaque": "",
+    "type": "Normal",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "stockage": {
+    "nom": "Stockage",
+    "attaque": "",
+    "type": "Normal",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "stratopercut": {
+    "nom": "Stratopercut",
+    "attaque": "",
+    "type": "Combat",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "strido_son": {
+    "nom": "Strido-Son",
+    "attaque": "Magique",
+    "type": "Acier",
+    "description": "Un cri horrible tel un crissement métallique ",
+    "de": "-",
+    "effet": "Baisse l'attaque de la cible de 2"
+  },
+  "suc_digestif": {
+    "nom": "Suc Digestif",
+    "attaque": "",
+    "type": "Poison",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "surchauffe": {
+    "nom": "Surchauffe",
+    "attaque": "",
+    "type": "Feu",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "surf": {
+    "nom": "Surf",
+    "attaque": "",
+    "type": "Eau",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "surpuissance": {
+    "nom": "Surpuissance",
+    "attaque": "",
+    "type": "Combat",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "survinsecte": {
+    "nom": "Survinsecte",
+    "attaque": "",
+    "type": "Insecte",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "synchropeine": {
+    "nom": "Synchropeine",
+    "attaque": "",
+    "type": "Psy",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "synthese": {
+    "nom": "Synthèse",
+    "attaque": "Magique",
+    "type": "Plante",
+    "description": "Un soin qui restaure des PV au lanceur.",
+    "de": "-",
+    "effet": "Restaure les PV à hauteur de la moitié des PV max"
+  },
+  "tacle_feu": {
+    "nom": "Tacle Feu",
+    "attaque": "",
+    "type": "Feu",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "tacle_lourd": {
+    "nom": "Tacle Lourd",
+    "attaque": "",
+    "type": "Acier",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "taillade": {
+    "nom": "Taillade",
+    "attaque": "Contact",
+    "type": "Insecte",
+    "description": "Un coup de faux ou de griffe dont la force augmente quand il touche plusieurs fois d'affilée.",
+    "de": "1d4+1",
+    "effet": "Si le lanceur réutilise cette attaque, les dégâts sont doublés par rapport à la dernière utilisation. L'effet est annulé si le lanceur rate son attaque ou en utilise une autre ou vise une autre cible"
+  },
+  "tambour_battant": {
+    "nom": "Tambour Battant",
+    "attaque": "",
+    "type": "Plante",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "tapotige": {
+    "nom": "Tapotige",
+    "attaque": "",
+    "type": "Plante",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "tatamigaeshi": {
+    "nom": "Tatamigaeshi",
+    "attaque": "",
+    "type": "Combat",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "techno_buster": {
+    "nom": "Techno-Buster",
+    "attaque": "",
+    "type": "Normal",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "t_l_kin_sie": {
+    "nom": "Télékinésie",
+    "attaque": "",
+    "type": "Psy",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "t_l_port": {
+    "nom": "Téléport",
+    "attaque": "",
+    "type": "Psy",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "telluriforce": {
+    "nom": "Telluriforce",
+    "attaque": "",
+    "type": "Sol",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "tempete_de_sable": {
+    "nom": "Tempête de Sable",
+    "attaque": "",
+    "type": "Roche",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "tempete_florale": {
+    "nom": "Tempête Florale",
+    "attaque": "",
+    "type": "Plante",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "tempete_verte": {
+    "nom": "Tempête Verte",
+    "attaque": "",
+    "type": "Plante",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "tenacite": {
+    "nom": "Ténacité",
+    "attaque": "",
+    "type": "Normal",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "ten_danse": {
+    "nom": "Ten-Danse",
+    "attaque": "",
+    "type": "Normal",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "tete_de_fer": {
+    "nom": "Tête de Fer",
+    "attaque": "",
+    "type": "Acier",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "theremonie": {
+    "nom": "Thérémonie",
+    "attaque": "",
+    "type": "Normal",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "tir_de_boue": {
+    "nom": "Tir de Boue",
+    "attaque": "",
+    "type": "Sol",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "tir_de_precision": {
+    "nom": "Tir de Précision",
+    "attaque": "",
+    "type": "Eau",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "tisse_ombre": {
+    "nom": "Tisse Ombre",
+    "attaque": "",
+    "type": "Spectre",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "toile": {
+    "nom": "Toile",
+    "attaque": "",
+    "type": "Insecte",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "toile_lek": {
+    "nom": "Toile Élek",
+    "attaque": "",
+    "type": "Electrik",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "toile_gluante": {
+    "nom": "Toile Gluante",
+    "attaque": "",
+    "type": "Insecte",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "tomberoche": {
+    "nom": "Tomberoche",
+    "attaque": "",
+    "type": "Roche",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "tonnerre": {
+    "nom": "Tonnerre",
+    "attaque": "Distance",
+    "type": "Electrik",
+    "description": "Une grosse décharge électrique tombe sur l'ennemi",
+    "de": "2d6+2",
+    "effet": "10% de chance de paralyser la cible pour 3 tours"
+  },
+  "torgnoles": {
+    "nom": "Torgnoles",
+    "attaque": "",
+    "type": "Normal",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "tornade": {
+    "nom": "Tornade",
+    "attaque": "Distance",
+    "type": "Vol",
+    "description": "Le lanceur bat des ailes pour générer une bourrasque qui blesse l'ennemi.",
+    "de": "1d4",
+    "effet": "Sa puissance double si l'adversaire est en train d'utiliser Vol ou Rebond."
+  },
+  "torrent_de_coups": {
+    "nom": "Torrent de Coups",
+    "attaque": "",
+    "type": "Eau",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "tour_de_magie": {
+    "nom": "Tour de Magie",
+    "attaque": "",
+    "type": "Psy",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "tour_rapide": {
+    "nom": "Tour Rapide",
+    "attaque": "Contact",
+    "type": "Normal",
+    "description": "Le lanceur attaque en tournant sur lui-même.",
+    "de": "1d4+2",
+    "effet": "Annule les effets secondaires des attaques bloquantes, des attaques de pièges et de Vampigraine"
+  },
+  "tourbi_sable": {
+    "nom": "Tourbi-Sable",
+    "attaque": "",
+    "type": "Sol",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "tourmente": {
+    "nom": "Tourmente",
+    "attaque": "",
+    "type": "Ténèbres",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "tourniquet": {
+    "nom": "Tourniquet",
+    "attaque": "Magique",
+    "type": "Eau",
+    "description": "Réduit de 50% tous les dégâts de type Feu pour le lanceur et ses alliés pendant 5 tours.",
+    "de": "-",
+    "effet": "Réduit de 50% tous les dégâts de type Feu pour le lanceur et ses alliés pendant 5 tours."
+  },
+  "tout_ou_rien": {
+    "nom": "Tout ou Rien",
+    "attaque": "",
+    "type": "Combat",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "toxik": {
+    "nom": "Toxik",
+    "attaque": "Magique",
+    "type": "Poison",
+    "description": "Le lanceur empoisonne gravement la cible.",
+    "de": "-",
+    "effet": "Empoisonne la cible pour 4 tours (2d4 dégâts par tour)"
+  },
+  "tranch_air": {
+    "nom": "Tranch'Air",
+    "attaque": "",
+    "type": "Vol",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "tranche": {
+    "nom": "Tranche",
+    "attaque": "",
+    "type": "Normal",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "tranche_nuit": {
+    "nom": "Tranche-Nuit",
+    "attaque": "",
+    "type": "Ténèbres",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "tranch_herbe": {
+    "nom": "Tranch'Herbe",
+    "attaque": "Distance",
+    "type": "Plante",
+    "description": "Fouette l'ennemi avec de fines lianes pour infliger des dégâts.",
+    "de": "2d4",
+    "effet": ""
+  },
+  "trempette": {
+    "nom": "Trempette",
+    "attaque": "",
+    "type": "Normal",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "trepignement": {
+    "nom": "Trépignement",
+    "attaque": "",
+    "type": "Sol",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "tricherie": {
+    "nom": "Tricherie",
+    "attaque": "",
+    "type": "Ténèbres",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "triplattaque": {
+    "nom": "Triplattaque",
+    "attaque": "",
+    "type": "Normal",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "triple_axel": {
+    "nom": "Triple Axel",
+    "attaque": "",
+    "type": "Glace",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "triple_pied": {
+    "nom": "Triple Pied",
+    "attaque": "",
+    "type": "Combat",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "troquenard": {
+    "nom": "Troquenard",
+    "attaque": "",
+    "type": "Plante",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "trou_noir": {
+    "nom": "Trou Noir",
+    "attaque": "",
+    "type": "Ténèbres",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "troudimensionnel": {
+    "nom": "TrouDimensionnel",
+    "attaque": "",
+    "type": "Psy",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "tunnel": {
+    "nom": "Tunnel",
+    "attaque": "",
+    "type": "Sol",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "tunnelier": {
+    "nom": "Tunnelier",
+    "attaque": "",
+    "type": "Sol",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "ultimapoing": {
+    "nom": "Ultimapoing",
+    "attaque": "",
+    "type": "Normal",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "ultimawashi": {
+    "nom": "Ultimawashi",
+    "attaque": "",
+    "type": "Normal",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "ultime_bastion": {
+    "nom": "Ultime Bastion",
+    "attaque": "",
+    "type": "Combat",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "ultralaser": {
+    "nom": "Ultralaser",
+    "attaque": "",
+    "type": "Normal",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "ultrason": {
+    "nom": "Ultrason",
+    "attaque": "Magique",
+    "type": "Normal",
+    "description": "Le lanceur produit d'étranges ondes sonores qui rendent la cible confuse.",
+    "de": "-",
+    "effet": "Les adversaires sont confus pendant 2 tours"
+  },
+  "uppercut": {
+    "nom": "Uppercut",
+    "attaque": "",
+    "type": "Normal",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "vague_psy": {
+    "nom": "Vague Psy",
+    "attaque": "Distance",
+    "type": "Psy",
+    "description": "Lance une vague destructrice sur l'adversaire.",
+    "de": "-",
+    "effet": "Inflige des dégâts équivalents au niveau du lanceur/10."
+  },
+  "vampibaiser": {
+    "nom": "Vampibaiser",
+    "attaque": "",
+    "type": "Fée",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "vampigraine": {
+    "nom": "Vampigraine",
+    "attaque": "Magique",
+    "type": "Plante",
+    "description": "Une graine est semée sur l'ennemi. À chaque tour, elle lui dérobe des PV que le lanceur récupère.",
+    "de": "-",
+    "effet": "Plante une graine qui draine 1/10 des PV de la cible sur 5 tours"
+  },
+  "vampi_poing": {
+    "nom": "Vampi-Poing",
+    "attaque": "",
+    "type": "Combat",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "vampirisme": {
+    "nom": "Vampirisme",
+    "attaque": "",
+    "type": "Insecte",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "vantardise": {
+    "nom": "Vantardise",
+    "attaque": "",
+    "type": "Normal",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "vapeur_f_rique": {
+    "nom": "Vapeur Féérique",
+    "attaque": "",
+    "type": "Fée",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "vaste_pouvoir": {
+    "nom": "Vaste Pouvoir",
+    "attaque": "",
+    "type": "Psy",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "v_g_attaque": {
+    "nom": "Végé-Attaque",
+    "attaque": "",
+    "type": "Plante",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "vendetta": {
+    "nom": "Vendetta",
+    "attaque": "",
+    "type": "Combat",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "vengeance": {
+    "nom": "Vengeance",
+    "attaque": "",
+    "type": "Normal",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "vent_argente": {
+    "nom": "Vent Argenté",
+    "attaque": "Distance",
+    "type": "Insecte",
+    "description": "Vent qui projette des écailles poudreuses sur l'ennemi.",
+    "de": "2d4",
+    "effet": "10% de chance de faire gagner au lanceur +2 en attaque et +2 en défense."
+  },
+  "vent_arriere": {
+    "nom": "Vent Arrière",
+    "attaque": "",
+    "type": "Vol",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "vent_ferique": {
+    "nom": "Vent Féérique",
+    "attaque": "",
+    "type": "Fée",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "vent_glace": {
+    "nom": "Vent Glace",
+    "attaque": "",
+    "type": "Glace",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "vent_mauvais": {
+    "nom": "Vent Mauvais",
+    "attaque": "",
+    "type": "Spectre",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "vent_violent": {
+    "nom": "Vent Violent",
+    "attaque": "",
+    "type": "Vol",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "verrou_enchant": {
+    "nom": "Verrou Enchanté",
+    "attaque": "",
+    "type": "Fée",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "verrouillage": {
+    "nom": "Verrouillage",
+    "attaque": "",
+    "type": "Normal",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "vibra_soin": {
+    "nom": "Vibra Soin",
+    "attaque": "",
+    "type": "Psy",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "vibraqua": {
+    "nom": "Vibraqua",
+    "attaque": "Distance",
+    "type": "Eau",
+    "description": "Le lanceur envoie un puissant jet d'eau sur l'ennemi. Peut le rendre confus.",
+    "de": "2d4",
+    "effet": "20% de chance de rendre la cible confuse."
+  },
+  "vibrecaille": {
+    "nom": "Vibrécaille",
+    "attaque": "",
+    "type": "Dragon",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "vibrobscur": {
+    "nom": "Vibrobscur",
+    "attaque": "",
+    "type": "Ténèbres",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "vif_roc": {
+    "nom": "Vif Roc",
+    "attaque": "",
+    "type": "Roche",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "vigilance": {
+    "nom": "Vigilance",
+    "attaque": "",
+    "type": "Fée",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "vitesse_extreme": {
+    "nom": "Vitesse Extrême",
+    "attaque": "",
+    "type": "Normal",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "vive_attaque": {
+    "nom": "Vive-Attaque",
+    "attaque": "Contact",
+    "type": "Normal",
+    "description": "Le lanceur fonce sur la cible si rapidement qu'on parvient à peine à le discerner.",
+    "de": "1d4",
+    "effet": ""
+  },
+  "voeu": {
+    "nom": "Voeu",
+    "attaque": "",
+    "type": "Normal",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "voeu_destructeur": {
+    "nom": "Voeu Destructeur",
+    "attaque": "",
+    "type": "Acier",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "voeu_soin": {
+    "nom": "Voeu Soin",
+    "attaque": "",
+    "type": "Psy",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "voile_aurore": {
+    "nom": "Voile Aurore",
+    "attaque": "",
+    "type": "Glace",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "voile_miroir": {
+    "nom": "Voile Miroir",
+    "attaque": "",
+    "type": "Psy",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "voix_enj_leuse": {
+    "nom": "Voix Enjôleuse",
+    "attaque": "",
+    "type": "Fée",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "vol": {
+    "nom": "Vol",
+    "attaque": "",
+    "type": "Vol",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "vol_magn_tik": {
+    "nom": "Vol Magnétik",
+    "attaque": "",
+    "type": "Electrik",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "vole_force": {
+    "nom": "Vole-Force",
+    "attaque": "",
+    "type": "Plante",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "vole_vie": {
+    "nom": "Vole-Vie",
+    "attaque": "Distance",
+    "type": "Plante",
+    "description": "Une attaque qui absorbe les nutriments de la cible et convertit une partie des dégâts infligés en PV pour le lanceur.",
+    "de": "1d4",
+    "effet": "Le lanceur récupère 2PV"
+  },
+  "voltage_le": {
+    "nom": "Voltageôle",
+    "attaque": "",
+    "type": "Electrik",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "vortex_magma": {
+    "nom": "Vortex Magma",
+    "attaque": "",
+    "type": "Feu",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "yama_arashi": {
+    "nom": "Yama Arashi",
+    "attaque": "",
+    "type": "Combat",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "yoga": {
+    "nom": "Yoga",
+    "attaque": "Magique",
+    "type": "Psy",
+    "description": "Le lanceur se concentre.",
+    "de": "-",
+    "effet": "Augmente l'attaque du lanceur de 2"
+  },
+  "zenith": {
+    "nom": "Zénith",
+    "attaque": "",
+    "type": "Feu",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "zone_etrange": {
+    "nom": "Zone Étrange",
+    "attaque": "",
+    "type": "Psy",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "zone_magique": {
+    "nom": "Zone Magique",
+    "attaque": "",
+    "type": "Psy",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "taurogne": {
+    "nom": "Taurogne",
+    "attaque": "",
+    "type": "Normal",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "marteau_mastoc": {
+    "nom": "Marteau Mastoc",
+    "attaque": "",
+    "type": "Acier",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "aquatacle": {
+    "nom": "Aquatacle",
+    "attaque": "",
+    "type": "Eau",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "change_force": {
+    "nom": "Échange Force",
+    "attaque": "",
+    "type": "Normal",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "tranch_aqua": {
+    "nom": "Tranch'Aqua",
+    "attaque": "",
+    "type": "Eau",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "hommage_posthume": {
+    "nom": "Hommage Posthume",
+    "attaque": "",
+    "type": "Spectre",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "sprint_bouclier": {
+    "nom": "Sprint Bouclier",
+    "attaque": "",
+    "type": "Psy",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "d_sherbaffe": {
+    "nom": "Désherbaffe",
+    "attaque": "",
+    "type": "Plante",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "t_ra_explosion": {
+    "nom": "Téra-Explosion",
+    "attaque": "",
+    "type": "Normal",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "bond": {
+    "nom": "Bond",
+    "attaque": "",
+    "type": "Insecte",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "douche_froide": {
+    "nom": "Douche Froide",
+    "attaque": "",
+    "type": "Eau",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "chute_de_neige": {
+    "nom": "Chute de Neige",
+    "attaque": "",
+    "type": "Glace",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "cryo_pirouette": {
+    "nom": "Cryo-Pirouette",
+    "attaque": "",
+    "type": "Glace",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "indignition": {
+    "nom": "Indignition",
+    "attaque": "",
+    "type": "Feu",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "hache_de_pierre": {
+    "nom": "Hache de Pierre",
+    "attaque": "",
+    "type": "Roche",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "assaut_frontal": {
+    "nom": "Assaut Frontal",
+    "attaque": "",
+    "type": "Sol",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "lune_rouge": {
+    "nom": "Lune Rouge",
+    "attaque": "",
+    "type": "Normal",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "griffes_funestes": {
+    "nom": "Griffes Funestes",
+    "attaque": "",
+    "type": "Poison",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "multitoxik": {
+    "nom": "Multitoxik",
+    "attaque": "",
+    "type": "Poison",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "typhon_passionn": {
+    "nom": "Typhon Passionné",
+    "attaque": "",
+    "type": "Fée",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "grand_courroux": {
+    "nom": "Grand Courroux",
+    "attaque": "",
+    "type": "Feu",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "herblast": {
+    "nom": "Herblast",
+    "attaque": "",
+    "type": "Plante",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "cort_ge_fun_bre": {
+    "nom": "Cortège Funèbre",
+    "attaque": "",
+    "type": "Feu",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "vagues_lames": {
+    "nom": "Vagues à Lames",
+    "attaque": "",
+    "type": "Ténèbres",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "danse_victoire": {
+    "nom": "Danse Victoire",
+    "attaque": "",
+    "type": "Combat",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "talon_marteau": {
+    "nom": "Talon-Marteau",
+    "attaque": "",
+    "type": "Combat",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "coeur_de_rancoeur": {
+    "nom": "Coeur de Rancoeur",
+    "attaque": "",
+    "type": "Spectre",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "mur_fumig_ne": {
+    "nom": "Mur Fumigène",
+    "attaque": "",
+    "type": "Acier",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "bise_glaciaire": {
+    "nom": "Bise Glaciaire",
+    "attaque": "",
+    "type": "Glace",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "triple_fl_che": {
+    "nom": "Triple Flèche",
+    "attaque": "",
+    "type": "Combat",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "voix_envo_tante": {
+    "nom": "Voix Envoûtante",
+    "attaque": "",
+    "type": "Fée",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "prio_parade": {
+    "nom": "Prio-Parade",
+    "attaque": "",
+    "type": "Combat",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "volt_assaut": {
+    "nom": "Volt Assaut",
+    "attaque": "",
+    "type": "Electrik",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "magie_florale": {
+    "nom": "Magie FLorale",
+    "attaque": "",
+    "type": "Plante",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "chant_flamboyant": {
+    "nom": "Chant Flamboyant",
+    "attaque": "",
+    "type": "Feu",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "danse_aquatique": {
+    "nom": "Danse Aquatique",
+    "attaque": "",
+    "type": "Eau",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "pi_ge_de_fil": {
+    "nom": "Piège de Fil",
+    "attaque": "",
+    "type": "Insecte",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "second_souffle": {
+    "nom": "Second souffle",
+    "attaque": "",
+    "type": "Normal",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "double_d_charge": {
+    "nom": "Double Décharge",
+    "attaque": "",
+    "type": "Electrik",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "salaison": {
+    "nom": "Salaison",
+    "attaque": "",
+    "type": "Roche",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "prolif_ration": {
+    "nom": "Prolifération",
+    "attaque": "",
+    "type": "Normal",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "grand_nettoyage": {
+    "nom": "Grand Nettoyage",
+    "attaque": "",
+    "type": "Normal",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "pression_extr_me": {
+    "nom": "Pression Extrême",
+    "attaque": "",
+    "type": "Acier",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "lumino_impact": {
+    "nom": "Lumino-Impact",
+    "attaque": "",
+    "type": "Psy",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "habanerage": {
+    "nom": "Habanerage",
+    "attaque": "",
+    "type": "Plante",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "d_calquage": {
+    "nom": "Décalquage",
+    "attaque": "",
+    "type": "Normal",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "vindicte": {
+    "nom": "Vindicte",
+    "attaque": "",
+    "type": "Ténèbres",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "lame_en_peine": {
+    "nom": "Lame en Peine",
+    "attaque": "",
+    "type": "Feu",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "canon_blind": {
+    "nom": "Canon Blindé",
+    "attaque": "",
+    "type": "Feu",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "dissonance_psy": {
+    "nom": "Dissonance Psy",
+    "attaque": "",
+    "type": "Psy",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "plat_du_jour": {
+    "nom": "Plat du Jour",
+    "attaque": "",
+    "type": "Dragon",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "d_charnement": {
+    "nom": "Décharnement",
+    "attaque": "",
+    "type": "Normal",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "toupie_clat": {
+    "nom": "Toupie Éclat",
+    "attaque": "",
+    "type": "Poison",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "queulonage": {
+    "nom": "Queulonage",
+    "attaque": "",
+    "type": "Normal",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "d_rapage": {
+    "nom": "Dérapage",
+    "attaque": "",
+    "type": "Acier",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "poing_sonique": {
+    "nom": "Poing Sonique",
+    "attaque": "",
+    "type": "Eau",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "triple_plongeon": {
+    "nom": "Triple Plongeon",
+    "attaque": "",
+    "type": "Eau",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "cri_draconique": {
+    "nom": "Cri Draconique",
+    "attaque": "",
+    "type": "Dragon",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "g_nusection": {
+    "nom": "Génusection",
+    "attaque": "",
+    "type": "Ténèbres",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "hyperceuse": {
+    "nom": "Hyperceuse",
+    "attaque": "",
+    "type": "Normal",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "double_laser": {
+    "nom": "Double Laser",
+    "attaque": "",
+    "type": "Psy",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "poing_de_col_re": {
+    "nom": "Poing de Colère",
+    "attaque": "",
+    "type": "Spectre",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "turbo_volt": {
+    "nom": "Turbo Volt",
+    "attaque": "",
+    "type": "Electrik",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "nitro_crash": {
+    "nom": "Nitro Crash",
+    "attaque": "",
+    "type": "Combat",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "cataclysme": {
+    "nom": "Cataclysme",
+    "attaque": "",
+    "type": "Ténèbres",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "ru_e_d_or": {
+    "nom": "Ruée d'Or",
+    "attaque": "",
+    "type": "Acier",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "charge_glaive": {
+    "nom": "Charge Glaive",
+    "attaque": "",
+    "type": "Dragon",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "cha_ne_malsaine": {
+    "nom": "Chaîne Malsaine",
+    "attaque": "",
+    "type": "Poison",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "pluie_t_rastrale": {
+    "nom": "Pluie Térastrale",
+    "attaque": "",
+    "type": "Normal",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "lame_tachyonique": {
+    "nom": "Lame Tachyonique",
+    "attaque": "",
+    "type": "Acier",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "lame_puissante": {
+    "nom": "Lame Puissante",
+    "attaque": "",
+    "type": "Roche",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "vif_clair": {
+    "nom": "Vif Éclair",
+    "attaque": "",
+    "type": "Electrik",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "rempart_br_lant": {
+    "nom": "Rempart Brûlant",
+    "attaque": "",
+    "type": "Feu",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "fulgurayon": {
+    "nom": "Fulgurayon",
+    "attaque": "",
+    "type": "Electrik",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "massue_liane": {
+    "nom": "Massue Liane",
+    "attaque": "",
+    "type": "Plante",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "mortier_matcha": {
+    "nom": "Mortier Matcha",
+    "attaque": "",
+    "type": "Plante",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "bombe_au_sirop": {
+    "nom": "Bombe au SIrop",
+    "attaque": "",
+    "type": "Plante",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "laser_hasard": {
+    "nom": "Laser Hasard",
+    "attaque": "",
+    "type": "Dragon",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "lame_psychique": {
+    "nom": "Lame Psychique",
+    "attaque": "",
+    "type": "Psy",
+    "description": "",
+    "de": "",
+    "effet": ""
+  },
+  "hydrovapeur": {
+    "nom": "hydrovapeur",
+    "attaque": "",
+    "type": "Eau",
+    "description": "",
+    "de": "",
+    "effet": ""
+  }
+}

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Liste des Pokémons</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; background-color: #f5f5f5; }
+        h1 { text-align: center; color: #333; margin-bottom: 30px; }
+        .pokemon-grid { 
+            display: grid; 
+            grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); 
+            gap: 15px; 
+            max-width: 1200px; 
+            margin: 0 auto; 
+        }
+        .pokemon-card { 
+            background: white; 
+            border: 2px solid #ddd; 
+            border-radius: 8px; 
+            padding: 15px; 
+            text-align: center; 
+            transition: all 0.3s ease;
+            cursor: pointer;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .pokemon-card:hover { 
+            border-color: #007bff; 
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+        }
+        .pokemon-number { 
+            font-size: 14px; 
+            color: #666; 
+            margin-bottom: 5px; 
+        }
+        .pokemon-name { 
+            font-size: 16px; 
+            font-weight: bold; 
+            color: #333; 
+            text-transform: capitalize;
+        }
+        .pokemon-image { 
+            width: 80px; 
+            height: 80px; 
+            margin: 10px 0;
+        }
+        a { 
+            text-decoration: none; 
+            color: inherit; 
+        }
+        .back-button {
+            display: inline-block;
+            background: #007bff;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+        .back-button:hover {
+            background: #0056b3;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <a href="accueil.html" class="back-button">← Retour à l'accueil</a>
+    <h1>Liste des Pokémons</h1>
+    <div class="pokemon-grid" id="pokemon-grid">
+    </div>
+    
+    <script>
+        const pokemonNames = [
+            "Bulbizarre", "Herbizarre", "Florizarre", "Salamèche", "Reptincel", "Dracaufeu", "Carapuce", "Carabaffe", "Tortank", "Chenipan",
+            "Chrysacier", "Papilusion", "Aspicot", "Coconfort", "Dardargnan", "Roucool", "Roucoups", "Roucarnage", "Rattata", "Rattatac",
+            "Piafabec", "Rapasdepic", "Abo", "Arbok", "Pikachu", "Raichu", "Sabelette", "Sablaireau", "Nidoran♀", "Nidorina",
+            "Nidoqueen", "Nidoran♂", "Nidorino", "Nidoking", "Mélofée", "Mélodelfe", "Goupix", "Feunard", "Rondoudou", "Grodoudou",
+            "Nosferapti", "Nosferalto", "Mystherbe", "Ortide", "Rafflesia", "Paras", "Parasect", "Mimitoss", "Aéromite", "Taupiqueur",
+            "Triopikeur", "Miaouss", "Persian", "Psykokwak", "Akwakwak", "Férosinge", "Colossinge", "Caninos", "Arcanin", "Ptitard",
+            "Têtarte", "Tartard", "Abra", "Kadabra", "Alakazam", "Machoc", "Machopeur", "Mackogneur", "Chétiflor", "Boustiflor",
+            "Empiflor", "Tentacool", "Tentacruel", "Racaillou", "Gravalanch", "Grolem", "Ponyta", "Galopa", "Ramoloss", "Flagadoss",
+            "Magnéti", "Magnéton", "Canarticho", "Doduo", "Dodrio", "Otaria", "Lamantine", "Tadmorv", "Grotadmorv", "Kokiyas",
+            "Crustabri", "Fantominus", "Spectrum", "Ectoplasma", "Onix", "Soporifik", "Hypnomade", "Krabby", "Krabboss", "Voltorbe",
+            "Électrode", "Nœunœuf", "Noadkoko", "Osselait", "Ossatueur", "Kicklee", "Tygnon", "Excelangue", "Smogo", "Smogogo",
+            "Rhinocorne", "Rhinoféros", "Leveinard", "Saquedeneu", "Kangourex", "Hypotrempe", "Hypocéan", "Poissirène", "Poissoroy", "Stari",
+            "Staross", "M. Mime", "Insécateur", "Lippoutou", "Élektek", "Magmar", "Scarabrute", "Tauros", "Magicarpe", "Léviator",
+            "Lokhlass", "Métamorph", "Évoli", "Aquali", "Voltali", "Pyroli", "Porygon", "Amonita", "Amonistar", "Kabuto",
+            "Kabutops", "Ptéra", "Ronflex", "Artikodin", "Électhor", "Sulfura", "Minidraco", "Draco", "Dracolosse", "Mewtwo", "Mew"
+        ];
+        
+        const grid = document.getElementById('pokemon-grid');
+        const selectedPokemon = [143, 135, 128]; // Ronflex, Voltali, Tauros
+        
+        selectedPokemon.forEach(i => {
+            const pokemonName = pokemonNames[i - 1];
+            const card = document.createElement('a');
+            card.href = `pokemon_new.html?id=${i}`;
+            card.innerHTML = `
+                <div class="pokemon-card">
+                    <div class="pokemon-number">${i}</div>
+                    <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${i}.png" 
+                         alt="${pokemonName}" class="pokemon-image" 
+                         onerror="this.src='https://via.placeholder.com/80x80?text=?'">
+                    <div class="pokemon-name">${pokemonName}</div>
+                </div>
+            `;
+            grid.appendChild(card);
+        });
+    </script>
+    </div>
+</body>
+</html>

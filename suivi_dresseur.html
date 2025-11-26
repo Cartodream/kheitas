@@ -1,0 +1,1854 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Suivi Dresseur - Pokémon RPG</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 15px;
+            background: linear-gradient(135deg, #2d3748 0%, #4a5568 100%);
+            min-height: 100vh;
+            color: #2d3748;
+        }
+        
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            background: #f7fafc;
+            border-radius: 12px;
+            padding: 25px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+        }
+        
+        h1 {
+            text-align: center;
+            color: #2d3748;
+            margin-bottom: 25px;
+            font-size: 2.2em;
+            font-weight: 600;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        
+        .gm-controls {
+            background: #e2e8f0;
+            border: 2px solid #cbd5e0;
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 25px;
+        }
+        
+        .gm-controls h3 {
+            margin: 0 0 15px 0;
+            color: #2d3748;
+            font-size: 1.3em;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .controls-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+        }
+        
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 20px;
+            color: #2d3748;
+            text-decoration: none;
+            font-weight: 600;
+            background: #e2e8f0;
+            padding: 10px 15px;
+            border-radius: 8px;
+            transition: all 0.2s;
+        }
+        
+        .back-link:hover {
+            background: #cbd5e0;
+            transform: translateX(-2px);
+        }
+        
+        .trainer-section {
+            margin-bottom: 30px;
+            border: 2px solid #cbd5e0;
+            border-radius: 12px;
+            padding: 20px;
+            background: white;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+        }
+        
+        .trainer-section.collapsed .pokemon-grid {
+            display: none;
+        }
+        
+        .trainer-section.collapsed .trainer-summary {
+            display: block;
+        }
+        
+        .trainer-summary {
+            display: none;
+            background: #f1f5f9;
+            border-radius: 8px;
+            padding: 15px;
+            margin-top: 15px;
+        }
+        
+        .summary-stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 10px;
+        }
+        
+        .stat-item {
+            text-align: center;
+            padding: 8px;
+            background: white;
+            border-radius: 6px;
+            border: 1px solid #e2e8f0;
+        }
+        
+        .stat-value {
+            font-size: 1.2em;
+            font-weight: bold;
+            color: #2d3748;
+        }
+        
+        .stat-label {
+            font-size: 0.85em;
+            color: #64748b;
+            margin-top: 2px;
+        }
+        
+        .trainer-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 20px;
+            padding-bottom: 15px;
+            border-bottom: 2px solid #e2e8f0;
+        }
+        
+        .trainer-info {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            flex: 1;
+        }
+        
+        .trainer-actions {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+        }
+        
+        .collapse-btn {
+            background: #64748b;
+            color: white;
+            border: none;
+            padding: 8px 12px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 0.9em;
+            transition: background 0.2s;
+        }
+        
+        .collapse-btn:hover {
+            background: #475569;
+        }
+        
+        .trainer-name {
+            padding: 12px 15px;
+            border: 2px solid #cbd5e0;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: 600;
+            background: white;
+            min-width: 200px;
+            transition: border-color 0.2s;
+        }
+        
+        .trainer-name:focus {
+            outline: none;
+            border-color: #3182ce;
+            box-shadow: 0 0 0 3px rgba(49, 130, 206, 0.1);
+        }
+        
+        .pokemon-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 18px;
+        }
+        
+        .pokemon-card {
+            border: 1px solid #e2e8f0;
+            border-radius: 10px;
+            padding: 18px;
+            background: #fefefe;
+            transition: all 0.2s;
+            position: relative;
+        }
+        
+        .pokemon-card:hover {
+            border-color: #cbd5e0;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        
+        .pokemon-card.empty {
+            opacity: 0.6;
+            background: #f8fafc;
+        }
+        
+        .pokemon-number {
+            position: absolute;
+            top: 8px;
+            right: 12px;
+            background: #e2e8f0;
+            color: #64748b;
+            padding: 4px 8px;
+            border-radius: 12px;
+            font-size: 0.75em;
+            font-weight: 600;
+        }
+        
+        .pokemon-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+        
+        .pokemon-select {
+            flex: 1;
+            padding: 8px;
+            border: 1px solid #d1d5db;
+            border-radius: 5px;
+            margin-right: 10px;
+        }
+        
+        .pokemon-level {
+            font-weight: 700;
+            color: #2d3748;
+            min-width: 80px;
+            background: #e2e8f0;
+            padding: 8px 12px;
+            border-radius: 6px;
+            text-align: center;
+        }
+        
+        .xp-info {
+            margin-bottom: 15px;
+        }
+        
+        .xp-bar {
+            width: 100%;
+            height: 20px;
+            background: #e5e7eb;
+            border-radius: 10px;
+            overflow: hidden;
+            margin: 5px 0;
+        }
+        
+        .xp-progress {
+            height: 100%;
+            background: linear-gradient(90deg, #10b981, #34d399);
+            transition: width 0.3s ease;
+        }
+        
+        .xp-input-group {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+        }
+        
+        .xp-input {
+            flex: 1;
+            padding: 8px;
+            border: 1px solid #d1d5db;
+            border-radius: 5px;
+        }
+        
+        .add-xp-btn {
+            background: #059669;
+            color: white;
+            border: none;
+            padding: 10px 16px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.2s;
+            font-size: 0.9em;
+        }
+        
+        .add-xp-btn:hover {
+            background: #047857;
+            transform: translateY(-1px);
+        }
+        
+        .batch-xp-btn {
+            background: #3182ce;
+            color: white;
+            border: none;
+            padding: 10px 16px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.2s;
+            font-size: 0.9em;
+        }
+        
+        .batch-xp-btn:hover {
+            background: #2c5282;
+            transform: translateY(-1px);
+        }
+        
+        .reset-btn {
+            background: #dc2626;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.2s;
+        }
+        
+        .reset-btn:hover {
+            background: #b91c1c;
+            transform: translateY(-1px);
+        }
+        
+        .export-btn {
+            background: #059669;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.2s;
+        }
+        
+        .export-btn:hover {
+            background: #047857;
+            transform: translateY(-1px);
+        }
+        
+        .import-btn {
+            background: #3182ce;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.2s;
+        }
+        
+        .import-btn:hover {
+            background: #2c5282;
+            transform: translateY(-1px);
+        }
+        
+        .batch-xp-modal {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.5);
+            display: none;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+        }
+        
+        .batch-xp-content {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            max-width: 600px;
+            width: 90%;
+            max-height: 80vh;
+            overflow-y: auto;
+        }
+        
+        .enemy-input {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 15px;
+            align-items: center;
+        }
+        
+        .enemy-input select, .enemy-input input {
+            flex: 1;
+            padding: 8px;
+            border: 1px solid #d1d5db;
+            border-radius: 5px;
+        }
+        
+        .pokemon-status {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr;
+            gap: 10px;
+            margin-bottom: 10px;
+            align-items: center;
+        }
+        
+        .close-btn {
+            background: #6b7280;
+            color: white;
+            border: none;
+            padding: 8px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            float: right;
+        }
+        
+        .xp-summary {
+            background: #f0f9ff;
+            border: 2px solid #0ea5e9;
+            border-radius: 10px;
+            padding: 15px;
+            margin: 10px 0;
+        }
+        
+        .pokemon-xp-line {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 8px 0;
+            border-bottom: 1px solid #e5e7eb;
+        }
+        
+        .pokemon-xp-line:last-child {
+            border-bottom: none;
+        }
+        
+        .level-up {
+            color: #059669;
+            font-weight: bold;
+        }
+        
+        .xp-gained {
+            color: #0ea5e9;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="accueil.html" class="back-link">
+            <span>←</span> Retour à l'accueil
+        </a>
+        
+        <h1>📋 Suivi des Dresseurs - Interface MJ</h1>
+        
+        <!-- Contrôles MJ -->
+        <div class="gm-controls">
+            <h3>🎮 Contrôles du Maître de Jeu</h3>
+            <div class="controls-grid">
+                <button class="export-btn" onclick="exportData()">📥 Exporter Données</button>
+                <input type="file" id="importFile" accept=".json" style="display: none;" onchange="importData(event)">
+                <button class="import-btn" onclick="document.getElementById('importFile').click()">📤 Importer Données</button>
+                <button class="batch-xp-btn" onclick="toggleAllTrainers()">👁️ Basculer Vue</button>
+                <button class="batch-xp-btn" onclick="openMultiPlayerBattle()">⚔️ Combat Multi-Joueurs</button>
+                <button class="reset-btn" onclick="resetAllTrainers()">🗑️ Réinitialiser Tout</button>
+                <button class="batch-xp-btn" onclick="showGlobalStats()">📊 Statistiques</button>
+            </div>
+        </div>
+        
+        <div id="trainersContainer">
+            <!-- Les sections de dresseurs seront générées ici -->
+        </div>
+    </div>
+    
+    <!-- Modal pour calcul XP en lot -->
+    <div id="batchXPModal" class="batch-xp-modal">
+        <div class="batch-xp-content" id="batchXPContent">
+            <!-- Contenu généré dynamiquement -->
+        </div>
+    </div>
+
+    <script>
+        let pokemonData = {};
+        let attacksData = {};
+        let trainers = [];
+
+        // Initialiser 4 dresseurs avec 6 Pokémon chacun
+        for (let t = 0; t < 4; t++) {
+            const trainer = {
+                name: `Dresseur ${t + 1}`,
+                team: [],
+                box: [],
+                pokedex: {}
+            };
+            
+            for (let i = 0; i < 6; i++) {
+                trainer.team.push({
+                    id: null,
+                    name: '',
+                    level: 1,
+                    currentXP: 0,
+                    xpForNextLevel: 8,
+                    moves: [null, null, null, null]
+                });
+            }
+            
+            trainers.push(trainer);
+        }
+
+        // Charger les données des Pokémon et attaques
+        Promise.all([
+            fetch('pokemon_data.json').then(response => response.json()),
+            fetch('attacks.json').then(response => response.json())
+        ])
+        .then(([pokemon, attacks]) => {
+            pokemonData = pokemon;
+            attacksData = attacks;
+            loadTrainersFromStorage();
+            renderTrainers();
+        })
+        .catch(error => {
+            console.error('Erreur lors du chargement des données:', error);
+        });
+
+        function calculateXPForLevel(level) {
+            return Math.pow(level, 3);
+        }
+
+        function calculateLevelFromXP(xp) {
+            return Math.floor(Math.cbrt(xp));
+        }
+
+        function renderTrainers() {
+            const container = document.getElementById('trainersContainer');
+            container.innerHTML = '';
+
+            trainers.forEach((trainer, trainerIndex) => {
+                const trainerSection = document.createElement('div');
+                trainerSection.className = 'trainer-section';
+                
+                // Calculer les statistiques du dresseur
+                const activePokemons = trainer.team.filter(p => p.id !== null).length;
+                const totalLevel = trainer.team.reduce((sum, p) => p.id ? sum + p.level : sum, 0);
+                const avgLevel = activePokemons > 0 ? Math.round(totalLevel / activePokemons) : 0;
+                const totalXP = trainer.team.reduce((sum, p) => p.id ? sum + p.currentXP : sum, 0);
+                
+                trainerSection.innerHTML = `
+                    <div class="trainer-header">
+                        <div class="trainer-info">
+                            <input type="text" class="trainer-name" value="${trainer.name}" 
+                                   onchange="updateTrainerName(${trainerIndex}, this.value)" 
+                                   placeholder="Nom du dresseur">
+                        </div>
+                        <div class="trainer-actions">
+                            <button class="batch-xp-btn" onclick="openBatchXP(${trainerIndex})">⚡ Combat XP</button>
+                            <button class="batch-xp-btn" onclick="openPokemonBox(${trainerIndex})">📦 Boîte</button>
+                            <button class="batch-xp-btn" onclick="openPokedex(${trainerIndex})">📖 Pokédex</button>
+                            <button class="collapse-btn" onclick="toggleTrainer(${trainerIndex})" id="collapseBtn${trainerIndex}">
+                                📋 Résumé
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <div class="trainer-summary" id="summary${trainerIndex}">
+                        <div class="summary-stats">
+                            <div class="stat-item">
+                                <div class="stat-value">${activePokemons}/6</div>
+                                <div class="stat-label">Pokémon actifs</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-value">${avgLevel}</div>
+                                <div class="stat-label">Niveau moyen</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-value">${totalXP}</div>
+                                <div class="stat-label">XP total</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-value">${trainer.team.filter(p => p.id && p.level >= 10).length}</div>
+                                <div class="stat-label">Niv. 10+</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-value">${trainer.box ? trainer.box.length : 0}</div>
+                                <div class="stat-label">En boîte</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-value">${trainer.pokedex ? Object.keys(trainer.pokedex).filter(id => trainer.pokedex[id].seen).length : 0}</div>
+                                <div class="stat-label">Vus</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-value">${trainer.pokedex ? Object.keys(trainer.pokedex).filter(id => trainer.pokedex[id].caught).length : 0}</div>
+                                <div class="stat-label">Capturés</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="pokemon-grid" id="trainerGrid${trainerIndex}">
+                        <!-- Pokémon du dresseur -->
+                    </div>
+                `;
+                
+                container.appendChild(trainerSection);
+                
+                // Rendre les Pokémon de ce dresseur
+                const pokemonGrid = document.getElementById(`trainerGrid${trainerIndex}`);
+                trainer.team.forEach((pokemon, pokemonIndex) => {
+                    const card = document.createElement('div');
+                    card.className = 'pokemon-card';
+                    
+                    const xpProgress = pokemon.xpForNextLevel > 0 ? 
+                        (pokemon.currentXP / pokemon.xpForNextLevel) * 100 : 0;
+
+                    if (!pokemon.id) {
+                        card.classList.add('empty');
+                    }
+                    
+                    card.innerHTML = `
+                        <div class="pokemon-number">#${pokemonIndex + 1}</div>
+                        
+                        <div class="pokemon-header">
+                            <select class="pokemon-select" onchange="selectPokemon(${trainerIndex}, ${pokemonIndex}, this.value)">
+                                <option value="">Choisir un Pokémon...</option>
+                                ${Object.keys(pokemonData).map(id => {
+                                    const p = pokemonData[id];
+                                    const selected = pokemon.id == id ? 'selected' : '';
+                                    return `<option value="${id}" ${selected}>#${id.padStart(3, '0')} ${p.nom}</option>`;
+                                }).join('')}
+                            </select>
+                            <div class="pokemon-level">Niv. ${pokemon.level}</div>
+                        </div>
+                        
+                        <div class="xp-info">
+                            <div style="font-weight: 600; margin-bottom: 8px;">XP: ${pokemon.currentXP} / ${pokemon.xpForNextLevel}</div>
+                            <div class="xp-bar">
+                                <div class="xp-progress" style="width: ${xpProgress}%"></div>
+                            </div>
+                            <div style="font-size: 0.85em; color: #64748b; margin-top: 4px;">
+                                Progrès: ${Math.round(xpProgress)}%
+                            </div>
+                        </div>
+                        
+                        <div class="xp-input-group">
+                            <input type="number" class="xp-input" placeholder="XP à ajouter" min="0" id="xpInput${trainerIndex}_${pokemonIndex}">
+                            <button class="add-xp-btn" onclick="addXP(${trainerIndex}, ${pokemonIndex})">+ XP</button>
+                        </div>
+                        ${pokemon.id ? `
+                            <div style="display: flex; gap: 5px; margin-top: 10px;">
+                                <button class="batch-xp-btn" style="padding: 6px 10px; font-size: 0.8em; flex: 1;" onclick="openMoveManager(${trainerIndex}, ${pokemonIndex})">Attaques</button>
+                                <button class="reset-btn" style="padding: 6px 10px; font-size: 0.8em; flex: 1;" onclick="moveToBox(${trainerIndex}, ${pokemonIndex})">Boîte</button>
+                            </div>
+                        ` : ''}
+                    `;
+                    
+                    pokemonGrid.appendChild(card);
+                });
+            });
+        }
+
+        function updateTrainerName(trainerIndex, name) {
+            trainers[trainerIndex].name = name;
+            saveTrainersToStorage();
+        }
+
+        function selectPokemon(trainerIndex, pokemonIndex, pokemonId) {
+            const currentPokemon = trainers[trainerIndex].team[pokemonIndex];
+            
+            if (pokemonId) {
+                // Si un Pokémon est déjà sélectionné, demander confirmation
+                if (currentPokemon.id) {
+                    const pokemon = pokemonData[pokemonId];
+                    if (!confirm(`Remplacer ${currentPokemon.name} par ${pokemon.nom} ?\n\nAttention : Cela effacera le niveau, l'XP et les attaques actuels !`)) {
+                        // Remettre la sélection précédente
+                        document.querySelector(`select[onchange*="selectPokemon(${trainerIndex}, ${pokemonIndex}"]:not([onchange*="updateMove"])`).value = currentPokemon.id;
+                        return;
+                    }
+                }
+                
+                const pokemon = pokemonData[pokemonId];
+                trainers[trainerIndex].team[pokemonIndex] = {
+                    id: pokemonId,
+                    name: pokemon.nom,
+                    level: 1,
+                    currentXP: 0,
+                    xpForNextLevel: calculateXPForLevel(2),
+                    moves: [null, null, null, null]
+                };
+            } else {
+                trainers[trainerIndex].team[pokemonIndex] = {
+                    id: null,
+                    name: '',
+                    level: 1,
+                    currentXP: 0,
+                    xpForNextLevel: calculateXPForLevel(2),
+                    moves: [null, null, null, null]
+                };
+            }
+            saveTrainersToStorage();
+            renderTrainers();
+        }
+
+        function addXP(trainerIndex, pokemonIndex) {
+            const input = document.getElementById(`xpInput${trainerIndex}_${pokemonIndex}`);
+            const xpToAdd = parseInt(input.value);
+            
+            const pokemon = trainers[trainerIndex].team[pokemonIndex];
+            if (!xpToAdd || xpToAdd <= 0 || !pokemon.id) return;
+            
+            pokemon.currentXP += xpToAdd;
+            
+            // Vérifier les montées de niveau
+            while (pokemon.currentXP >= pokemon.xpForNextLevel) {
+                pokemon.currentXP -= pokemon.xpForNextLevel;
+                pokemon.level++;
+                pokemon.xpForNextLevel = calculateXPForLevel(pokemon.level + 1);
+                
+                showNotification(`${pokemon.name} de ${trainers[trainerIndex].name} monte au niveau ${pokemon.level} !`, 'success');
+                
+                // Vérifier les nouvelles attaques
+                checkNewMoves(pokemon, trainers[trainerIndex].name);
+                
+                // Vérifier évolution possible
+                checkEvolution(pokemon, trainers[trainerIndex].name);
+            }
+            
+            input.value = '';
+            saveTrainersToStorage();
+            renderTrainers();
+        }
+
+        function resetAllTrainers() {
+            if (confirm('Êtes-vous sûr de vouloir réinitialiser tous les dresseurs ?')) {
+                for (let t = 0; t < 4; t++) {
+                    trainers[t].name = `Dresseur ${t + 1}`;
+                    for (let i = 0; i < 6; i++) {
+                        trainers[t].team[i] = {
+                            id: null,
+                            name: '',
+                            level: 1,
+                            currentXP: 0,
+                            xpForNextLevel: calculateXPForLevel(2)
+                        };
+                    }
+                }
+                saveTrainersToStorage();
+                renderTrainers();
+            }
+        }
+
+        function saveTrainersToStorage() {
+            localStorage.setItem('pokemonTrainers', JSON.stringify(trainers));
+        }
+
+        function loadTrainersFromStorage() {
+            const saved = localStorage.getItem('pokemonTrainers');
+            if (saved) {
+                trainers = JSON.parse(saved);
+            }
+        }
+
+        function exportData() {
+            const dataToExport = {
+                trainers: trainers,
+                exportDate: new Date().toISOString(),
+                version: '1.0'
+            };
+            
+            const dataStr = JSON.stringify(dataToExport, null, 2);
+            const dataBlob = new Blob([dataStr], {type: 'application/json'});
+            
+            const link = document.createElement('a');
+            link.href = URL.createObjectURL(dataBlob);
+            link.download = `pokemon_dresseurs_${new Date().toISOString().split('T')[0]}.json`;
+            link.click();
+        }
+
+        function importData(event) {
+            const file = event.target.files[0];
+            if (!file) return;
+            
+            const reader = new FileReader();
+            reader.onload = function(e) {
+                try {
+                    const importedData = JSON.parse(e.target.result);
+                    
+                    if (importedData.trainers && Array.isArray(importedData.trainers)) {
+                        if (confirm('Êtes-vous sûr de vouloir remplacer toutes les données actuelles ?')) {
+                            trainers = importedData.trainers;
+                            saveTrainersToStorage();
+                            renderTrainers();
+                            alert('Données importées avec succès !');
+                        }
+                    } else {
+                        alert('Fichier JSON invalide. Format non reconnu.');
+                    }
+                } catch (error) {
+                    alert('Erreur lors de la lecture du fichier JSON.');
+                }
+            };
+            reader.readAsText(file);
+            
+            // Reset input pour permettre de réimporter le même fichier
+            event.target.value = '';
+        }
+        
+        // Initialisation au chargement
+        document.addEventListener('DOMContentLoaded', function() {
+            // Ajouter des raccourcis clavier pour le MJ
+            document.addEventListener('keydown', function(e) {
+                if (e.ctrlKey) {
+                    switch(e.key) {
+                        case 's':
+                            e.preventDefault();
+                            exportData();
+                            break;
+                        case 'r':
+                            e.preventDefault();
+                            toggleAllTrainers();
+                            break;
+                    }
+                }
+            });
+        });
+        
+        // Amélioration de l'affichage des alertes
+        function showNotification(message, type = 'info') {
+            const notification = document.createElement('div');
+            notification.style.cssText = `
+                position: fixed;
+                top: 20px;
+                right: 20px;
+                padding: 15px 20px;
+                border-radius: 8px;
+                color: white;
+                font-weight: 600;
+                z-index: 10000;
+                animation: slideIn 0.3s ease;
+                max-width: 300px;
+            `;
+            
+            switch(type) {
+                case 'success':
+                    notification.style.background = '#059669';
+                    break;
+                case 'error':
+                    notification.style.background = '#dc2626';
+                    break;
+                default:
+                    notification.style.background = '#3182ce';
+            }
+            
+            notification.textContent = message;
+            document.body.appendChild(notification);
+            
+            setTimeout(() => {
+                notification.remove();
+            }, 3000);
+        }
+        
+        // Ajouter les styles d'animation
+        const style = document.createElement('style');
+        style.textContent = `
+            @keyframes slideIn {
+                from { transform: translateX(100%); opacity: 0; }
+                to { transform: translateX(0); opacity: 1; }
+            }
+            @keyframes fadeIn {
+                from { opacity: 0; }
+                to { opacity: 1; }
+            }
+            @keyframes bounceIn {
+                0% { transform: scale(0.3); opacity: 0; }
+                50% { transform: scale(1.05); }
+                70% { transform: scale(0.9); }
+                100% { transform: scale(1); opacity: 1; }
+            }
+        `;
+        document.head.appendChild(style);
+        
+        function openBatchXP(trainerIndex) {
+            const modal = document.getElementById('batchXPModal');
+            const content = document.getElementById('batchXPContent');
+            
+            content.innerHTML = `
+                <button class="close-btn" onclick="closeBatchXP()">✕</button>
+                <h3>Calcul XP pour ${trainers[trainerIndex].name}</h3>
+                
+                <div style="margin-bottom: 20px;">
+                    <h4>Pokémon vaincu :</h4>
+                    <div class="enemy-input">
+                        <select id="enemyPokemon">
+                            <option value="">Choisir un Pokémon...</option>
+                            ${Object.keys(pokemonData).map(id => {
+                                const p = pokemonData[id];
+                                return `<option value="${id}">#${id.padStart(3, '0')} ${p.nom}</option>`;
+                            }).join('')}
+                        </select>
+                        <input type="number" id="enemyLevel" placeholder="Niveau" min="1" max="100">
+                    </div>
+                    
+                    <div style="margin-top: 10px;">
+                        <label><input type="checkbox" id="isTrainer"> Combat contre un dresseur</label>
+                    </div>
+                </div>
+                
+                <div style="margin-bottom: 20px;">
+                    <h4>État de l'équipe :</h4>
+                    ${trainers[trainerIndex].team.map((pokemon, i) => {
+                        if (!pokemon.id) return '';
+                        return `
+                            <div class="pokemon-status">
+                                <span>${pokemon.name} (Niv. ${pokemon.level})</span>
+                                <select id="participation_${i}">
+                                    <option value="2">N'a pas participé</option>
+                                    <option value="1">A participé</option>
+                                </select>
+                                <label><input type="checkbox" id="alive_${i}" checked> En vie</label>
+                            </div>
+                        `;
+                    }).join('')}
+                </div>
+                
+                <div style="text-align: center;">
+                    <button class="add-xp-btn" onclick="calculateBatchXP(${trainerIndex})" style="margin-right: 10px;">Calculer et Appliquer XP</button>
+                    <button class="close-btn" onclick="closeBatchXP()">Annuler</button>
+                </div>
+            `;
+            
+            modal.style.display = 'flex';
+        }
+        
+        function closeBatchXP() {
+            document.getElementById('batchXPModal').style.display = 'none';
+        }
+        
+        function showXPSummary(trainerIndex, enemyName, enemyLevel, totalXP, levelUps) {
+            const modal = document.getElementById('batchXPModal');
+            const content = document.getElementById('batchXPContent');
+            
+            // Recalculer les détails pour l'affichage
+            const enemyPokemonId = document.getElementById('enemyPokemon').value;
+            const isTrainer = document.getElementById('isTrainer').checked;
+            const enemyPokemon = pokemonData[enemyPokemonId];
+            
+            let pokemonDetails = [];
+            
+            trainers[trainerIndex].team.forEach((pokemon, i) => {
+                if (!pokemon.id) return;
+                
+                const participation = parseInt(document.getElementById(`participation_${i}`).value);
+                const isAlive = document.getElementById(`alive_${i}`).checked;
+                
+                // Recalcul pour affichage
+                const a = 1;
+                const b = enemyPokemon.exp_base;
+                const N = enemyLevel;
+                const s = 1 / participation;
+                const Np = pokemon.level;
+                const t = isTrainer ? 1.5 : 1;
+                const itemMultiplier = 1;
+                
+                const numerator = 2 * N + 10;
+                const denominator = N + Np + 10;
+                const fraction = numerator / denominator;
+                const power = Math.pow(fraction, 2.5);
+                
+                let xpGained = Math.floor((a * b * N * s * power + 1) * t * itemMultiplier / 5);
+                
+                if (!isAlive) {
+                    xpGained = Math.floor(xpGained * 0.5);
+                }
+                
+                pokemonDetails.push({
+                    name: pokemon.name,
+                    level: pokemon.level,
+                    xpGained: xpGained,
+                    participation: participation === 1 ? 'Participé' : 'Non participé',
+                    alive: isAlive ? 'En vie' : 'KO'
+                });
+            });
+            
+            content.innerHTML = `
+                <button class="close-btn" onclick="closeBatchXP()">✕</button>
+                <h3>🎉 Récapitulatif du Combat</h3>
+                
+                <div class="xp-summary">
+                    <h4>Combat contre : ${enemyName} (Niveau ${enemyLevel})</h4>
+                    <p><strong>Type :</strong> ${isTrainer ? 'Dresseur' : 'Pokémon sauvage'}</p>
+                    <p><strong>XP total distribué :</strong> <span class="xp-gained">${totalXP} XP</span></p>
+                </div>
+                
+                <div class="xp-summary">
+                    <h4>Détail par Pokémon :</h4>
+                    ${pokemonDetails.map(p => `
+                        <div class="pokemon-xp-line">
+                            <div>
+                                <strong>${p.name}</strong> (Niv. ${p.level})<br>
+                                <small>${p.participation} • ${p.alive}</small>
+                            </div>
+                            <div class="xp-gained">+${p.xpGained} XP</div>
+                        </div>
+                    `).join('')}
+                </div>
+                
+                ${levelUps.length > 0 ? `
+                    <div class="xp-summary">
+                        <h4>🎆 Montées de niveau :</h4>
+                        ${levelUps.map(levelUp => `
+                            <div class="level-up">⬆️ ${levelUp}</div>
+                        `).join('')}
+                    </div>
+                ` : ''}
+                
+                <div style="text-align: center; margin-top: 20px;">
+                    <button class="add-xp-btn" onclick="closeBatchXP()">Fermer</button>
+                </div>
+            `;
+            
+            modal.style.display = 'flex';
+        }
+        
+        function calculateBatchXP(trainerIndex) {
+            const enemyPokemonId = document.getElementById('enemyPokemon').value;
+            const enemyLevel = parseInt(document.getElementById('enemyLevel').value);
+            const isTrainer = document.getElementById('isTrainer').checked;
+            
+            if (!enemyPokemonId || !enemyLevel) {
+                alert('Veuillez sélectionner un Pokémon ennemi et son niveau.');
+                return;
+            }
+            
+            const enemyPokemon = pokemonData[enemyPokemonId];
+            let totalXPGained = 0;
+            let levelUps = [];
+            
+            trainers[trainerIndex].team.forEach((pokemon, i) => {
+                if (!pokemon.id) return;
+                
+                const participation = parseInt(document.getElementById(`participation_${i}`).value);
+                const isAlive = document.getElementById(`alive_${i}`).checked;
+                
+                // Calcul XP selon la formule
+                const a = 1;
+                const b = enemyPokemon.exp_base;
+                const N = enemyLevel;
+                const s = 1 / participation;
+                const Np = pokemon.level;
+                const t = isTrainer ? 1.5 : 1;
+                const itemMultiplier = 1;
+                
+                const numerator = 2 * N + 10;
+                const denominator = N + Np + 10;
+                const fraction = numerator / denominator;
+                const power = Math.pow(fraction, 2.5);
+                
+                let xpGained = Math.floor((a * b * N * s * power + 1) * t * itemMultiplier / 5);
+                
+                // Réduction si KO
+                if (!isAlive) {
+                    xpGained = Math.floor(xpGained * 0.5);
+                }
+                
+                // Appliquer l'XP
+                pokemon.currentXP += xpGained;
+                totalXPGained += xpGained;
+                
+                // Vérifier montées de niveau
+                while (pokemon.currentXP >= pokemon.xpForNextLevel) {
+                    pokemon.currentXP -= pokemon.xpForNextLevel;
+                    pokemon.level++;
+                    pokemon.xpForNextLevel = calculateXPForLevel(pokemon.level + 1);
+                    levelUps.push(`${pokemon.name} → Niveau ${pokemon.level}`);
+                    
+                    // Vérifier les nouvelles attaques
+                    checkNewMoves(pokemon, trainers[trainerIndex].name);
+                    
+                    // Vérifier évolution possible
+                    checkEvolution(pokemon, trainers[trainerIndex].name);
+                }
+            });
+            
+            // Sauvegarder et rafraîchir
+            saveTrainersToStorage();
+            renderTrainers();
+            closeBatchXP();
+            
+            // Afficher résumé détaillé
+            showXPSummary(trainerIndex, enemyPokemon.nom, enemyLevel, totalXPGained, levelUps);
+        }
+        
+        // Nouvelles fonctions pour les contrôles MJ
+        function toggleTrainer(trainerIndex) {
+            const section = document.querySelector(`#trainersContainer .trainer-section:nth-child(${trainerIndex + 1})`);
+            const btn = document.getElementById(`collapseBtn${trainerIndex}`);
+            
+            section.classList.toggle('collapsed');
+            btn.textContent = section.classList.contains('collapsed') ? '📄 Détails' : '📋 Résumé';
+        }
+        
+        function toggleAllTrainers() {
+            const sections = document.querySelectorAll('.trainer-section');
+            const isAnyCollapsed = Array.from(sections).some(s => s.classList.contains('collapsed'));
+            
+            sections.forEach((section, index) => {
+                const btn = document.getElementById(`collapseBtn${index}`);
+                if (isAnyCollapsed) {
+                    section.classList.remove('collapsed');
+                    btn.textContent = '📋 Résumé';
+                } else {
+                    section.classList.add('collapsed');
+                    btn.textContent = '📄 Détails';
+                }
+            });
+        }
+        
+        function showGlobalStats() {
+            const totalTrainers = trainers.length;
+            const activeTrainers = trainers.filter(t => t.team.some(p => p.id !== null)).length;
+            const totalPokemons = trainers.reduce((sum, t) => sum + t.team.filter(p => p.id !== null).length, 0);
+            const totalLevels = trainers.reduce((sum, t) => sum + t.team.reduce((tSum, p) => p.id ? tSum + p.level : tSum, 0), 0);
+            const avgLevel = totalPokemons > 0 ? Math.round(totalLevels / totalPokemons) : 0;
+            const highLevelPokemons = trainers.reduce((sum, t) => sum + t.team.filter(p => p.id && p.level >= 20).length, 0);
+            
+            alert(`📊 Statistiques Globales \n\n` +
+                  `👥 Dresseurs actifs: ${activeTrainers}/${totalTrainers}\n` +
+                  `👾 Pokémon total: ${totalPokemons}\n` +
+                  `🎆 Niveau moyen: ${avgLevel}\n` +
+                  `⭐ Pokémon Niv. 20+: ${highLevelPokemons}`);
+        }
+        
+        function checkNewMoves(pokemon, trainerName) {
+            if (!pokemon.id || !pokemonData[pokemon.id]) return;
+            
+            const pokemonInfo = pokemonData[pokemon.id];
+            if (!pokemonInfo.capacites) return;
+            
+            const newMoves = pokemonInfo.capacites.filter(move => move.niveau === pokemon.level);
+            
+            if (newMoves.length > 0) {
+                const moveNames = newMoves.map(move => move.attaque).join(', ');
+                showMoveAlert(pokemon.name, trainerName, moveNames, pokemon.level);
+            }
+        }
+        
+        function showMoveAlert(pokemonName, trainerName, moves, level) {
+            // Créer le modal d'alerte
+            const modal = document.createElement('div');
+            modal.style.cssText = `
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: rgba(0,0,0,0.8);
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                z-index: 10000;
+                animation: fadeIn 0.3s ease;
+            `;
+            
+            const content = document.createElement('div');
+            content.style.cssText = `
+                background: linear-gradient(135deg, #ff6b6b, #ffa500);
+                color: white;
+                padding: 30px;
+                border-radius: 15px;
+                text-align: center;
+                max-width: 500px;
+                box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+                animation: bounceIn 0.5s ease;
+                border: 3px solid #fff;
+            `;
+            
+            content.innerHTML = `
+                <div style="font-size: 3em; margin-bottom: 15px;">⚡🎯⚡</div>
+                <h2 style="margin: 0 0 15px 0; font-size: 1.5em;">NOUVELLE ATTAQUE !</h2>
+                <p style="font-size: 1.2em; margin: 10px 0;"><strong>${pokemonName}</strong> de <strong>${trainerName}</strong></p>
+                <p style="font-size: 1.1em; margin: 15px 0;">peut maintenant apprendre :</p>
+                <div style="background: rgba(255,255,255,0.2); padding: 15px; border-radius: 10px; margin: 15px 0;">
+                    <strong style="font-size: 1.3em; text-transform: uppercase;">${moves}</strong>
+                </div>
+                <p style="font-size: 1em; margin: 10px 0; opacity: 0.9;">Niveau d'apprentissage : ${level}</p>
+                <button onclick="this.parentElement.parentElement.remove()" style="
+                    background: #fff;
+                    color: #ff6b6b;
+                    border: none;
+                    padding: 12px 25px;
+                    border-radius: 25px;
+                    font-weight: bold;
+                    cursor: pointer;
+                    font-size: 1.1em;
+                    margin-top: 15px;
+                ">OK, Compris !</button>
+            `;
+            
+            modal.appendChild(content);
+            document.body.appendChild(modal);
+            
+            // Son d'alerte (bip)
+            try {
+                const audio = new Audio('data:audio/wav;base64,UklGRnoGAABXQVZFZm10IBAAAAABAAEAQB8AAEAfAAABAAgAZGF0YQoGAACBhYqFbF1fdJivrJBhNjVgodDbq2EcBj+a2/LDciUFLIHO8tiJNwgZaLvt559NEAxQp+PwtmMcBjiR1/LMeSwFJHfH8N2QQAoUXrTp66hVFApGn+DyvmwhBSuBzvLZiTYIG2m98OScTgwOUarm7blmGgU7k9n1unEiBC13yO/eizEIHWq+8+OWT');
+                audio.play().catch(() => {});
+            } catch(e) {}
+            
+            // Auto-fermeture après 10 secondes
+            setTimeout(() => {
+                if (modal.parentElement) {
+                    modal.remove();
+                }
+            }, 10000);
+        }
+        
+        function checkEvolution(pokemon, trainerName) {
+            if (!pokemon.id || !pokemonData[pokemon.id]) return;
+            
+            const pokemonInfo = pokemonData[pokemon.id];
+            if (!pokemonInfo.evolution || pokemonInfo.evolution === "n'évolue pas") return;
+            
+            // Vérifier évolution par niveau
+            if (pokemonInfo.evolution.niveau && pokemon.level >= pokemonInfo.evolution.niveau) {
+                showEvolutionAlert(pokemon.name, trainerName, pokemonInfo.evolution.nom, 'niveau ' + pokemonInfo.evolution.niveau);
+            }
+            // Vérifier évolution par pierre
+            else if (pokemonInfo.evolution.pierre) {
+                showEvolutionAlert(pokemon.name, trainerName, pokemonInfo.evolution.nom, pokemonInfo.evolution.pierre);
+            }
+            // Vérifier évolution par échange
+            else if (pokemonInfo.evolution.echange) {
+                showEvolutionAlert(pokemon.name, trainerName, pokemonInfo.evolution.nom, 'échange');
+            }
+        }
+        
+        function showEvolutionAlert(pokemonName, trainerName, evolutionName, method) {
+            const modal = document.createElement('div');
+            modal.style.cssText = `
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: rgba(0,0,0,0.8);
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                z-index: 10000;
+                animation: fadeIn 0.3s ease;
+            `;
+            
+            const content = document.createElement('div');
+            content.style.cssText = `
+                background: linear-gradient(135deg, #9c27b0, #673ab7);
+                color: white;
+                padding: 30px;
+                border-radius: 15px;
+                text-align: center;
+                max-width: 500px;
+                box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+                animation: bounceIn 0.5s ease;
+                border: 3px solid #fff;
+            `;
+            
+            content.innerHTML = `
+                <div style="font-size: 3em; margin-bottom: 15px;">🌟✨🌟</div>
+                <h2 style="margin: 0 0 15px 0; font-size: 1.5em;">ÉVOLUTION POSSIBLE !</h2>
+                <p style="font-size: 1.2em; margin: 10px 0;"><strong>${pokemonName}</strong> de <strong>${trainerName}</strong></p>
+                <p style="font-size: 1.1em; margin: 15px 0;">peut évoluer en :</p>
+                <div style="background: rgba(255,255,255,0.2); padding: 15px; border-radius: 10px; margin: 15px 0;">
+                    <strong style="font-size: 1.3em; text-transform: uppercase;">${evolutionName}</strong>
+                </div>
+                <p style="font-size: 1em; margin: 10px 0; opacity: 0.9;">Condition : ${method}</p>
+                <div style="margin-top: 20px; display: flex; gap: 15px; justify-content: center;">
+                    <button onclick="evolvePokemon('${pokemonName}', '${trainerName}', '${evolutionName}'); this.parentElement.parentElement.parentElement.remove();" style="
+                        background: #4caf50;
+                        color: white;
+                        border: none;
+                        padding: 12px 25px;
+                        border-radius: 25px;
+                        font-weight: bold;
+                        cursor: pointer;
+                        font-size: 1.1em;
+                    ">✨ Évolue</button>
+                    <button onclick="this.parentElement.parentElement.parentElement.remove()" style="
+                        background: #f44336;
+                        color: white;
+                        border: none;
+                        padding: 12px 25px;
+                        border-radius: 25px;
+                        font-weight: bold;
+                        cursor: pointer;
+                        font-size: 1.1em;
+                    ">❌ N'évolue pas</button>
+                </div>
+            `;
+            
+            modal.appendChild(content);
+            document.body.appendChild(modal);
+            
+            // Son d'évolution
+            try {
+                const audio = new Audio('data:audio/wav;base64,UklGRnoGAABXQVZFZm10IBAAAAABAAEAQB8AAEAfAAABAAgAZGF0YQoGAACBhYqFbF1fdJivrJBhNjVgodDbq2EcBj+a2/LDciUFLIHO8tiJNwgZaLvt559NEAxQp+PwtmMcBjiR1/LMeSwFJHfH8N2QQAoUXrTp66hVFApGn+DyvmwhBSuBzvLZiTYIG2m98OScTgwOUarm7blmGgU7k9n1unEiBC13yO/eizEIHWq+8+OWT');
+                audio.play().catch(() => {});
+            } catch(e) {}
+        }
+        
+        function evolvePokemon(pokemonName, trainerName, evolutionName) {
+            // Trouver le Pokémon
+            trainers.forEach((trainer, tIndex) => {
+                if (trainer.name === trainerName) {
+                    trainer.team.forEach((pokemon, pIndex) => {
+                        if (pokemon.name === pokemonName) {
+                            // Trouver l'évolution dans les données
+                            const evolutionId = Object.keys(pokemonData).find(id => 
+                                pokemonData[id].nom === evolutionName
+                            );
+                            
+                            if (evolutionId) {
+                                pokemon.id = evolutionId;
+                                pokemon.name = evolutionName;
+                                
+                                // Sauvegarder et rafraîchir
+                                saveTrainersToStorage();
+                                renderTrainers();
+                                
+                                // Notification d'évolution réussie
+                                showNotification(`🎉 ${pokemonName} a évolué en ${evolutionName} !`, 'success');
+                            }
+                        }
+                    });
+                }
+            });
+        }
+        
+        function openMultiPlayerBattle() {
+            const modal = document.getElementById('batchXPModal');
+            const content = document.getElementById('batchXPContent');
+            
+            content.innerHTML = `
+                <button class="close-btn" onclick="closeBatchXP()">✕</button>
+                <h3>⚔️ Combat Multi-Joueurs</h3>
+                
+                <div style="margin-bottom: 20px;">
+                    <h4>Pokémon vaincu :</h4>
+                    <div class="enemy-input">
+                        <select id="multiEnemyPokemon">
+                            <option value="">Choisir un Pokémon...</option>
+                            ${Object.keys(pokemonData).map(id => {
+                                const p = pokemonData[id];
+                                return `<option value="${id}">#${id.padStart(3, '0')} ${p.nom}</option>`;
+                            }).join('')}
+                        </select>
+                        <input type="number" id="multiEnemyLevel" placeholder="Niveau" min="1" max="100">
+                    </div>
+                    
+                    <div style="margin-top: 10px;">
+                        <label><input type="checkbox" id="multiIsTrainer"> Combat contre un dresseur</label>
+                    </div>
+                </div>
+                
+                <div style="margin-bottom: 20px;">
+                    <h4>Sélection des dresseurs participants :</h4>
+                    ${trainers.map((trainer, trainerIndex) => `
+                        <div style="margin: 10px 0; padding: 10px; border: 1px solid #ddd; border-radius: 5px;">
+                            <label style="display: flex; align-items: center; gap: 10px;">
+                                <input type="checkbox" id="trainer_${trainerIndex}" onchange="toggleTrainerPokemon(${trainerIndex})">
+                                <strong>${trainer.name}</strong>
+                            </label>
+                            <div id="trainerPokemon_${trainerIndex}" style="display: none; margin-top: 10px; padding-left: 20px;">
+                                ${trainer.team.map((pokemon, pokemonIndex) => {
+                                    if (!pokemon.id) return '';
+                                    return `
+                                        <div style="display: flex; align-items: center; gap: 10px; margin: 5px 0;">
+                                            <input type="checkbox" id="pokemon_${trainerIndex}_${pokemonIndex}">
+                                            <span>${pokemon.name} (Niv. ${pokemon.level})</span>
+                                            <select id="participation_${trainerIndex}_${pokemonIndex}" style="margin-left: auto;">
+                                                <option value="2">N'a pas participé</option>
+                                                <option value="1">A participé</option>
+                                            </select>
+                                            <label><input type="checkbox" id="alive_${trainerIndex}_${pokemonIndex}" checked> En vie</label>
+                                        </div>
+                                    `;
+                                }).join('')}
+                            </div>
+                        </div>
+                    `).join('')}
+                </div>
+                
+                <div style="text-align: center;">
+                    <button class="add-xp-btn" onclick="calculateMultiPlayerXP()" style="margin-right: 10px;">Calculer et Appliquer XP</button>
+                    <button class="close-btn" onclick="closeBatchXP()">Annuler</button>
+                </div>
+            `;
+            
+            modal.style.display = 'flex';
+        }
+        
+        function toggleTrainerPokemon(trainerIndex) {
+            const checkbox = document.getElementById(`trainer_${trainerIndex}`);
+            const pokemonDiv = document.getElementById(`trainerPokemon_${trainerIndex}`);
+            
+            if (checkbox.checked) {
+                pokemonDiv.style.display = 'block';
+                // Cocher tous les Pokémon du dresseur
+                trainers[trainerIndex].team.forEach((pokemon, pokemonIndex) => {
+                    if (pokemon.id) {
+                        const pokemonCheckbox = document.getElementById(`pokemon_${trainerIndex}_${pokemonIndex}`);
+                        if (pokemonCheckbox) pokemonCheckbox.checked = true;
+                    }
+                });
+            } else {
+                pokemonDiv.style.display = 'none';
+                // Décocher tous les Pokémon du dresseur
+                trainers[trainerIndex].team.forEach((pokemon, pokemonIndex) => {
+                    if (pokemon.id) {
+                        const pokemonCheckbox = document.getElementById(`pokemon_${trainerIndex}_${pokemonIndex}`);
+                        if (pokemonCheckbox) pokemonCheckbox.checked = false;
+                    }
+                });
+            }
+        }
+        
+        function calculateMultiPlayerXP() {
+            const enemyPokemonId = document.getElementById('multiEnemyPokemon').value;
+            const enemyLevel = parseInt(document.getElementById('multiEnemyLevel').value);
+            const isTrainer = document.getElementById('multiIsTrainer').checked;
+            
+            if (!enemyPokemonId || !enemyLevel) {
+                alert('Veuillez sélectionner un Pokémon ennemi et son niveau.');
+                return;
+            }
+            
+            const enemyPokemon = pokemonData[enemyPokemonId];
+            let totalXPGained = 0;
+            let levelUps = [];
+            let participatingPokemon = [];
+            
+            // Collecter tous les Pokémon participants
+            trainers.forEach((trainer, trainerIndex) => {
+                trainer.team.forEach((pokemon, pokemonIndex) => {
+                    if (!pokemon.id) return;
+                    
+                    const pokemonCheckbox = document.getElementById(`pokemon_${trainerIndex}_${pokemonIndex}`);
+                    if (pokemonCheckbox && pokemonCheckbox.checked) {
+                        const participation = parseInt(document.getElementById(`participation_${trainerIndex}_${pokemonIndex}`).value);
+                        const isAlive = document.getElementById(`alive_${trainerIndex}_${pokemonIndex}`).checked;
+                        
+                        participatingPokemon.push({
+                            pokemon: pokemon,
+                            trainerIndex: trainerIndex,
+                            pokemonIndex: pokemonIndex,
+                            participation: participation,
+                            isAlive: isAlive
+                        });
+                    }
+                });
+            });
+            
+            if (participatingPokemon.length === 0) {
+                alert('Veuillez sélectionner au moins un Pokémon participant.');
+                return;
+            }
+            
+            // Calculer l'XP pour chaque Pokémon
+            participatingPokemon.forEach(({pokemon, trainerIndex, pokemonIndex, participation, isAlive}) => {
+                const a = 1;
+                const b = enemyPokemon.exp_base;
+                const N = enemyLevel;
+                const s = 1 / participation;
+                const Np = pokemon.level;
+                const t = isTrainer ? 1.5 : 1;
+                const itemMultiplier = 1;
+                
+                const numerator = 2 * N + 10;
+                const denominator = N + Np + 10;
+                const fraction = numerator / denominator;
+                const power = Math.pow(fraction, 2.5);
+                
+                let xpGained = Math.floor((a * b * N * s * power + 1) * t * itemMultiplier / 5);
+                
+                if (!isAlive) {
+                    xpGained = Math.floor(xpGained * 0.5);
+                }
+                
+                // Appliquer l'XP
+                pokemon.currentXP += xpGained;
+                totalXPGained += xpGained;
+                
+                // Vérifier montées de niveau
+                while (pokemon.currentXP >= pokemon.xpForNextLevel) {
+                    pokemon.currentXP -= pokemon.xpForNextLevel;
+                    pokemon.level++;
+                    pokemon.xpForNextLevel = calculateXPForLevel(pokemon.level + 1);
+                    levelUps.push(`${pokemon.name} (${trainers[trainerIndex].name}) → Niveau ${pokemon.level}`);
+                    
+                    // Vérifier nouvelles attaques et évolutions
+                    checkNewMoves(pokemon, trainers[trainerIndex].name);
+                    checkEvolution(pokemon, trainers[trainerIndex].name);
+                }
+            });
+            
+            // Sauvegarder et rafraîchir
+            saveTrainersToStorage();
+            renderTrainers();
+            closeBatchXP();
+            
+            // Afficher résumé
+            showMultiPlayerSummary(enemyPokemon.nom, enemyLevel, totalXPGained, levelUps, participatingPokemon.length, isTrainer);
+        }
+        
+        function openPokemonBox(trainerIndex) {
+            const modal = document.getElementById('batchXPModal');
+            const content = document.getElementById('batchXPContent');
+            const trainer = trainers[trainerIndex];
+            
+            if (!trainer.box) trainer.box = [];
+            
+            content.innerHTML = `
+                <button class="close-btn" onclick="closeBatchXP()">✕</button>
+                <h3>📦 Boîte Pokémon - ${trainer.name}</h3>
+                
+                <div style="margin-bottom: 20px;">
+                    <h4>Ajouter un Pokémon :</h4>
+                    <div class="enemy-input">
+                        <select id="boxPokemonSelect">
+                            <option value="">Choisir un Pokémon...</option>
+                            ${Object.keys(pokemonData).map(id => {
+                                const p = pokemonData[id];
+                                return `<option value="${id}">#${id.padStart(3, '0')} ${p.nom}</option>`;
+                            }).join('')}
+                        </select>
+                        <input type="number" id="boxPokemonLevel" placeholder="Niveau" min="1" max="100" value="1">
+                        <button class="add-xp-btn" onclick="addPokemonToBox(${trainerIndex})">Ajouter</button>
+                    </div>
+                </div>
+                
+                <div style="margin-bottom: 20px;">
+                    <h4>Pokémon en boîte (${trainer.box.length}) :</h4>
+                    <div style="max-height: 300px; overflow-y: auto; border: 1px solid #ddd; border-radius: 5px; padding: 10px;">
+                        ${trainer.box.length === 0 ? '<p style="text-align: center; color: #666;">Aucun Pokémon en boîte</p>' : 
+                            trainer.box.map((pokemon, index) => `
+                                <div style="display: flex; align-items: center; justify-content: space-between; padding: 8px; border-bottom: 1px solid #eee; margin-bottom: 5px;">
+                                    <div>
+                                        <strong>${pokemon.name}</strong> - Niveau ${pokemon.level}
+                                        <div style="font-size: 0.8em; color: #666;">XP: ${pokemon.currentXP}/${pokemon.xpForNextLevel}</div>
+                                    </div>
+                                    <div style="display: flex; gap: 5px;">
+                                        <button class="add-xp-btn" style="padding: 5px 10px; font-size: 0.8em;" onclick="moveToTeam(${trainerIndex}, ${index})">→ Équipe</button>
+                                        <button class="reset-btn" style="padding: 5px 10px; font-size: 0.8em;" onclick="removeFromBox(${trainerIndex}, ${index})">Suppr.</button>
+                                    </div>
+                                </div>
+                            `).join('')}
+                    </div>
+                </div>
+                
+                <div style="text-align: center;">
+                    <button class="close-btn" onclick="closeBatchXP()">Fermer</button>
+                </div>
+            `;
+            
+            modal.style.display = 'flex';
+        }
+        
+        function addPokemonToBox(trainerIndex) {
+            const pokemonId = document.getElementById('boxPokemonSelect').value;
+            const level = parseInt(document.getElementById('boxPokemonLevel').value) || 1;
+            
+            if (!pokemonId) {
+                alert('Veuillez sélectionner un Pokémon.');
+                return;
+            }
+            
+            const pokemon = pokemonData[pokemonId];
+            const newPokemon = {
+                id: pokemonId,
+                name: pokemon.nom,
+                level: level,
+                currentXP: 0,
+                xpForNextLevel: calculateXPForLevel(level + 1),
+                moves: [null, null, null, null]
+            };
+            
+            trainers[trainerIndex].box.push(newPokemon);
+            saveTrainersToStorage();
+            openPokemonBox(trainerIndex);
+        }
+        
+        function removeFromBox(trainerIndex, pokemonIndex) {
+            if (confirm('Supprimer ce Pokémon de la boîte ?')) {
+                trainers[trainerIndex].box.splice(pokemonIndex, 1);
+                saveTrainersToStorage();
+                openPokemonBox(trainerIndex);
+            }
+        }
+        
+        function moveToTeam(trainerIndex, boxIndex) {
+            const trainer = trainers[trainerIndex];
+            const pokemon = trainer.box[boxIndex];
+            
+            const freeSlot = trainer.team.findIndex(p => !p.id);
+            
+            if (freeSlot === -1) {
+                alert('Équipe complète ! Libérez d\'abord un slot.');
+                return;
+            }
+            
+            trainer.team[freeSlot] = pokemon;
+            trainer.box.splice(boxIndex, 1);
+            
+            saveTrainersToStorage();
+            renderTrainers();
+            openPokemonBox(trainerIndex);
+        }
+        
+        function moveToBox(trainerIndex, pokemonIndex) {
+            const trainer = trainers[trainerIndex];
+            const pokemon = trainer.team[pokemonIndex];
+            
+            if (!pokemon.id) return;
+            
+            if (!trainer.box) trainer.box = [];
+            
+            trainer.box.push(pokemon);
+            trainer.team[pokemonIndex] = {
+                id: null,
+                name: '',
+                level: 1,
+                currentXP: 0,
+                xpForNextLevel: calculateXPForLevel(2),
+                moves: [null, null, null, null]
+            };
+            
+            saveTrainersToStorage();
+            renderTrainers();
+            showNotification(`${pokemon.name} déplacé vers la boîte !`, 'success');
+        }
+        
+        function openMoveManager(trainerIndex, pokemonIndex) {
+            const modal = document.getElementById('batchXPModal');
+            const content = document.getElementById('batchXPContent');
+            const pokemon = trainers[trainerIndex].team[pokemonIndex];
+            
+            if (!pokemon.id) return;
+            if (!pokemon.moves) pokemon.moves = [null, null, null, null];
+            
+            const pokemonInfo = pokemonData[pokemon.id];
+            const learnableMoves = pokemonInfo.capacites ? pokemonInfo.capacites.filter(move => move.niveau <= pokemon.level) : [];
+            
+            content.innerHTML = `
+                <button class="close-btn" onclick="closeBatchXP()">✕</button>
+                <h3>Attaques de ${pokemon.name} (Niv. ${pokemon.level})</h3>
+                
+                <div style="margin-bottom: 20px;">
+                    <h4>Attaques actuelles :</h4>
+                    ${[0,1,2,3].map(slot => {
+                        const currentMoveKey = pokemon.moves && pokemon.moves[slot];
+                        const currentMoveInfo = currentMoveKey ? attacksData[currentMoveKey] : null;
+                        const slotColor = currentMoveInfo ? getTypeColor(currentMoveInfo.type) : '#f8f9fa';
+                        return `
+                        <div style="display: flex; align-items: center; gap: 10px; margin: 10px 0; padding: 10px; border: 1px solid #ddd; border-radius: 5px; background: ${slotColor};">
+                            <span style="min-width: 80px; font-weight: bold;">Slot ${slot + 1}:</span>
+                            <select style="flex: 1; padding: 5px;" onchange="updateMove(${trainerIndex}, ${pokemonIndex}, ${slot}, this.value)">
+                                <option value="">Aucune attaque</option>
+                                ${learnableMoves.map(move => {
+                                    const attackKey = move.attaque.toLowerCase().replace(/[^a-z0-9]/g, '_');
+                                    const selected = pokemon.moves && pokemon.moves[slot] === attackKey ? 'selected' : '';
+                                    return `<option value="${attackKey}" ${selected}>${move.attaque} (Niv. ${move.niveau})</option>`;
+                                }).join('')}
+                            </select>
+                        </div>
+                        `;
+                    }).join('')}
+                </div>
+                
+                <div style="margin-bottom: 20px;">
+                    <h4>Attaques apprenables :</h4>
+                    <div style="max-height: 200px; overflow-y: auto; border: 1px solid #ddd; border-radius: 5px; padding: 10px;">
+                        ${learnableMoves.length === 0 ? '<p>Aucune attaque apprenable</p>' : 
+                            learnableMoves.map(move => {
+                                const attackKey = move.attaque.toLowerCase().replace(/[^a-z0-9]/g, '_');
+                                const attackInfo = attacksData[attackKey];
+                                const typeColor = getTypeColor(attackInfo ? attackInfo.type : 'Normal');
+                                return `
+                                    <div style="display: flex; justify-content: space-between; align-items: center; padding: 8px; border-bottom: 1px solid #eee; background: ${typeColor}; border-radius: 5px; margin-bottom: 5px;">
+                                        <div>
+                                            <strong>${move.attaque}</strong> (Niv. ${move.niveau})
+                                            ${attackInfo ? `<br><small>Type: ${attackInfo.type} | ${attackInfo.de || 'N/A'}</small>` : ''}
+                                        </div>
+                                        <button class="add-xp-btn" style="padding: 5px 10px; font-size: 0.8em;" 
+                                                onclick="quickAddMove(${trainerIndex}, ${pokemonIndex}, '${attackKey}')">Ajouter</button>
+                                    </div>
+                                `;
+                            }).join('')}
+                    </div>
+                </div>
+                
+                <div style="text-align: center;">
+                    <button class="close-btn" onclick="closeBatchXP()">Fermer</button>
+                </div>
+            `;
+            
+            modal.style.display = 'flex';
+        }
+        
+        function updateMove(trainerIndex, pokemonIndex, slot, moveKey) {
+            if (!trainers[trainerIndex].team[pokemonIndex].moves) {
+                trainers[trainerIndex].team[pokemonIndex].moves = [null, null, null, null];
+            }
+            trainers[trainerIndex].team[pokemonIndex].moves[slot] = moveKey || null;
+            saveTrainersToStorage();
+        }
+        
+        function quickAddMove(trainerIndex, pokemonIndex, moveKey) {
+            const pokemon = trainers[trainerIndex].team[pokemonIndex];
+            if (!pokemon.moves) pokemon.moves = [null, null, null, null];
+            
+            const freeSlot = pokemon.moves.findIndex(move => !move);
+            
+            if (freeSlot === -1) {
+                alert('Toutes les attaques sont occupées ! Remplacez une attaque existante.');
+                return;
+            }
+            
+            pokemon.moves[freeSlot] = moveKey;
+            saveTrainersToStorage();
+            openMoveManager(trainerIndex, pokemonIndex);
+        }
+        
+        function openPokedex(trainerIndex) {
+            const modal = document.getElementById('batchXPModal');
+            const content = document.getElementById('batchXPContent');
+            const trainer = trainers[trainerIndex];
+            
+            if (!trainer.pokedex) trainer.pokedex = {};
+            
+            const pokemonList = Object.keys(pokemonData)
+                .filter(id => parseInt(id) <= 151)
+                .sort((a, b) => parseInt(a) - parseInt(b));
+            
+            content.innerHTML = `
+                <button class="close-btn" onclick="closeBatchXP()">✕</button>
+                <h3>📖 Pokédex de ${trainer.name}</h3>
+                
+                <div style="margin-bottom: 20px; text-align: center;">
+                    <strong>Progrès : ${Object.keys(trainer.pokedex).filter(id => trainer.pokedex[id].seen).length}/151 vus | 
+                    ${Object.keys(trainer.pokedex).filter(id => trainer.pokedex[id].caught).length}/151 capturés</strong>
+                </div>
+                
+                <div style="max-height: 400px; overflow-y: auto; border: 1px solid #ddd; border-radius: 5px; padding: 10px;">
+                    <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 10px;">
+                        ${pokemonList.map(id => {
+                            const pokemon = pokemonData[id];
+                            const pokedexEntry = trainer.pokedex[id] || { seen: false, caught: false };
+                            return `
+                                <div style="display: flex; align-items: center; gap: 10px; padding: 8px; border: 1px solid #eee; border-radius: 5px; background: ${pokedexEntry.caught ? '#e8f5e8' : pokedexEntry.seen ? '#fff3cd' : '#f8f9fa'};">
+                                    <span style="min-width: 40px; font-weight: bold;">#${id.padStart(3, '0')}</span>
+                                    <span style="flex: 1;">${pokemon.nom}</span>
+                                    <label style="display: flex; align-items: center; gap: 5px;">
+                                        <input type="checkbox" ${pokedexEntry.seen ? 'checked' : ''} 
+                                               onchange="updatePokedex(${trainerIndex}, '${id}', 'seen', this.checked)">
+                                        Vu
+                                    </label>
+                                    <label style="display: flex; align-items: center; gap: 5px;">
+                                        <input type="checkbox" ${pokedexEntry.caught ? 'checked' : ''} 
+                                               onchange="updatePokedex(${trainerIndex}, '${id}', 'caught', this.checked)">
+                                        Capturé
+                                    </label>
+                                </div>
+                            `;
+                        }).join('')}
+                    </div>
+                </div>
+                
+                <div style="text-align: center; margin-top: 20px;">
+                    <button class="close-btn" onclick="closeBatchXP()">Fermer</button>
+                </div>
+            `;
+            
+            modal.style.display = 'flex';
+        }
+        
+        function updatePokedex(trainerIndex, pokemonId, type, checked) {
+            const trainer = trainers[trainerIndex];
+            if (!trainer.pokedex) trainer.pokedex = {};
+            if (!trainer.pokedex[pokemonId]) trainer.pokedex[pokemonId] = { seen: false, caught: false };
+            
+            trainer.pokedex[pokemonId][type] = checked;
+            
+            // Si on coche "capturé", on coche automatiquement "vu"
+            if (type === 'caught' && checked) {
+                trainer.pokedex[pokemonId].seen = true;
+            }
+            // Si on décoche "vu", on décoche automatiquement "capturé"
+            if (type === 'seen' && !checked) {
+                trainer.pokedex[pokemonId].caught = false;
+            }
+            
+            saveTrainersToStorage();
+            renderTrainers();
+        }
+        
+        function getTypeColor(type) {
+            const typeColors = {
+                'Normal': '#A8A878',
+                'Feu': '#F08030',
+                'Eau': '#6890F0',
+                'Electrik': '#F8D030',
+                'Plante': '#78C850',
+                'Glace': '#98D8D8',
+                'Combat': '#C03028',
+                'Poison': '#A040A0',
+                'Sol': '#E0C068',
+                'Vol': '#A890F0',
+                'Psy': '#F85888',
+                'Insecte': '#A8B820',
+                'Roche': '#B8A038',
+                'Spectre': '#705898',
+                'Dragon': '#7038F8',
+                'Ténèbres': '#705848',
+                'Acier': '#B8B8D0',
+                'Fée': '#EE99AC'
+            };
+            return typeColors[type] || '#68A090';
+        }
+        
+
+        
+        function showMultiPlayerSummary(enemyName, enemyLevel, totalXP, levelUps, pokemonCount, isTrainer) {
+            const modal = document.getElementById('batchXPModal');
+            const content = document.getElementById('batchXPContent');
+            
+            content.innerHTML = `
+                <button class="close-btn" onclick="closeBatchXP()">✕</button>
+                <h3>🎉 Récapitulatif Combat Multi-Joueurs</h3>
+                
+                <div class="xp-summary">
+                    <h4>Combat contre : ${enemyName} (Niveau ${enemyLevel})</h4>
+                    <p><strong>Type :</strong> ${isTrainer ? 'Dresseur' : 'Pokémon sauvage'}</p>
+                    <p><strong>Pokémon participants :</strong> ${pokemonCount}</p>
+                    <p><strong>XP total distribué :</strong> <span class="xp-gained">${totalXP} XP</span></p>
+                </div>
+                
+                ${levelUps.length > 0 ? `
+                    <div class="xp-summary">
+                        <h4>🎆 Montées de niveau :</h4>
+                        ${levelUps.map(levelUp => `
+                            <div class="level-up">⬆️ ${levelUp}</div>
+                        `).join('')}
+                    </div>
+                ` : ''}
+                
+                <div style="text-align: center; margin-top: 20px;">
+                    <button class="add-xp-btn" onclick="closeBatchXP()">Fermer</button>
+                </div>
+            `;
+            
+            modal.style.display = 'flex';
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calcul d'XP - Pokémon RPG</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background: linear-gradient(135deg, #38a169 0%, #2d7d32 100%);
+            min-height: 100vh;
+        }
+        
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+        }
+        
+        h1 {
+            text-align: center;
+            color: #2d7d32;
+            margin-bottom: 30px;
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+            color: #333;
+        }
+        
+        input, select {
+            width: 100%;
+            padding: 10px;
+            border: 2px solid #ddd;
+            border-radius: 5px;
+            font-size: 16px;
+            box-sizing: border-box;
+        }
+        
+        input:focus, select:focus {
+            border-color: #38a169;
+            outline: none;
+        }
+        
+        button {
+            background: #38a169;
+            color: white;
+            padding: 12px 30px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            width: 100%;
+            margin-top: 10px;
+        }
+        
+        button:hover {
+            background: #2d7d32;
+        }
+        
+        .result {
+            margin-top: 20px;
+            padding: 15px;
+            background: #f0fff4;
+            border: 2px solid #38a169;
+            border-radius: 5px;
+            display: none;
+        }
+        
+        select {
+            max-height: 200px;
+            overflow-y: auto;
+        }
+        
+        .back-link {
+            display: inline-block;
+            margin-bottom: 20px;
+            color: #38a169;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        
+        .back-link:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="accueil.html" class="back-link">← Retour à l'accueil</a>
+        
+        <h1>Calcul d'Expérience</h1>
+        
+        <form id="xpForm">
+            <div class="form-group">
+                <label for="pokemonLevel">Niveau du Pokémon :</label>
+                <input type="number" id="pokemonLevel" min="1" max="100" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="enemyPokemon">Pokémon vaincu :</label>
+                <select id="enemyPokemon" required>
+                    <option value="">Sélectionnez un Pokémon...</option>
+                </select>
+            </div>
+            
+            <div class="form-group">
+                <label for="enemyLevel">Niveau du Pokémon vaincu :</label>
+                <input type="number" id="enemyLevel" min="1" max="100" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="participation">Participation au combat :</label>
+                <select id="participation">
+                    <option value="1">A participé au combat (s=1)</option>
+                    <option value="2">N'a pas participé au combat (s=2)</option>
+                </select>
+            </div>
+            
+            <div class="form-group">
+                <label for="isTrainer">Combat contre un dresseur :</label>
+                <select id="isTrainer">
+                    <option value="false">Non (Pokémon sauvage)</option>
+                    <option value="true">Oui (Pokémon de dresseur)</option>
+                </select>
+            </div>
+            
+            <div class="form-group">
+                <label for="participantCount">Nombre de Pokémon participants :</label>
+                <input type="number" id="participantCount" min="1" max="6" value="1" required>
+            </div>
+            
+            <button type="submit">Calculer l'XP</button>
+        </form>
+        
+        <div id="result" class="result">
+            <h3>Résultat :</h3>
+            <p id="xpGained"></p>
+            <p id="xpToNext"></p>
+        </div>
+    </div>
+
+    <script>
+        let pokemonData = {};
+        
+        // Charger les données des Pokémon
+        fetch('pokemon_data.json')
+            .then(response => response.json())
+            .then(data => {
+                pokemonData = data;
+                
+                // Remplir la liste des Pokémon
+                const enemySelect = document.getElementById('enemyPokemon');
+                Object.keys(data).forEach(id => {
+                    const pokemon = data[id];
+                    const option = document.createElement('option');
+                    option.value = id;
+                    option.textContent = `#${id.padStart(3, '0')} ${pokemon.nom}`;
+                    enemySelect.appendChild(option);
+                });
+            })
+            .catch(error => {
+                console.error('Erreur lors du chargement des données Pokémon:', error);
+            });
+        
+        document.getElementById('xpForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const pokemonLevel = parseInt(document.getElementById('pokemonLevel').value);
+            const enemyPokemonId = parseInt(document.getElementById('enemyPokemon').value);
+            const enemyLevel = parseInt(document.getElementById('enemyLevel').value);
+            const participationValue = parseInt(document.getElementById('participation').value);
+            const isTrainer = document.getElementById('isTrainer').value === 'true';
+            const participantCount = parseInt(document.getElementById('participantCount').value);
+            
+            const enemyPokemon = pokemonData[enemyPokemonId];
+            const enemyName = enemyPokemon ? enemyPokemon.nom : 'Pokémon inconnu';
+            
+            // Formule officielle d'XP Pokémon
+            // EXP = (a × b × N^5 × s × (2×N + 10 / N + Np + 10)^2.5 + 1) × t × e
+            
+            const a = 1; // Multiplicateur de base
+            const b = enemyPokemon ? enemyPokemon.exp_base : 64; // XP yield du Pokémon
+            const N = enemyLevel; // Niveau du Pokémon vaincu
+            const s = 1 / participationValue; // Participation au combat
+            const Np = pokemonLevel; // Niveau du Pokémon qui gagne l'XP
+            const t = isTrainer ? 1.5 : 1; // Multiplicateur dresseur
+            const itemMultiplier = 1; // Pas d'objet tenu
+            
+            // Calcul de la formule
+            const numerator = 2 * N + 10;
+            const denominator = N + Np + 10;
+            const fraction = numerator / denominator;
+            const power = Math.pow(fraction, 2.5);
+            
+            let baseXP = Math.floor((a * b * N * s * power + 1) * t * itemMultiplier / 5);
+            
+            // Diviser l'XP par le nombre de participants au combat
+            baseXP = Math.floor(baseXP / participantCount);
+            
+            // XP nécessaire pour le niveau suivant (formule simplifiée)
+            const xpForNextLevel = Math.floor(Math.pow(pokemonLevel + 1, 3));
+            
+            document.getElementById('xpGained').textContent = `XP gagnés contre ${enemyName} (Niv. ${enemyLevel}) : ${baseXP}`;
+            document.getElementById('xpToNext').textContent = `XP nécessaires pour le niveau ${pokemonLevel + 1} : ${xpForNextLevel}`;
+            document.getElementById('result').style.display = 'block';
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculateur de Dégâts - Pokémon RPG</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background: linear-gradient(135deg, #dc2626 0%, #991b1b 100%);
+            min-height: 100vh;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+        }
+        
+        h1 {
+            text-align: center;
+            color: #dc2626;
+            margin-bottom: 30px;
+        }
+        
+        .back-link {
+            display: inline-block;
+            margin-bottom: 20px;
+            color: #dc2626;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        
+        .back-link:hover {
+            text-decoration: underline;
+        }
+        
+        .form-group {
+            margin-bottom: 12px;
+        }
+        
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+            color: #333;
+        }
+        
+        select, input {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 14px;
+            box-sizing: border-box;
+        }
+        
+        select:focus, input:focus {
+            border-color: #dc2626;
+            outline: none;
+        }
+        
+        .pokemon-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 15px;
+            margin-top: 20px;
+        }
+        
+        .pokemon-calculator {
+            border: 2px solid #e5e7eb;
+            border-radius: 8px;
+            padding: 15px;
+            background: #f9fafb;
+        }
+        
+        .pokemon-calculator h3 {
+            margin: 0 0 12px 0;
+            color: #374151;
+            text-align: center;
+            font-size: 1.1em;
+        }
+        
+        .calculator-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 10px;
+        }
+        
+        .result {
+            margin-top: 15px;
+            padding: 12px;
+            background: #f0f9ff;
+            border: 1px solid #0ea5e9;
+            border-radius: 6px;
+            text-align: center;
+        }
+        
+        .result h3 {
+            margin: 0 0 10px 0;
+            color: #0c4a6e;
+        }
+        
+        .damage-value {
+            font-size: 1.5em;
+            font-weight: bold;
+            color: #dc2626;
+        }
+        
+        .multiplier {
+            font-size: 0.9em;
+            color: #666;
+            margin-top: 8px;
+        }
+        
+        .effectiveness {
+            margin-top: 8px;
+            padding: 4px 8px;
+            border-radius: 12px;
+            font-weight: bold;
+            display: inline-block;
+            font-size: 0.8em;
+        }
+        
+        .super-effective {
+            background: #dcfce7;
+            color: #166534;
+        }
+        
+        .not-very-effective {
+            background: #fef2f2;
+            color: #991b1b;
+        }
+        
+        .no-effect {
+            background: #f3f4f6;
+            color: #374151;
+        }
+        
+        .normal-effective {
+            background: #f8fafc;
+            color: #475569;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="accueil.html" class="back-link">← Retour à l'accueil</a>
+        
+        <h1>⚔️ Calculateur de Dégâts - Équipe</h1>
+        
+        <div class="pokemon-grid" id="pokemonGrid">
+            <!-- Les calculateurs seront générés ici -->
+        </div>
+    </div>
+
+    <script>
+        let pokemonData = {};
+
+        // Charger les données des Pokémon
+        fetch('pokemon_data.json')
+            .then(response => response.json())
+            .then(data => {
+                pokemonData = data;
+                generateCalculators();
+            })
+            .catch(error => {
+                console.error('Erreur lors du chargement des données Pokémon:', error);
+            });
+
+        function generateCalculators() {
+            const grid = document.getElementById('pokemonGrid');
+            
+            for (let i = 0; i < 8; i++) {
+                const calculator = document.createElement('div');
+                calculator.className = 'pokemon-calculator';
+                calculator.innerHTML = `
+                    <h3>Pokémon ${i + 1}</h3>
+                    
+                    <div class="calculator-grid">
+                        <div class="form-group">
+                            <label for="attackType${i}">Type d'attaque :</label>
+                            <select id="attackType${i}" onchange="calculateDamage(${i})">
+                                <option value="">Sélectionner...</option>
+                                <option value="Normal">Normal</option>
+                                <option value="Feu">Feu</option>
+                                <option value="Eau">Eau</option>
+                                <option value="Électrik">Électrik</option>
+                                <option value="Plante">Plante</option>
+                                <option value="Glace">Glace</option>
+                                <option value="Combat">Combat</option>
+                                <option value="Poison">Poison</option>
+                                <option value="Sol">Sol</option>
+                                <option value="Vol">Vol</option>
+                                <option value="Psy">Psy</option>
+                                <option value="Insecte">Insecte</option>
+                                <option value="Roche">Roche</option>
+                                <option value="Spectre">Spectre</option>
+                                <option value="Dragon">Dragon</option>
+                                <option value="Ténèbres">Ténèbres</option>
+                                <option value="Acier">Acier</option>
+                                <option value="Fée">Fée</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="targetPokemon${i}">Pokémon cible :</label>
+                            <select id="targetPokemon${i}" onchange="calculateDamage(${i})">
+                                <option value="">Sélectionner...</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="baseDamage${i}">Dégâts de base :</label>
+                            <input type="number" id="baseDamage${i}" min="0" placeholder="Ex: 2" onchange="calculateDamage(${i})">
+                        </div>
+                    </div>
+                    
+                    <div id="result${i}" class="result" style="display: none;">
+                        <h3>Résultat :</h3>
+                        <div class="damage-value" id="finalDamage${i}">0</div>
+                        <div class="multiplier" id="multiplierText${i}">Multiplicateur : ×1</div>
+                        <div class="effectiveness" id="effectivenessText${i}">Efficacité normale</div>
+                    </div>
+                `;
+                
+                grid.appendChild(calculator);
+                
+                // Remplir la liste des Pokémon pour ce calculateur
+                const targetSelect = document.getElementById(`targetPokemon${i}`);
+                Object.keys(pokemonData).forEach(id => {
+                    const pokemon = pokemonData[id];
+                    const option = document.createElement('option');
+                    option.value = id;
+                    option.textContent = `#${id.padStart(3, '0')} ${pokemon.nom}`;
+                    targetSelect.appendChild(option);
+                });
+            }
+        }
+
+        function calculateDamage(index) {
+            const attackType = document.getElementById(`attackType${index}`).value;
+            const targetPokemonId = document.getElementById(`targetPokemon${index}`).value;
+            const baseDamage = parseInt(document.getElementById(`baseDamage${index}`).value);
+            
+            if (!attackType || !targetPokemonId || !baseDamage) {
+                document.getElementById(`result${index}`).style.display = 'none';
+                return;
+            }
+            
+            const targetPokemon = pokemonData[targetPokemonId];
+            if (!targetPokemon || !targetPokemon.sensibilites) {
+                document.getElementById(`result${index}`).style.display = 'none';
+                return;
+            }
+            
+            // Obtenir le multiplicateur de sensibilité
+            const multiplier = targetPokemon.sensibilites[attackType] || 1.0;
+            
+            // Calculer les dégâts finaux
+            const finalDamage = Math.floor(baseDamage * multiplier);
+            
+            // Afficher le résultat
+            document.getElementById(`finalDamage${index}`).textContent = finalDamage;
+            document.getElementById(`multiplierText${index}`).textContent = `Multiplicateur : ×${multiplier}`;
+            
+            // Déterminer l'efficacité
+            const effectivenessElement = document.getElementById(`effectivenessText${index}`);
+            effectivenessElement.className = 'effectiveness';
+            
+            if (multiplier === 0) {
+                effectivenessElement.textContent = 'Aucun effet';
+                effectivenessElement.classList.add('no-effect');
+            } else if (multiplier < 1) {
+                effectivenessElement.textContent = 'Peu efficace';
+                effectivenessElement.classList.add('not-very-effective');
+            } else if (multiplier > 1) {
+                effectivenessElement.textContent = 'Super efficace';
+                effectivenessElement.classList.add('super-effective');
+            } else {
+                effectivenessElement.textContent = 'Efficacité normale';
+                effectivenessElement.classList.add('normal-effective');
+            }
+            
+            document.getElementById(`result${index}`).style.display = 'block';
+        }
+    </script>
+</body>
+</html>

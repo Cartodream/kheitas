@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokémon RPG - Accueil</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        
+        h1 {
+            color: white;
+            font-size: 2.5em;
+            margin-bottom: 50px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        .vignettes {
+            display: flex;
+            gap: 30px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        .vignette {
+            background: white;
+            border-radius: 15px;
+            padding: 30px;
+            width: 250px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            text-decoration: none;
+            color: #333;
+        }
+        
+        .vignette:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 35px rgba(0,0,0,0.3);
+        }
+        
+        .vignette h2 {
+            font-size: 1.5em;
+            margin-bottom: 15px;
+            color: #4a5568;
+        }
+        
+        .vignette p {
+            color: #666;
+            line-height: 1.5;
+        }
+        
+        .icon {
+            font-size: 3em;
+            margin-bottom: 15px;
+        }
+        
+        .pokedex-icon {
+            color: #e53e3e;
+        }
+        
+        .xp-icon {
+            color: #38a169;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Pokémon RPG</h1>
+        
+        <div class="vignettes">
+            <a href="liste_pokemon_gen1_grid.html" class="vignette">
+                <div class="icon pokedex-icon">📱</div>
+                <h2>Pokédex</h2>
+                <p>Consultez la liste complète des Pokémon avec leurs statistiques et informations détaillées.</p>
+            </a>
+        </div>
+    </div>
+</body>
+</html>
