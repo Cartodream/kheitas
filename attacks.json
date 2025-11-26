@@ -601,11 +601,11 @@
   },
   "blabla_dodo": {
     "nom": "Blabla Dodo",
-    "attaque": "",
+    "attaque": "Magique",
     "type": "Normal",
-    "description": "",
-    "de": "",
-    "effet": ""
+    "description": "Le lanceur utilise une de ses capacités au hasard pendant qu'il dort.",
+    "de": "-",
+    "effet": "Le lanceur utilise une technique au hasard parmi toutes les techniques apprises s'il est endormi. Aucune énergie n'est utilisée pour lancer la technique au hasard"
   },
   "blizzard": {
     "nom": "Blizzard",
